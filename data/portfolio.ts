@@ -1,11 +1,11 @@
 export const personal = {
   name: "Amenti Liben",
   brand: "AMOL.",
-  role: "Backend Engineer & API Architect",
-  tagline: "Building scalable backend\nsystems that power applications",
-  subtitle: "< Backend Engineer />",
+  role: "Full-Stack Engineer (Backend-Focused)",
+  tagline: "Building scalable systems\nwith backend expertise",
+  subtitle: "< Full-Stack Engineer />",
   description:
-    "I architect and build production-grade backend systems and APIs — from database design to scalable microservices. Specializing in Node.js, PostgreSQL, REST/GraphQL APIs, and robust backend infrastructure for mission-critical operations.",
+    "I architect and build full-stack applications with a strong focus on backend systems and APIs. Specializing in Node.js, PostgreSQL, REST/GraphQL APIs, and scalable server architecture, while also delivering complete frontend solutions with Next.js and TypeScript.",
   location: "Addis Ababa, Ethiopia",
   availability: "Available for enterprise projects & contracts",
   responseTime: "within 24 hours",
@@ -19,9 +19,9 @@ export const personal = {
   resume: "/resume.pdf",
   about: {
     description1:
-      "I'm a backend engineer based in Ethiopia specializing in API development, database architecture, and scalable server-side systems. I build robust backend solutions for enterprise management systems across education, healthcare, hospitality, logistics, pharmacy, wholesale, and government sectors.",
+      "I'm a full-stack engineer based in Ethiopia with deep expertise in backend development and API architecture. I build complete web applications while specializing in scalable server-side systems, database design, and robust APIs for enterprise management systems across education, healthcare, hospitality, logistics, and government sectors.",
     description2:
-      "I focus on building reliable, secure backend systems that handle complex business logic, real-time data processing, and mission-critical operations. Database optimization, API design, security, and system performance are my top priorities.",
+      "My strength lies in backend engineering — building reliable, secure systems that handle complex business logic, real-time data processing, and mission-critical operations. I also deliver polished frontends, but my core expertise is in database optimization, API design, system architecture, and backend performance.",
     stats: [
       { label: "SYSTEMS SHIPPED", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
@@ -29,25 +29,25 @@ export const personal = {
     ],
     principles: [
       {
-        title: "SCALABLE ARCHITECTURE",
-        desc: "I design backend systems for scale — optimized database schemas, efficient APIs, caching strategies, and distributed systems architecture for high-performance operations.",
+        title: "BACKEND-FIRST ARCHITECTURE",
+        desc: "I design systems starting with robust backend architecture — optimized databases, efficient APIs, caching strategies, and scalable server infrastructure that powers reliable applications.",
       },
       {
-        title: "SECURITY & RELIABILITY",
-        desc: "Data integrity, encryption, authentication, authorization, and monitoring are built in from day one. Backend systems must be secure, fault-tolerant, and production-ready.",
+        title: "FULL-STACK DELIVERY",
+        desc: "While my expertise is backend-focused, I deliver complete solutions including frontend interfaces. I ensure seamless integration between backend APIs and user-facing applications.",
       },
       {
-        title: "API-FIRST DESIGN",
-        desc: "I build clean, well-documented RESTful and GraphQL APIs that are easy to integrate, maintain, and scale. API design and performance optimization are core priorities.",
+        title: "SECURITY & PERFORMANCE",
+        desc: "Data integrity, authentication, authorization, query optimization, and monitoring are built in from day one. Backend systems must be secure, fast, and production-ready.",
       },
     ],
     timeline: [
-      { year: "2024", event: "Started building backend systems professionally" },
-      { year: "2024-Q3", event: "Built first enterprise backend API (School Management)" },
-      { year: "2025", event: "Expanded to 7 backend systems across sectors" },
-      { year: "2026", event: "Focused on API architecture & microservices" },
+      { year: "2024", event: "Started building full-stack applications professionally" },
+      { year: "2024-Q3", event: "Built first enterprise backend system (School Management)" },
+      { year: "2025", event: "Expanded to 7 full-stack systems with backend focus" },
+      { year: "2026", event: "Specialized in API architecture & database optimization" },
     ],
-    tags: ["BACKEND SYSTEMS", "API DEVELOPMENT", "DATABASE ARCHITECTURE", "MICROSERVICES"],
+    tags: ["FULL-STACK", "BACKEND EXPERT", "API DEVELOPMENT", "DATABASE ARCHITECTURE"],
   },
 };
 
