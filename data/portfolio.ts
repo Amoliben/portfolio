@@ -268,7 +268,7 @@ export const experience = [
     title: "Full-Stack Engineer",
     company: "Freelance & Open Source",
     type: "Remote",
-    period: "2024 — PRESENT",
+    period: "2023 — PRESENT",
     status: "ACTIVE",
     desc: "Building enterprise management systems with robust backends, RESTful APIs, and responsive frontends for education, healthcare, hospitality, and government sectors.",
     bullets: [
@@ -284,26 +284,6 @@ export const experience = [
       { label: "UPTIME", value: "99.5%" },
     ],
     tech: ["NODE.JS", "PYTHON", "LARAVEL", "POSTGRESQL", "PRISMA", "NEXT.JS", "REACT", "REDIS", "DOCKER"],
-  },
-  {
-    title: "Full-Stack Developer",
-    company: "Freelance",
-    type: "Remote",
-    period: "2023 — 2024",
-    status: "COMPLETED",
-    desc: "Developed web applications from scratch for startups and small businesses, handling both frontend and backend development.",
-    bullets: [
-      "Delivered 4 full-stack projects from requirements gathering to production deployment.",
-      "Implemented PostgreSQL databases with normalized schemas and optimized queries for data integrity and performance.",
-      "Built secure authentication systems with JWT, password hashing, session management, and role-based access control.",
-      "Created responsive user interfaces with React and modern CSS frameworks, ensuring cross-browser compatibility and mobile responsiveness.",
-    ],
-    metrics: [
-      { label: "PERFORMANCE", value: "+30%" },
-      { label: "CLIENTS", value: "4" },
-      { label: "PROJECTS", value: "4" },
-    ],
-    tech: ["NODE.JS", "PYTHON", "LARAVEL", "POSTGRESQL", "REACT", "GIT"],
   },
 ];
 

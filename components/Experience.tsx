@@ -31,15 +31,15 @@ export default function Experience() {
         </motion.h2>
 
         <motion.p {...a(0.2)} style={{ color: "var(--text-muted)", fontSize: "clamp(15px, 1.4vw, 17px)", lineHeight: 1.75, maxWidth: 580, marginBottom: 40 }}>
-          From open-source builds to collaborative product work, I focus on shipping interfaces that are usable, maintainable, and fast.
+          Building enterprise systems and web applications with focus on scalability, performance, and user experience.
         </motion.p>
 
         {/* Summary stats */}
         <motion.div {...a(0.25)} className="exp-stats">
           {[
             { label: "YEARS BUILDING", value: "3+" },
-            { label: "PRODUCTS", value: "10+" },
-            { label: "MAIN FOCUS", value: "Web UX" },
+            { label: "SYSTEMS BUILT", value: "7" },
+            { label: "MAIN FOCUS", value: "Enterprise" },
           ].map((s) => (
             <div key={s.label} style={card}>
               <div style={{ fontFamily: mono, fontSize: 20, fontWeight: 700, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
