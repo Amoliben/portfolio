@@ -264,25 +264,25 @@ export const certificates = [
 
 export const experience = [
   {
-    title: "Full-Stack Engineer & Digital Transformation Specialist",
+    title: "Full-Stack Engineer (Backend-Focused)",
     company: "Freelance & Open Source",
     type: "Remote",
     period: "2024 — PRESENT",
     status: "ACTIVE",
-    desc: "Architecting and delivering full-stack web and mobile products end-to-end — from database design and API development to UI systems, mobile apps, and production deployments. Currently building enterprise management systems for education, healthcare, hospitality, and government sectors.",
+    desc: "Architecting and delivering full-stack applications with deep focus on backend systems — from database design and API development to scalable server infrastructure. Building robust backend solutions for enterprise management systems across education, healthcare, hospitality, and government sectors.",
     bullets: [
-      "Designed and shipped 7 enterprise management systems (School, Hospital, Hotel, Pharmacy, Wholesale, Delivery, Government) handling 500+ concurrent users.",
-      "Developed 3 cross-platform mobile apps using Flutter for iOS and Android with 88+ Lighthouse scores.",
-      "Built real-time tracking systems with GPS integration, WebSockets, and live notifications for delivery management.",
-      "Implemented role-based access control (RBAC), data encryption, and compliance features for healthcare and government systems.",
-      "Reduced system load by 30% through database optimization, caching strategies, and API performance tuning.",
+      "Designed and built backend APIs for 7 enterprise management systems (School, Hospital, Hotel, Pharmacy, Wholesale, Delivery, Government) handling 500+ concurrent users.",
+      "Architected PostgreSQL database schemas with optimized queries, indexes, and relationships for complex business logic and data integrity.",
+      "Built RESTful APIs with Node.js/Express handling authentication, authorization, real-time features, and third-party integrations.",
+      "Implemented role-based access control (RBAC), JWT authentication, data encryption, and audit logging for healthcare and government compliance.",
+      "Reduced database query time by 40% and API response time by 30% through query optimization, caching strategies (Redis), and database indexing.",
     ],
     metrics: [
-      { label: "SYSTEMS BUILT", value: "7" },
+      { label: "APIS BUILT", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
       { label: "UPTIME", value: "99.5%" },
     ],
-    tech: ["NEXT.JS", "TYPESCRIPT", "FLUTTER", "POSTGRESQL", "PRISMA", "DOCKER", "REDIS", "WEBSOCKETS"],
+    tech: ["NODE.JS", "POSTGRESQL", "PRISMA", "REDIS", "DOCKER", "WEBSOCKETS", "REST API", "JWT"],
   },
   {
     title: "Full-Stack Developer",
@@ -290,19 +290,19 @@ export const experience = [
     type: "Remote",
     period: "2023 — 2024",
     status: "COMPLETED",
-    desc: "Designed and shipped responsive web interfaces and mobile applications for startups and small businesses across Ethiopia and internationally.",
+    desc: "Developed full-stack web applications with focus on backend development, API design, and database architecture for startups and small businesses across Ethiopia and internationally.",
     bullets: [
-      "Delivered 4 client projects on time, from wireframe to production deployment.",
-      "Built 2 Flutter mobile apps for iOS and Android with native performance.",
-      "Migrated legacy HTML/CSS codebases to modern React with TypeScript, improving maintainability.",
-      "Improved page load performance by 25% through image optimization and code splitting.",
+      "Delivered 4 client projects on time, building backend APIs and database systems from scratch to production deployment.",
+      "Designed and implemented PostgreSQL databases with normalized schemas, foreign keys, and optimized queries for data integrity.",
+      "Built secure authentication systems with JWT, password hashing, and session management for user data protection.",
+      "Improved API performance by 25% through database query optimization, proper indexing, and caching strategies.",
     ],
     metrics: [
-      { label: "CORE VITALS", value: "+25%" },
+      { label: "API PERFORMANCE", value: "+25%" },
       { label: "CLIENTS", value: "4" },
-      { label: "MOBILE APPS", value: "2" },
+      { label: "DATABASES", value: "4" },
     ],
-    tech: ["REACT", "TYPESCRIPT", "FLUTTER", "FIGMA", "GIT"],
+    tech: ["NODE.JS", "POSTGRESQL", "PRISMA", "REST API", "GIT"],
   },
 ];
 
