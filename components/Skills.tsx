@@ -43,12 +43,12 @@ export default function Skills() {
           fontSize: "clamp(30px, 4vw, 52px)", fontWeight: 800,
           lineHeight: 1.1, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 16,
         }}>
-          Technical range built for<br />
-          <span style={{ color: "var(--accent)" }}>product execution.</span>
+          Core technologies for<br />
+          <span style={{ color: "var(--accent)" }}>modern web development.</span>
         </motion.h2>
 
         <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.8, maxWidth: 560, marginBottom: 48, fontWeight: 500 }}>
-          I combine frontend craftsmanship, backend reliability, and delivery-focused tooling to ship complete experiences.
+          Focused on essential technologies for building scalable full-stack web applications — from frontend interfaces to backend APIs and databases.
         </motion.p>
 
         {/* Summary stats */}
@@ -124,10 +124,10 @@ export default function Skills() {
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
             <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "var(--accent)" }} />
-            <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase" }}>Delivery Principle</div>
+            <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase" }}>Learning Approach</div>
           </div>
           <p style={{ color: "var(--text-muted)", fontSize: 15, lineHeight: 1.75 }}>
-            I optimize for the whole lifecycle: planning, implementation, review, deployment, and iteration. Strong code quality and predictable delivery are part of the product, not an afterthought.
+            I focus on mastering core technologies deeply rather than spreading thin across many tools. Each skill is developed through hands-on projects and real-world application, ensuring practical understanding alongside theoretical knowledge.
           </p>
         </motion.div>
       </div>

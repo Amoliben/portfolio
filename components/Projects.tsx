@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { projects, personal } from "@/data/portfolio";
 
 const mono = "'JetBrains Mono', monospace";
-const filters = ["All", "Full Stack", "Frontend"];
+const filters = ["All", "Full Stack", "Backend", "Frontend"];
 
 const gradients = [
   "linear-gradient(135deg, rgba(232,255,71,0.14) 0%, rgba(0,200,150,0.08) 100%)",
@@ -23,6 +23,7 @@ export default function Projects() {
   const filtered = projects.filter((p) => {
     if (active === "All") return true;
     if (active === "Full Stack") return p.type === "FULL STACK";
+    if (active === "Backend") return p.type === "BACKEND";
     return p.type === "FRONTEND";
   });
 
@@ -42,20 +43,20 @@ export default function Projects() {
           fontSize: "clamp(30px, 4vw, 52px)", fontWeight: 800,
           lineHeight: 1.1, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 16,
         }}>
-          Product work focused on<br />
-          <span style={{ color: "var(--accent)" }}>speed and craft.</span>
+          Real projects built with<br />
+          <span style={{ color: "var(--accent)" }}>modern technologies.</span>
         </motion.h2>
 
         <motion.p {...a(0.2)} style={{ color: "var(--text)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.8, maxWidth: 560, marginBottom: 36, fontWeight: 500 }}>
-          A curated set of products spanning full-stack platforms and frontend builds, each designed for clean UX and performance.
+          Showcasing actual projects I've built, deployed, and maintained. Each project demonstrates practical application of full-stack development skills.
         </motion.p>
 
         {/* Stats */}
         <motion.div {...a(0.25)} style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 32 }}>
           {[
             { label: "TOTAL PROJECTS", value: projects.length },
-            { label: "FEATURED",       value: projects.filter((p) => p.featured).length },
-            { label: "LATEST YEAR",    value: "2026" },
+            { label: "LIVE DEMOS",     value: projects.filter((p) => p.live && !p.live.includes("#")).length },
+            { label: "LATEST YEAR",    value: "2025" },
           ].map((s) => (
             <div key={s.label} style={{
               backgroundColor: "var(--surface)", border: "1px solid var(--border)",
@@ -172,7 +173,7 @@ export default function Projects() {
                     }}
                       onMouseEnter={(e) => (e.currentTarget.style.gap = "10px")}
                       onMouseLeave={(e) => (e.currentTarget.style.gap = "6px")}
-                    >View Case Study <span>→</span></a>
+                    >View Live Demo <span>→</span></a>
                   </div>
                 </div>
               </motion.div>

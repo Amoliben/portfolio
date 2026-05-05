@@ -3,9 +3,9 @@ import "./globals.css";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
-  title: "Amenti Liben | Full-Stack Engineer",
-  description: "Full-stack engineer specializing in Next.js, TypeScript, and scalable web systems. Available for product development, performance optimization, and technical consulting.",
-  keywords: ["full-stack developer", "Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Product Engineer", "Ethiopia"],
+  title: "Amenti Liben | Full-Stack Developer & Software Engineering Student",
+  description: "3rd-year Software Engineering student and Full-Stack Developer building web applications with Next.js, TypeScript, Node.js, Python, and PostgreSQL. Open to internships and junior developer opportunities.",
+  keywords: ["full-stack developer", "software engineering student", "Next.js", "React", "TypeScript", "Node.js", "Python", "Laravel", "PostgreSQL", "Flutter", "Ethiopia", "internship"],
   authors: [{ name: "Amenti Liben", url: "https://amentiliben.com" }],
   creator: "Amenti Liben",
   publisher: "Amenti Liben",
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Amenti Liben | Full-Stack Engineer",
-    description: "Building modern web products with clean architecture, strong performance, and real impact.",
+    title: "Amenti Liben | Full-Stack Developer & Software Engineering Student",
+    description: "3rd-year Software Engineering student building web applications with Next.js, TypeScript, and modern technologies. Open to opportunities.",
     type: "website",
     url: "https://amentiliben.com",
     siteName: "Amenti Liben",
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
         url: "https://amentiliben.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Amenti Liben - Full-Stack Engineer",
+        alt: "Amenti Liben - Full-Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amenti Liben | Full-Stack Engineer",
-    description: "Building modern web products with clean architecture and real performance.",
+    title: "Amenti Liben | Full-Stack Developer & Software Engineering Student",
+    description: "3rd-year Software Engineering student building web applications. Open to internships and opportunities.",
     creator: "@amentiliben",
   },
   robots: {

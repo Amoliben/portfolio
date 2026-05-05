@@ -70,52 +70,60 @@ export default function Hero() {
           </span>
         </motion.div>
 
+        {/* Greeting */}
+        <motion.p {...fadeUp(0.2)} style={{
+          fontSize: "clamp(16px, 2vw, 20px)",
+          fontWeight: 500, color: "var(--text-muted)",
+          marginBottom: 16, letterSpacing: "-0.01em",
+        }}>
+          Hi, I'm <span style={{ color: "var(--text)", fontWeight: 600 }}>Amenti Liben</span>
+        </motion.p>
+
         {/* Heading */}
-        <motion.h1 {...fadeUp(0.2)} style={{
-          fontSize: "clamp(48px, 8.5vw, 108px)",
-          fontWeight: 800, lineHeight: 1.02,
+        <motion.h1 {...fadeUp(0.3)} style={{
+          fontSize: "clamp(40px, 7vw, 88px)",
+          fontWeight: 800, lineHeight: 1.1,
           letterSpacing: "-0.03em", marginBottom: 24, color: "var(--text)",
         }}>
-          {personal.tagline.split('\n').map((line, i, arr) => (
-            <span key={i}>
-              {i === 1 ? <span style={{ color: "var(--accent)" }} className="text-glow">{line}.</span> : line}
-              {i < arr.length - 1 && <br />}
-            </span>
-          ))}
+          <span style={{ color: "var(--accent)" }} className="text-glow">Full-Stack Developer</span>
+          <br />
+          building scalable and<br />
+          high-performance web applications
         </motion.h1>
-
-        {/* Role tag */}
-        <motion.div {...fadeUp(0.3)} style={{ marginBottom: 24 }}>
-          <span style={{
-            fontFamily: mono, fontSize: "clamp(12px, 1.4vw, 15px)", color: "var(--text-secondary)",
-            border: "1px solid var(--border)", padding: "10px 20px",
-            borderRadius: 9999, display: "inline-block", backgroundColor: "var(--surface)",
-            letterSpacing: "0.04em",
-          }}>
-            {"< Full-Stack Engineer />"}
-          </span>
-        </motion.div>
 
         {/* Description */}
         <motion.p {...fadeUp(0.4)} style={{
           color: "var(--text-muted)", fontSize: "clamp(15px, 1.6vw, 18px)",
-          lineHeight: 1.8, maxWidth: 560, marginBottom: 44,
+          lineHeight: 1.8, maxWidth: 600, marginBottom: 20,
         }}>
-          {personal.description}
+          I specialize in modern technologies like <span style={{ color: "var(--text)", fontWeight: 500 }}>Next.js</span>, <span style={{ color: "var(--text)", fontWeight: 500 }}>TypeScript</span>, and <span style={{ color: "var(--text)", fontWeight: 500 }}>Node.js</span> to create efficient and user-focused solutions.
         </motion.p>
+
+        {/* Focus badge */}
+        <motion.div {...fadeUp(0.45)} style={{ marginBottom: 44 }}>
+          <span style={{
+            fontFamily: mono, fontSize: "clamp(11px, 1.3vw, 13px)", color: "var(--text-secondary)",
+            border: "1px solid var(--border)", padding: "10px 18px",
+            borderRadius: 9999, display: "inline-block", backgroundColor: "var(--surface)",
+            letterSpacing: "0.02em",
+          }}>
+            Focused on <span style={{ color: "var(--accent)" }}>Backend Systems</span> • <span style={{ color: "var(--accent)" }}>REST APIs</span> • <span style={{ color: "var(--accent)" }}>Clean Architecture</span>
+          </span>
+        </motion.div>
 
         {/* CTAs */}
         <motion.div {...fadeUp(0.5)} className="hero-ctas">
           <a href="#experience" className="btn-primary">
-            EXPLORE WORK
+            VIEW PROJECTS
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </a>
+          <a href="#contact" className="btn-outline">
+            CONTACT ME
           </a>
           {[
             { label: "GitHub", href: personal.github, icon: "🐙" },
             { label: "LinkedIn", href: personal.linkedin, icon: "💼" },
-            { label: "Facebook", href: personal.facebook, icon: "👥" },
             { label: "Telegram", href: personal.telegram, icon: "✈️" },
-            { label: "Instagram", href: personal.instagram, icon: "📸" },
           ].map((l) => (
             <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <span>{l.icon}</span>
@@ -127,9 +135,9 @@ export default function Hero() {
         {/* Stats */}
         <motion.div {...fadeUp(0.6)} className="hero-stats">
           {[
-            { label: "AVG. LIGHTHOUSE", value: 90, suffix: "+" },
-            { label: "SYSTEMS SHIPPED", value: 7, suffix: "" },
-            { label: "YEARS BUILDING", value: 2, suffix: "+" },
+            { label: "PROJECTS BUILT", value: 5, suffix: "+" },
+            { label: "TECHNOLOGIES", value: 12, suffix: "+" },
+            { label: "YEARS LEARNING", value: 2, suffix: "+" },
           ].map((s) => (
             <div key={s.label}>
               <div style={{ fontFamily: mono, fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>

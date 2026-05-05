@@ -50,28 +50,25 @@ export default function Contact() {
           {/* Left */}
           <div>
             <motion.h2 {...a(0.1)} style={{ fontSize: "clamp(32px, 4.5vw, 56px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: 20 }}>
-              Let&apos;s build something<br /><span style={{ color: "var(--accent)" }}>useful and beautiful.</span>
+              Let&apos;s Connect
             </motion.h2>
 
             <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.4vw, 17px)", lineHeight: 1.75, marginBottom: 32, fontWeight: 500 }}>
-              Share your project idea, timeline, or problem space. I'll reply with a clear next step and technical direction.
+              I&apos;m open to collaboration, internships, and opportunities. Feel free to reach out through any of the channels below.
             </motion.p>
 
             <motion.div {...a(0.25)} style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 24 }}>
               {[
-                { k: "Availability", v: personal.availability, d: "Best for product design/engineering, full-stack implementation, and UI performance optimization." },
                 { k: "Email", v: personal.email, isLink: true },
-                { k: "Phone", v: personal.phone, isLink: false },
+                { k: "Location", v: personal.location, isLink: false },
+                { k: "Availability", v: personal.availability, isLink: false },
               ].map((item) => (
                 <div key={item.k} style={{ backgroundColor: "var(--surface)", border: "1px solid var(--border)", borderRadius: 14, padding: "16px 20px" }}>
                   <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>{item.k}</div>
                   {item.isLink ? (
                     <a href={`mailto:${item.v}`} style={{ fontFamily: mono, fontSize: 13, color: "var(--accent)", textDecoration: "none" }}>{item.v}</a>
                   ) : (
-                    <>
-                      <div style={{ fontSize: 14, color: "var(--text)", marginBottom: 2 }}>{item.v}</div>
-                      {item.d && <div style={{ fontSize: 12, color: "var(--text)" }}>{item.d}</div>}
-                    </>
+                    <div style={{ fontSize: 14, color: "var(--text)" }}>{item.v}</div>
                   )}
                 </div>
               ))}
@@ -115,21 +112,21 @@ export default function Contact() {
               </div>
 
               <div>
-                <label style={label}>Project Type</label>
+                <label style={label}>Inquiry Type</label>
                 <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}>
                   <option value="">Select type...</option>
-                  <option value="Full Stack App">Full Stack App</option>
-                  <option value="Frontend / UI">Frontend / UI</option>
-                  <option value="API / Backend">API / Backend</option>
-                  <option value="Consulting">Consulting</option>
+                  <option value="Internship Opportunity">Internship Opportunity</option>
+                  <option value="Job Opportunity">Job Opportunity</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="Project Inquiry">Project Inquiry</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
 
               <div>
-                <label style={label}>Project Details</label>
-                <textarea required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Describe your project, timeline, and goals..." style={{ ...inputStyle, resize: "none" }}
+                <label style={label}>Message</label>
+                <textarea required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tell me about the opportunity or project..." style={{ ...inputStyle, resize: "none" }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
               </div>
 

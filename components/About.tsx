@@ -29,15 +29,18 @@ export default function About() {
               fontSize: "clamp(30px, 4vw, 52px)", fontWeight: 800,
               lineHeight: 1.1, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 24,
             }}>
-              Building products where<br />
-              <span style={{ color: "var(--accent)" }}>design meets engineering.</span>
+              Building scalable and<br />
+              <span style={{ color: "var(--accent)" }}>maintainable applications.</span>
             </motion.h2>
 
             <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.85, marginBottom: 16, fontWeight: 500 }}>
               {personal.about.description1}
             </motion.p>
-            <motion.p {...a(0.25)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.85, marginBottom: 40, fontWeight: 500 }}>
+            <motion.p {...a(0.25)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.85, marginBottom: 16, fontWeight: 500 }}>
               {personal.about.description2}
+            </motion.p>
+            <motion.p {...a(0.28)} style={{ color: "var(--text-muted)", fontSize: "clamp(14px, 1.2vw, 16px)", lineHeight: 1.85, marginBottom: 40, fontWeight: 500, fontStyle: "italic" }}>
+              {personal.about.description3}
             </motion.p>
 
             {/* Stats */}
@@ -123,9 +126,9 @@ export default function About() {
               borderRadius: "var(--radius-lg)", padding: 24, marginBottom: 14,
             }}>
               <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>Current Focus</div>
-              <div style={{ fontSize: 15, color: "var(--text-secondary)", marginBottom: 24, fontWeight: 500 }}>Shipping quality fast</div>
+              <div style={{ fontSize: 15, color: "var(--text-secondary)", marginBottom: 24, fontWeight: 500 }}>Seeking internship & junior developer opportunities</div>
 
-              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>Growth Timeline</div>
+              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>Learning Journey</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 {personal.about.timeline.map((item, i) => (
                   <div key={item.year} style={{ display: "flex", alignItems: "center", gap: 12 }}>
