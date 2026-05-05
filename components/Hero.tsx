@@ -129,7 +129,7 @@ export default function Hero() {
           {[
             { label: "AVG. LIGHTHOUSE", value: 90, suffix: "+" },
             { label: "SYSTEMS SHIPPED", value: 7, suffix: "" },
-            { label: "YEARS BUILDING", value: 2, suffix: "" },
+            { label: "YEARS BUILDING", value: 2, suffix: "+" },
           ].map((s) => (
             <div key={s.label}>
               <div style={{ fontFamily: mono, fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>

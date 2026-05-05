@@ -2,7 +2,7 @@ export const personal = {
   name: "Amenti Liben",
   brand: "AMOL.",
   role: "Full-Stack Engineer",
-  tagline: "Building complete web\napplications from scratch",
+  tagline: "Building web applications\nfrom scratch",
   subtitle: "< Full-Stack Engineer />",
   description:
     "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, Python, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frameworks like Next.js and React. Delivering scalable solutions from database to user interface.",
@@ -25,7 +25,7 @@ export const personal = {
     stats: [
       { label: "SYSTEMS SHIPPED", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
-      { label: "YEARS BUILDING", value: "2" },
+      { label: "YEARS BUILDING", value: "2+" },
     ],
     principles: [
       {
@@ -291,7 +291,7 @@ export const education = {
   degree: "B.Sc. Software Engineering",
   university: "Haramaya University",
   period: "2024 — 2028",
-  standing: "3rd Year",
+  standing: "2nd Year",
   languages: [
     { name: "English", level: "PROFESSIONAL" },
     { name: "Afaan Oromoo", level: "NATIVE" },
