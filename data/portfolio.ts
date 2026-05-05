@@ -291,7 +291,7 @@ export const education = {
   degree: "B.Sc. Software Engineering",
   university: "Haramaya University",
   period: "2024 — 2028",
-  standing: "2nd Year",
+  standing: "3rd Year",
   languages: [
     { name: "English", level: "PROFESSIONAL" },
     { name: "Afaan Oromoo", level: "NATIVE" },
