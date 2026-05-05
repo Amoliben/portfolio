@@ -1,5 +1,5 @@
 export const personal = {
-  name: "Amol Iben",
+  name: "Amenti Liben",
   brand: "AMOL.",
   role: "Full-Stack Engineer & Digital Transformation Specialist",
   tagline: "Building web & mobile\napplications that matter",
