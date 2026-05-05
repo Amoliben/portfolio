@@ -1,10 +1,12 @@
-# Amol Iben - Professional Portfolio
+# Amenti Liben - Professional Portfolio
 
 A modern, responsive portfolio showcasing enterprise management systems and full-stack development expertise.
 
 ## 🌐 Live Demo
 
-Visit the live portfolio: [Coming Soon - Deploy to Vercel]
+**🚀 [DEPLOY NOW - See DEPLOY_NOW.md](./DEPLOY_NOW.md)**
+
+> **Important**: This portfolio is ready for deployment. Follow the 2-minute guide in `DEPLOY_NOW.md` to get your live URL.
 
 ## ✨ Features
 
@@ -292,4 +294,16 @@ Contributions are welcome! Feel free to fork and submit pull requests.
 **Last Updated**: May 5, 2026  
 **Version**: 1.0.0
 
-Made with ❤️ by Amol Iben
+Made with ❤️ by Amenti Liben
+
+---
+
+## 🚨 CRITICAL: Deploy Your Portfolio NOW
+
+**Your portfolio is NOT live yet!**
+
+Recruiters will NOT run your code locally. You need a live URL.
+
+**👉 Follow the 2-minute guide: [DEPLOY_NOW.md](./DEPLOY_NOW.md)**
+
+It takes 2 minutes to deploy to Vercel and get a professional live URL.
