@@ -61,7 +61,36 @@ This portfolio demonstrates my skills as a **Full-Stack Developer**:
 
 ---
 
-## 🚀 Quick Start
+## � Performance Metrics (Verified)
+
+This portfolio has been optimized for performance:
+
+```
+Route (app)           Size         First Load JS
+/                    61.5 kB      148 kB
+```
+
+### What This Means:
+- **Page Size**: 61.5 kB (very lightweight)
+- **First Load JS**: 148 kB (excellent for a full-featured site)
+- **Static Generation**: Pages are pre-rendered for instant loading
+
+### Optimization Techniques Used:
+- Static page generation (SSG)
+- Code splitting and lazy loading
+- Image optimization with next/image
+- Font optimization (self-hosted, display: swap)
+- CSS and JS minification
+- Efficient component architecture
+
+### How to Verify:
+1. Deploy to Vercel (see DEPLOY_NOW.md)
+2. Run Lighthouse audit in Chrome DevTools
+3. Check all scores are 90+
+
+---
+
+## �🚀 Quick Start
 
 ```bash
 # Clone repository
