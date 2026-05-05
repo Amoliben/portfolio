@@ -290,7 +290,7 @@ export const experience = [
 export const education = {
   degree: "B.Sc. Software Engineering",
   university: "Haramaya University",
-  period: "2023 — 2027",
+  period: "2024 — 2028",
   standing: "3rd Year",
   languages: [
     { name: "English", level: "PROFESSIONAL" },
