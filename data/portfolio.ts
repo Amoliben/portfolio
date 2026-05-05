@@ -2,7 +2,7 @@ export const personal = {
   name: "Amol Iben",
   brand: "AMOL.",
   role: "Full-Stack Engineer & Digital Transformation Specialist",
-  tagline: "Building enterprise\nsystems that scale.",
+  tagline: "Building web & mobile\napplications that matter",
   subtitle: "< Full-Stack Engineer />",
   description:
     "I architect and ship production-grade enterprise management systems — from database design to pixel-perfect UI. Specializing in Next.js, TypeScript, Flutter, and scalable backend services for mission-critical operations.",

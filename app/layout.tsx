@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/contexts/ThemeContext";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
@@ -67,10 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script async src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
       </head>
       <body>
-        <ThemeProvider>
-          <ScrollProgress />
-          {children}
-        </ThemeProvider>
+        <ScrollProgress />
+        {children}
       </body>
     </html>
   );

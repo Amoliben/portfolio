@@ -2,13 +2,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { personal } from "@/data/portfolio";
-import ThemeToggle from "./ThemeToggle";
-
 const navLinks = [
   { label: "About",        href: "#about" },
   { label: "Skills",       href: "#skills" },
   { label: "Services",     href: "#services" },
-  { label: "Projects",     href: "#projects" },
+  { label: "Experience",   href: "#experience" },
   { label: "Contact",      href: "#contact" },
 ];
 
@@ -100,7 +98,6 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="nav-cta">
-            <ThemeToggle />
             <a href={personal.github} target="_blank" rel="noopener noreferrer"
               style={{ fontFamily: mono, fontSize: 12, color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
@@ -180,7 +177,6 @@ export default function Navbar() {
                 })}
               </div>
               <div style={{ padding: "20px 24px", borderTop: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: 12 }}>
-                <ThemeToggle />
                 <a href={`mailto:${personal.email}`} className="btn-primary" style={{ textAlign: "center", justifyContent: "center" }}>
                   Hire Me
                 </a>

@@ -31,19 +31,14 @@ export default function Footer() {
             Ready to Build
           </motion.div>
           <motion.h2 {...a(0.1)} style={{ fontSize: "clamp(22px, 4vw, 40px)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: 14 }}>
-            Need a fast, modern<br /><span style={{ color: "#e8ff47" }}>product experience?</span>
+            Need a fast, modern<br /><span style={{ color: "var(--accent)" }}>product experience?</span>
           </motion.h2>
           <motion.p {...a(0.2)} style={{ color: "var(--text-muted)", fontSize: 15, lineHeight: 1.7, marginBottom: 28 }}>
             I help teams design and ship polished web products with strong UX and measurable performance.
           </motion.p>
-          <motion.a {...a(0.3)} href={`mailto:${personal.email}`} style={{
-            fontFamily: mono, fontWeight: 600, fontSize: 13, letterSpacing: "0.05em",
-            backgroundColor: "#e8ff47", color: "#000", padding: "14px 32px", borderRadius: 9999,
-            textDecoration: "none", display: "inline-block", transition: "background-color 0.2s",
-          }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4eb3a")}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#e8ff47")}
-          >START A PROJECT</motion.a>
+          <motion.a {...a(0.3)} href={`mailto:${personal.email}`} className="btn-primary" style={{ padding: "14px 32px" }}>
+            START A PROJECT
+          </motion.a>
         </div>
       </div>
 
@@ -51,13 +46,13 @@ export default function Footer() {
       <div style={{ maxWidth: 1600, margin: "0 auto", padding: "56px 64px 28px" }}>
         <div className="footer-grid">
           <div>
-            <div style={{ fontFamily: mono, fontWeight: 900, fontSize: 20, color: "#e8ff47", marginBottom: 12, letterSpacing: "0.1em" }}>AMOL.</div>
+            <div style={{ fontFamily: mono, fontWeight: 900, fontSize: 20, color: "var(--accent)", marginBottom: 12, letterSpacing: "0.1em" }}>AMOL.</div>
             <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 12 }}>
               Full-stack engineer specializing in enterprise management systems and digital transformation. Building quality experiences from concept to launch.
             </p>
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 4 }}>📍 {personal.location}</div>
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 8 }}>Typically replies {personal.responseTime}</div>
-            <a href={`mailto:${personal.email}`} style={{ fontFamily: mono, fontSize: 11, color: "#e8ff47", textDecoration: "none" }}>{personal.email}</a>
+            <a href={`mailto:${personal.email}`} style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", textDecoration: "none" }}>{personal.email}</a>
           </div>
 
           <div>

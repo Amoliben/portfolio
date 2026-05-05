@@ -76,8 +76,12 @@ export default function Hero() {
           fontWeight: 800, lineHeight: 1.02,
           letterSpacing: "-0.03em", marginBottom: 24, color: "var(--text)",
         }}>
-          Enterprise systems<br />
-          <span style={{ color: "var(--accent)" }} className="text-glow">that scale.</span>
+          {personal.tagline.split('\n').map((line, i, arr) => (
+            <span key={i}>
+              {i === 1 ? <span style={{ color: "var(--accent)" }} className="text-glow">{line}.</span> : line}
+              {i < arr.length - 1 && <br />}
+            </span>
+          ))}
         </motion.h1>
 
         {/* Role tag */}
@@ -102,7 +106,7 @@ export default function Hero() {
 
         {/* CTAs */}
         <motion.div {...fadeUp(0.5)} className="hero-ctas">
-          <a href="#projects" className="btn-primary">
+          <a href="#experience" className="btn-primary">
             EXPLORE WORK
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>

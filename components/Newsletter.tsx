@@ -85,7 +85,7 @@ export default function Newsletter() {
               }}
               onMouseEnter={(e) => {
                 if (!subscribed) {
-                  e.currentTarget.style.backgroundColor = "#d4eb3a";
+                  e.currentTarget.style.filter = "brightness(1.1)";
                 }
               }}
               onMouseLeave={(e) => {

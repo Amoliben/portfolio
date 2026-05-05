@@ -27,7 +27,7 @@ export default function Experience() {
         </motion.div>
 
         <motion.h2 {...a(0.1)} style={{ fontSize: "clamp(32px, 4.5vw, 56px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: 16 }}>
-          Experience shaped by<br /><span style={{ color: "#e8ff47" }}>real product delivery.</span>
+          Experience shaped by<br /><span style={{ color: "var(--accent)" }}>real product delivery.</span>
         </motion.h2>
 
         <motion.p {...a(0.2)} style={{ color: "var(--text-muted)", fontSize: "clamp(15px, 1.4vw, 17px)", lineHeight: 1.75, maxWidth: 580, marginBottom: 40 }}>
@@ -42,7 +42,7 @@ export default function Experience() {
             { label: "MAIN FOCUS", value: "Web UX" },
           ].map((s) => (
             <div key={s.label} style={card}>
-              <div style={{ fontFamily: mono, fontSize: 20, fontWeight: 700, color: "#e8ff47", lineHeight: 1 }}>{s.value}</div>
+              <div style={{ fontFamily: mono, fontSize: 20, fontWeight: 700, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
               <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 6, textTransform: "uppercase" }}>{s.label}</div>
             </div>
           ))}
@@ -62,7 +62,7 @@ export default function Experience() {
                   <span style={{
                     fontFamily: mono, fontSize: 9, padding: "3px 8px", borderRadius: 4,
                     border: exp.status === "ACTIVE" ? "1px solid rgba(74,222,128,0.3)" : "1px solid var(--border)",
-                    color: exp.status === "ACTIVE" ? "#4ade80" : "var(--text-subtle)",
+                    color: exp.status === "ACTIVE" ? "var(--green)" : "var(--text-subtle)",
                     backgroundColor: exp.status === "ACTIVE" ? "rgba(74,222,128,0.06)" : "transparent",
                   }}>{exp.status}</span>
                 </div>
@@ -73,7 +73,7 @@ export default function Experience() {
               <ul style={{ listStyle: "none", marginBottom: 18, display: "flex", flexDirection: "column", gap: 6 }}>
                 {exp.bullets.map((b) => (
                   <li key={b} style={{ fontSize: 13, color: "var(--text-muted)", display: "flex", gap: 8, alignItems: "flex-start" }}>
-                    <span style={{ color: "#e8ff47", flexShrink: 0, marginTop: 2 }}>•</span>{b}
+                    <span style={{ color: "var(--accent)", flexShrink: 0, marginTop: 2 }}>•</span>{b}
                   </li>
                 ))}
               </ul>
@@ -81,7 +81,7 @@ export default function Experience() {
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 14 }}>
                 {exp.metrics.map((m) => (
                   <div key={m.label} style={{ backgroundColor: "var(--bg)", border: "1px solid var(--border)", borderRadius: 10, padding: "10px 14px" }}>
-                    <div style={{ fontFamily: mono, fontSize: 14, fontWeight: 700, color: "#e8ff47", lineHeight: 1 }}>{m.value}</div>
+                    <div style={{ fontFamily: mono, fontSize: 14, fontWeight: 700, color: "var(--accent)", lineHeight: 1 }}>{m.value}</div>
                     <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.1em", marginTop: 4, textTransform: "uppercase" }}>{m.label}</div>
                   </div>
                 ))}
@@ -105,7 +105,7 @@ export default function Experience() {
               <div style={{ fontSize: 13, color: "var(--text-muted)", marginTop: 4 }}>{education.university} • {education.period}</div>
             </div>
             <div style={{ backgroundColor: "var(--bg)", border: "1px solid var(--border)", borderRadius: 10, padding: "10px 14px" }}>
-              <div style={{ fontFamily: mono, fontSize: 14, fontWeight: 700, color: "#e8ff47", lineHeight: 1 }}>{education.standing}</div>
+              <div style={{ fontFamily: mono, fontSize: 14, fontWeight: 700, color: "var(--accent)", lineHeight: 1 }}>{education.standing}</div>
               <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.1em", marginTop: 4, textTransform: "uppercase" }}>Academic Standing</div>
             </div>
           </div>

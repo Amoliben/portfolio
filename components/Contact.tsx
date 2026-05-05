@@ -50,7 +50,7 @@ export default function Contact() {
           {/* Left */}
           <div>
             <motion.h2 {...a(0.1)} style={{ fontSize: "clamp(32px, 4.5vw, 56px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: 20 }}>
-              Let&apos;s build something<br /><span style={{ color: "#e8ff47" }}>useful and beautiful.</span>
+              Let&apos;s build something<br /><span style={{ color: "var(--accent)" }}>useful and beautiful.</span>
             </motion.h2>
 
             <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.4vw, 17px)", lineHeight: 1.75, marginBottom: 32, fontWeight: 500 }}>
@@ -66,7 +66,7 @@ export default function Contact() {
                 <div key={item.k} style={{ backgroundColor: "var(--surface)", border: "1px solid var(--border)", borderRadius: 14, padding: "16px 20px" }}>
                   <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>{item.k}</div>
                   {item.isLink ? (
-                    <a href={`mailto:${item.v}`} style={{ fontFamily: mono, fontSize: 13, color: "#e8ff47", textDecoration: "none" }}>{item.v}</a>
+                    <a href={`mailto:${item.v}`} style={{ fontFamily: mono, fontSize: 13, color: "var(--accent)", textDecoration: "none" }}>{item.v}</a>
                   ) : (
                     <>
                       <div style={{ fontSize: 14, color: "var(--text)", marginBottom: 2 }}>{item.v}</div>
@@ -87,7 +87,7 @@ export default function Contact() {
               ].map((l) => (
                 <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
                   style={{ fontFamily: mono, fontSize: 12, border: "1px solid var(--border)", color: "var(--text-muted)", padding: "8px 16px", borderRadius: 9999, textDecoration: "none", transition: "all 0.2s" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#e8ff47"; e.currentTarget.style.color = "#e8ff47"; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
                 >{l.label} ↗</a>
               ))}
@@ -133,16 +133,12 @@ export default function Contact() {
                   onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
               </div>
 
-              <button type="submit" style={{
-                fontFamily: mono, fontWeight: 600, fontSize: 13, letterSpacing: "0.05em",
-                backgroundColor: sent ? "var(--surface)" : "#e8ff47",
-                color: sent ? "#e8ff47" : "#000",
-                border: sent ? "1px solid #e8ff47" : "none",
-                padding: 16, borderRadius: 12, cursor: "pointer", transition: "all 0.2s", width: "100%",
-              }}
-                onMouseEnter={(e) => { if (!sent) e.currentTarget.style.backgroundColor = "#d4eb3a"; }}
-                onMouseLeave={(e) => { if (!sent) e.currentTarget.style.backgroundColor = "#e8ff47"; }}
-              >{sent ? "MESSAGE SENT ✓" : "SEND MESSAGE"}</button>
+              <button type="submit" className="btn-primary" style={{
+                width: "100%", justifyContent: "center", padding: 16, borderRadius: 12,
+                opacity: sent ? 0.7 : 1,
+              }}>
+                {sent ? "MESSAGE SENT ✓" : "SEND MESSAGE"}
+              </button>
             </form>
           </motion.div>
         </div>
