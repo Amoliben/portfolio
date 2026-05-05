@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>© 2026 Amol Iben. Crafted with intent.</div>
+          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>© 2026 Amenti Libne. Crafted with intent.</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
             {["NEXT.JS 14", "TYPESCRIPT", "TAILWIND", "FRAMER MOTION"].map((t) => (
               <span key={t} style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.05em" }}>{t}</span>
