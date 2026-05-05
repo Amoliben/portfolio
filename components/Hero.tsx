@@ -57,7 +57,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="container" style={{ position: "relative", padding: "100px 48px 80px" }}>
+      <div className="container hero-container" style={{ position: "relative" }}>
 
         {/* Status badge */}
         <motion.div {...fadeUp(0.1)} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 36 }}>
@@ -65,7 +65,7 @@ export default function Hero() {
             width: 8, height: 8, borderRadius: "50%", backgroundColor: "var(--green)",
             display: "inline-block", flexShrink: 0,
           }} />
-          <span style={{ fontFamily: mono, fontSize: 11, letterSpacing: "0.22em", color: "var(--text-secondary)", textTransform: "uppercase" }}>
+          <span style={{ fontFamily: mono, fontSize: "clamp(10px, 2vw, 11px)", letterSpacing: "0.22em", color: "var(--text-secondary)", textTransform: "uppercase" }}>
             {personal.availability}
           </span>
         </motion.div>
