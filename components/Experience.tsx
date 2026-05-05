@@ -37,7 +37,7 @@ export default function Experience() {
         {/* Summary stats */}
         <motion.div {...a(0.25)} className="exp-stats">
           {[
-            { label: "YEARS BUILDING", value: "3+" },
+            { label: "YEARS BUILDING", value: "2+" },
             { label: "SYSTEMS BUILT", value: "7" },
             { label: "MAIN FOCUS", value: "Enterprise" },
           ].map((s) => (

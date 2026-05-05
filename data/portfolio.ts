@@ -42,8 +42,8 @@ export const personal = {
       },
     ],
     timeline: [
-      { year: "2023", event: "Started professional software development journey" },
-      { year: "2024", event: "Built first enterprise management system (School Management)" },
+      { year: "2024", event: "Started professional software development journey" },
+      { year: "2024-Q3", event: "Built first enterprise management system (School Management)" },
       { year: "2025", event: "Expanded to 7 systems across multiple sectors" },
       { year: "2026", event: "Advancing full-stack expertise with Node.js, Python & Laravel" },
     ],
@@ -268,7 +268,7 @@ export const experience = [
     title: "Full-Stack Engineer",
     company: "Freelance & Open Source",
     type: "Remote",
-    period: "2023 — PRESENT",
+    period: "2024 — PRESENT",
     status: "ACTIVE",
     desc: "Building enterprise management systems with robust backends, RESTful APIs, and responsive frontends for education, healthcare, hospitality, and government sectors.",
     bullets: [
