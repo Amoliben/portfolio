@@ -134,7 +134,7 @@ export default function Navbar() {
             <motion.div
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               onClick={() => setMenuOpen(false)}
-              style={{ position: "fixed", inset: 0, zIndex: 38, backgroundColor: "rgba(0,0,0,0.6)", backdropFilter: "blur(4px)" }}
+              style={{ position: "fixed", inset: 0, zIndex: 55, backgroundColor: "rgba(0,0,0,0.6)", backdropFilter: "blur(4px)" }}
             />
             <motion.div
               initial={{ opacity: 0, x: "100%" }} animate={{ opacity: 1, x: 0 }}
@@ -143,7 +143,7 @@ export default function Navbar() {
               className="mobile-menu"
               style={{
                 position: "fixed", top: 0, right: 0, bottom: 0, width: "min(320px, 85vw)",
-                zIndex: 40, backgroundColor: "var(--surface)",
+                zIndex: 60, backgroundColor: "var(--surface)",
                 borderLeft: "1px solid var(--border)",
                 display: "flex", flexDirection: "column",
               }}
