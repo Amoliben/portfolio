@@ -288,7 +288,7 @@ export const experience = [
     title: "Full-Stack Developer",
     company: "Freelance",
     type: "Remote",
-    period: "2023 — 2024",
+    period: "2025 — 2026",
     status: "COMPLETED",
     desc: "Developed complete web applications from scratch, handling both frontend and backend development. Built databases, APIs, authentication systems, and user interfaces for startups and small businesses.",
     bullets: [
