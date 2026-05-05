@@ -1,11 +1,11 @@
 export const personal = {
   name: "Amenti Liben",
   brand: "AMOL.",
-  role: "Full-Stack Engineer & Digital Transformation Specialist",
-  tagline: "Building web & mobile\napplications that matter",
-  subtitle: "< Full-Stack Engineer />",
+  role: "Backend Engineer & API Architect",
+  tagline: "Building scalable backend\nsystems that power applications",
+  subtitle: "< Backend Engineer />",
   description:
-    "I architect and ship production-grade enterprise management systems — from database design to pixel-perfect UI. Specializing in Next.js, TypeScript, Flutter, and scalable backend services for mission-critical operations.",
+    "I architect and build production-grade backend systems and APIs — from database design to scalable microservices. Specializing in Node.js, PostgreSQL, REST/GraphQL APIs, and robust backend infrastructure for mission-critical operations.",
   location: "Addis Ababa, Ethiopia",
   availability: "Available for enterprise projects & contracts",
   responseTime: "within 24 hours",
@@ -19,9 +19,9 @@ export const personal = {
   resume: "/resume.pdf",
   about: {
     description1:
-      "I'm a full-stack engineer based in Ethiopia specializing in enterprise management systems and digital transformation. I architect and build scalable web and mobile solutions for education, healthcare, hospitality, logistics, pharmacy, wholesale, and government sectors.",
+      "I'm a backend engineer based in Ethiopia specializing in API development, database architecture, and scalable server-side systems. I build robust backend solutions for enterprise management systems across education, healthcare, hospitality, logistics, pharmacy, wholesale, and government sectors.",
     description2:
-      "I focus on building reliable, secure systems that handle complex business logic, real-time data, and mission-critical operations. Code quality, security, performance, and user experience are my top priorities.",
+      "I focus on building reliable, secure backend systems that handle complex business logic, real-time data processing, and mission-critical operations. Database optimization, API design, security, and system performance are my top priorities.",
     stats: [
       { label: "SYSTEMS SHIPPED", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
@@ -29,25 +29,25 @@ export const personal = {
     ],
     principles: [
       {
-        title: "ENTERPRISE ARCHITECTURE",
-        desc: "I design systems for scale — clear data models, role-based access control, audit trails, and compliance-ready infrastructure for mission-critical operations.",
+        title: "SCALABLE ARCHITECTURE",
+        desc: "I design backend systems for scale — optimized database schemas, efficient APIs, caching strategies, and distributed systems architecture for high-performance operations.",
       },
       {
-        title: "RELIABILITY & SECURITY",
-        desc: "Data integrity, encryption, backup strategies, and monitoring are built in from day one. Systems must be secure, recoverable, and compliant with regulations.",
+        title: "SECURITY & RELIABILITY",
+        desc: "Data integrity, encryption, authentication, authorization, and monitoring are built in from day one. Backend systems must be secure, fault-tolerant, and production-ready.",
       },
       {
-        title: "OWNERSHIP MINDSET",
-        desc: "I take full responsibility from spec to deployment — including monitoring, documentation, training, and iterating based on real usage data.",
+        title: "API-FIRST DESIGN",
+        desc: "I build clean, well-documented RESTful and GraphQL APIs that are easy to integrate, maintain, and scale. API design and performance optimization are core priorities.",
       },
     ],
     timeline: [
-      { year: "2024", event: "Started building full-stack applications professionally" },
-      { year: "2024-Q3", event: "Built first enterprise management system (School)" },
-      { year: "2025", event: "Expanded to 7 enterprise systems across sectors" },
-      { year: "2026", event: "Focused on digital transformation & government digitalization" },
+      { year: "2024", event: "Started building backend systems professionally" },
+      { year: "2024-Q3", event: "Built first enterprise backend API (School Management)" },
+      { year: "2025", event: "Expanded to 7 backend systems across sectors" },
+      { year: "2026", event: "Focused on API architecture & microservices" },
     ],
-    tags: ["ENTERPRISE SYSTEMS", "DIGITAL TRANSFORMATION", "REAL-TIME SYSTEMS", "COMPLIANCE-READY"],
+    tags: ["BACKEND SYSTEMS", "API DEVELOPMENT", "DATABASE ARCHITECTURE", "MICROSERVICES"],
   },
 };
 
