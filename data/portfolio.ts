@@ -5,7 +5,7 @@ export const personal = {
   tagline: "Building complete web\napplications from scratch",
   subtitle: "< Full-Stack Engineer />",
   description:
-    "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frameworks like Next.js and React. Delivering scalable solutions from database to user interface.",
+    "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, Python, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frameworks like Next.js and React. Delivering scalable solutions from database to user interface.",
   location: "Addis Ababa, Ethiopia",
   availability: "Available for enterprise projects & contracts",
   responseTime: "within 24 hours",
@@ -56,7 +56,7 @@ export const skills = {
     groups: 4,
     avgProficiency: "82%",
     topStack: "Next.js + TS",
-    strengths: ["NEXT.JS", "REACT", "TYPESCRIPT", "TAILWIND", "NODE.JS", "POSTGRESQL", "FLUTTER"],
+    strengths: ["NEXT.JS", "REACT", "TYPESCRIPT", "TAILWIND", "NODE.JS", "PYTHON", "POSTGRESQL", "FLUTTER"],
   },
   categories: [
     {
@@ -92,6 +92,7 @@ export const skills = {
       desc: "RESTful and GraphQL APIs, relational data modeling, auth systems, and production-grade server architecture.",
       items: [
         { name: "Node.js", level: 82 },
+        { name: "Python", level: 80 },
         { name: "PHP (Laravel)", level: 85 },
         { name: "PostgreSQL", level: 80 },
         { name: "Prisma ORM", level: 80 },
@@ -112,7 +113,7 @@ export const skills = {
     },
   ],
   techStack: [
-    "NODE.JS", "PHP", "LARAVEL", "POSTGRESQL",
+    "NODE.JS", "PYTHON", "PHP", "LARAVEL", "POSTGRESQL",
     "PRISMA", "DOCKER", "REST API", "TYPESCRIPT",
     "NEXT.JS", "REACT", "TAILWIND", "FLUTTER",
   ],
@@ -273,7 +274,7 @@ export const experience = [
     bullets: [
       "Built 7 enterprise management systems (School, Hospital, Hotel, Pharmacy, Wholesale, Delivery, Government) handling 500+ concurrent users.",
       "Designed PostgreSQL schemas with optimized queries, proper relationships, and data integrity constraints for complex business logic.",
-      "Developed RESTful APIs with Node.js and Laravel handling authentication, authorization, real-time features, and third-party integrations.",
+      "Developed RESTful APIs with Node.js, Python, and Laravel handling authentication, authorization, real-time features, and third-party integrations.",
       "Created responsive interfaces with Next.js and React, ensuring seamless backend integration and excellent user experience.",
       "Improved system performance by 35% through database optimization, API caching (Redis), and frontend optimization.",
     ],
@@ -282,7 +283,7 @@ export const experience = [
       { label: "CONCURRENT USERS", value: "500+" },
       { label: "UPTIME", value: "99.5%" },
     ],
-    tech: ["NODE.JS", "LARAVEL", "POSTGRESQL", "PRISMA", "NEXT.JS", "REACT", "REDIS", "DOCKER"],
+    tech: ["NODE.JS", "PYTHON", "LARAVEL", "POSTGRESQL", "PRISMA", "NEXT.JS", "REACT", "REDIS", "DOCKER"],
   },
   {
     title: "Full-Stack Developer",
@@ -302,7 +303,7 @@ export const experience = [
       { label: "CLIENTS", value: "4" },
       { label: "PROJECTS", value: "4" },
     ],
-    tech: ["NODE.JS", "LARAVEL", "POSTGRESQL", "REACT", "GIT"],
+    tech: ["NODE.JS", "PYTHON", "LARAVEL", "POSTGRESQL", "REACT", "GIT"],
   },
 ];
 
@@ -370,7 +371,7 @@ export const services = [
   {
     id: 4,
     title: "Backend & API Development",
-    description: "Scalable backends with Node.js and Laravel, PostgreSQL databases, real-time features, authentication, and production-grade infrastructure.",
+    description: "Scalable backends with Node.js, Python, and Laravel, PostgreSQL databases, real-time features, authentication, and production-grade infrastructure.",
     features: ["REST/GraphQL APIs", "Database Design", "Authentication & Auth", "Real-time Systems", "Monitoring & Logging"],
     icon: "🔧",
   },
