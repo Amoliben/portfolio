@@ -1,8 +1,14 @@
-# Amenti Liben - Full-Stack Engineer
+# Hi, I'm Amenti Liben 👋
 
-🚀 Modern, responsive portfolio showcasing enterprise management systems and full-stack development expertise.
+I'm a **Full-Stack Developer** based in Ethiopia, focused on building scalable web applications with modern technologies.
 
-Built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
+I specialize in **Node.js**, **Python**, **PHP (Laravel)**, **PostgreSQL**, and **React/Next.js**. I build complete applications from database design to user interface.
+
+**Currently looking for**: Entry-level/full-stack opportunities where I can contribute to meaningful projects and grow as a developer.
+
+---
+
+🚀 Built this portfolio to showcase my skills in **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
 
 ---
 
@@ -14,44 +20,44 @@ Built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 What I Work With
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Deployment**: Vercel-ready
+### Frontend
+- **Next.js** / **React** - Building modern web apps
+- **TypeScript** - Type-safe code
+- **Tailwind CSS** - Responsive styling
+- **Framer Motion** - Smooth animations
+
+### Backend
+- **Node.js** - Server-side JavaScript
+- **Python** - Scripting and APIs
+- **PHP (Laravel)** - Web application development
+- **PostgreSQL** / **MongoDB** - Database design and management
+
+### Tools & Platforms
+- **Git** - Version control
+- **Docker** - Containerization
+- **Vercel** - Deployment
+- **Flutter** - Mobile apps (iOS & Android)
 
 ---
 
-## 📌 What I Built
+## 📌 What I'm Building
 
-This portfolio showcases my full-stack development skills through:
+This portfolio demonstrates my skills as a **Full-Stack Developer**:
 
-### ✅ **Portfolio Website** (This Site!)
-- **Problem**: Need a professional online presence
-- **Solution**: Modern, responsive portfolio with smooth animations
-- **Tech**: Next.js 14, TypeScript, Tailwind CSS, Framer Motion
-- **Live**: [Deploy to see it live](./DEPLOY_NOW.md)
-- **Features**: 90+ Lighthouse score, fully responsive, SEO optimized
+### This Portfolio Website
+- Built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, **Framer Motion**
+- 90+ Lighthouse score, fully responsive, SEO optimized
+- Shows what I can create with modern web technologies
 
-### ✅ **Full-Stack Expertise**
-- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Python, PHP (Laravel)
-- **Database**: PostgreSQL, Prisma ORM, MongoDB
-- **Mobile**: Flutter (iOS & Android)
-- **DevOps**: Docker, Git, Vercel
+### My Focus
+- Building complete applications (frontend + backend)
+- Database design and optimization
+- Clean, maintainable code
+- Performance and user experience
 
-### ✅ **Skills Demonstrated**
-- Responsive UI/UX design
-- Performance optimization
-- TypeScript type safety
-- Modern React patterns
-- Component architecture
-- Animation implementation
-- SEO best practices
-
-> **Note**: I'm actively building enterprise management systems and will add live demos as they're deployed.
+> I'm actively building real-world projects and will add live demos as they're deployed.
 
 ---
 
@@ -138,14 +144,19 @@ portfolio/
 
 ---
 
-## 📫 Contact
+## 📫 Let's Connect
 
-- **Email**: amentiliben454@gmail.com
-- **Phone**: +251917397648
-- **Location**: Addis Ababa, Ethiopia
+I'm always open to:
+- 💬 Chat about web development
+- 🤝 Collaborating on projects
+- 💼 Job opportunities and internships
+- 📚 Learning from other developers
 
-### Connect with Me
+**Email**: amentiliben454@gmail.com  
+**Phone**: +251917397648  
+**Location**: Addis Ababa, Ethiopia  
 
+### Find Me On
 - [GitHub](https://github.com/Amoliben)
 - [LinkedIn](https://www.linkedin.com/in/amenti-liben-51233a378)
 - [Telegram](https://t.me/Amoliben)
@@ -161,22 +172,23 @@ Haramaya University | 2024 — 2028
 
 ---
 
-## 💼 Experience
+## 💼 My Journey
 
-**Full-Stack Engineer** | Freelance & Open Source | 2024 — Present
+### Full-Stack Developer (Freelance) | 2024 — Present
+- Building web applications using modern technologies
+- Working with **Node.js**, **Python**, **PHP (Laravel)**, **PostgreSQL**
+- Creating responsive interfaces with **React** and **Next.js**
+- Learning and improving every day
 
-- Building enterprise management systems with modern tech stack
-- Developing RESTful APIs with Node.js, Python, and Laravel
-- Creating responsive interfaces with Next.js and React
-- Working with PostgreSQL, Prisma ORM, and MongoDB
-- Implementing authentication, real-time features, and integrations
+### Currently Learning
+- Advanced TypeScript patterns
+- System design and architecture
+- More about DevOps and deployment
 
-**Focus Areas**:
-- Full-stack web application development
-- Database design and optimization
-- API development and integration
-- Mobile app development with Flutter
-- Performance optimization
+### What I'm Looking For
+- Opportunities to contribute to real projects
+- Mentorship and learning opportunities
+- Team collaboration experience
 
 ---
 
