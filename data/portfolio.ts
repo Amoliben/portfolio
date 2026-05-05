@@ -5,7 +5,7 @@ export const personal = {
   tagline: "Building complete web\napplications from scratch",
   subtitle: "< Full-Stack Engineer />",
   description:
-    "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frontend frameworks like Next.js and React. Delivering complete solutions from database to user interface.",
+    "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frameworks like Next.js and React. Delivering scalable solutions from database to user interface.",
   location: "Addis Ababa, Ethiopia",
   availability: "Available for enterprise projects & contracts",
   responseTime: "within 24 hours",
@@ -19,9 +19,9 @@ export const personal = {
   resume: "/resume.pdf",
   about: {
     description1:
-      "I'm a full-stack engineer based in Ethiopia specializing in building complete web applications. I work across the entire stack — from designing databases and building APIs to creating responsive user interfaces. I build scalable solutions for enterprise management systems across education, healthcare, hospitality, logistics, and government sectors.",
+      "I'm a full-stack engineer based in Ethiopia specializing in web and mobile applications. I work across the entire stack — from database architecture and API design to responsive user interfaces. I build scalable solutions for enterprise management systems across education, healthcare, hospitality, logistics, and government sectors.",
     description2:
-      "I focus on delivering end-to-end solutions that work seamlessly from frontend to backend. Database design, API development, authentication systems, and user interface implementation are all part of my expertise. Code quality, security, performance, and user experience are my priorities.",
+      "My focus is on delivering solutions that work seamlessly across all layers. Clean code, security, performance, and user experience are my priorities in every project.",
     stats: [
       { label: "SYSTEMS SHIPPED", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
@@ -30,15 +30,15 @@ export const personal = {
     principles: [
       {
         title: "FULL-STACK EXPERTISE",
-        desc: "I build complete applications from database to UI — designing schemas, creating APIs, implementing authentication, and building responsive interfaces that work together seamlessly.",
+        desc: "Building applications from database to UI — schema design, API development, authentication, and responsive interfaces that work together seamlessly.",
       },
       {
-        title: "END-TO-END DELIVERY",
-        desc: "From requirements to deployment, I handle the entire development lifecycle. Database design, backend logic, frontend implementation, testing, and production deployment.",
+        title: "SCALABLE ARCHITECTURE",
+        desc: "From requirements to deployment, I handle the entire development lifecycle with focus on scalability, maintainability, and production readiness.",
       },
       {
         title: "QUALITY & PERFORMANCE",
-        desc: "Clean code, optimized queries, fast APIs, and smooth user interfaces. Security, scalability, and maintainability are built in from the start.",
+        desc: "Optimized queries, fast APIs, and smooth user interfaces. Security and best practices are built in from day one.",
       },
     ],
     timeline: [
@@ -269,13 +269,13 @@ export const experience = [
     type: "Remote",
     period: "2024 — PRESENT",
     status: "ACTIVE",
-    desc: "Building complete full-stack applications from database design to user interfaces. Developing enterprise management systems with robust backends, RESTful APIs, and responsive frontends for education, healthcare, hospitality, and government sectors.",
+    desc: "Building enterprise management systems with robust backends, RESTful APIs, and responsive frontends for education, healthcare, hospitality, and government sectors.",
     bullets: [
-      "Built 7 complete enterprise management systems (School, Hospital, Hotel, Pharmacy, Wholesale, Delivery, Government) handling 500+ concurrent users.",
-      "Designed PostgreSQL database schemas with optimized queries, proper relationships, and data integrity constraints for complex business logic.",
+      "Built 7 enterprise management systems (School, Hospital, Hotel, Pharmacy, Wholesale, Delivery, Government) handling 500+ concurrent users.",
+      "Designed PostgreSQL schemas with optimized queries, proper relationships, and data integrity constraints for complex business logic.",
       "Developed RESTful APIs with Node.js and Laravel handling authentication, authorization, real-time features, and third-party integrations.",
-      "Created responsive frontend interfaces with Next.js and React, ensuring seamless integration with backend APIs and excellent user experience.",
-      "Improved overall system performance by 35% through database optimization, API caching (Redis), efficient queries, and frontend optimization.",
+      "Created responsive interfaces with Next.js and React, ensuring seamless backend integration and excellent user experience.",
+      "Improved system performance by 35% through database optimization, API caching (Redis), and frontend optimization.",
     ],
     metrics: [
       { label: "SYSTEMS BUILT", value: "7" },
@@ -288,12 +288,12 @@ export const experience = [
     title: "Full-Stack Developer",
     company: "Freelance",
     type: "Remote",
-    period: "2025 — 2026",
+    period: "2023 — 2024",
     status: "COMPLETED",
-    desc: "Developed complete web applications from scratch, handling both frontend and backend development. Built databases, APIs, authentication systems, and user interfaces for startups and small businesses.",
+    desc: "Developed web applications from scratch for startups and small businesses, handling both frontend and backend development.",
     bullets: [
-      "Delivered 4 complete full-stack projects from requirements gathering to production deployment.",
-      "Designed and implemented PostgreSQL databases with normalized schemas and optimized queries for data integrity and performance.",
+      "Delivered 4 full-stack projects from requirements gathering to production deployment.",
+      "Implemented PostgreSQL databases with normalized schemas and optimized queries for data integrity and performance.",
       "Built secure authentication systems with JWT, password hashing, session management, and role-based access control.",
       "Created responsive user interfaces with React and modern CSS frameworks, ensuring cross-browser compatibility and mobile responsiveness.",
     ],
@@ -349,28 +349,28 @@ export const services = [
   {
     id: 1,
     title: "Enterprise Management Systems",
-    description: "End-to-end development of mission-critical management systems for education, healthcare, hospitality, logistics, and government sectors. Includes architecture, security, compliance, and scalability.",
+    description: "Mission-critical management systems for education, healthcare, hospitality, logistics, and government sectors. Includes architecture, security, compliance, and scalability.",
     features: ["System Architecture", "Role-Based Access Control", "Real-Time Features", "Compliance & Audit Trails", "Multi-Tenant Support"],
     icon: "🏢",
   },
   {
     id: 2,
     title: "Full-Stack Product Development",
-    description: "Complete product engineering from architecture to deployment. I handle database design, API development, frontend implementation, mobile apps, and DevOps.",
+    description: "Product engineering from architecture to deployment. Database design, API development, frontend implementation, mobile apps, and DevOps.",
     features: ["System Architecture", "API Design", "Database Optimization", "CI/CD Setup", "Performance Tuning"],
     icon: "⚙️",
   },
   {
     id: 3,
     title: "Mobile App Development",
-    description: "Cross-platform iOS and Android apps using Flutter with native performance, beautiful UIs, and seamless user experiences. Perfect for management system mobile clients.",
+    description: "Cross-platform iOS and Android apps using Flutter with native performance and beautiful UIs. Perfect for management system mobile clients.",
     features: ["Flutter Development", "iOS & Android", "State Management", "Firebase Integration", "App Store Deployment"],
     icon: "📱",
   },
   {
     id: 4,
     title: "Backend & API Development",
-    description: "Scalable Node.js/Python backends with PostgreSQL, real-time features, authentication, and production-grade infrastructure for high-traffic systems.",
+    description: "Scalable backends with Node.js and Laravel, PostgreSQL databases, real-time features, authentication, and production-grade infrastructure.",
     features: ["REST/GraphQL APIs", "Database Design", "Authentication & Auth", "Real-time Systems", "Monitoring & Logging"],
     icon: "🔧",
   },
