@@ -2,7 +2,7 @@ export const personal = {
   name: "Amenti Liben",
   brand: "AMOL.",
   role: "Full-Stack Engineer",
-  tagline: "Building complete web\napplications end-to-end",
+  tagline: "Crafting digital experiences\nthat drive real impact",
   subtitle: "< Full-Stack Engineer />",
   description:
     "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frontend frameworks like Next.js and React. Delivering complete solutions from database to user interface.",
