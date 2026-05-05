@@ -64,9 +64,6 @@ export default function Services() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              {/* Icon */}
-              <div style={{ fontSize: 48, marginBottom: 20 }}>{service.icon}</div>
-
               {/* Title */}
               <h3 style={{
                 fontSize: "clamp(18px, 2.5vw, 22px)",
