@@ -1,0 +1,191 @@
+"use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { projects, personal } from "@/data/portfolio";
+
+const mono = "'JetBrains Mono', monospace";
+const filters = ["All", "Full Stack", "Frontend"];
+
+const gradients = [
+  "linear-gradient(135deg, rgba(232,255,71,0.14) 0%, rgba(0,200,150,0.08) 100%)",
+  "linear-gradient(135deg, rgba(100,160,255,0.14) 0%, rgba(180,100,255,0.08) 100%)",
+  "linear-gradient(135deg, rgba(255,140,80,0.14) 0%, rgba(232,255,71,0.06) 100%)",
+  "linear-gradient(135deg, rgba(80,220,200,0.14) 0%, rgba(100,160,255,0.08) 100%)",
+  "linear-gradient(135deg, rgba(255,100,150,0.12) 0%, rgba(255,180,80,0.08) 100%)",
+  "linear-gradient(135deg, rgba(180,100,255,0.14) 0%, rgba(80,220,200,0.08) 100%)",
+];
+
+export default function Projects() {
+  const [active, setActive] = useState("All");
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
+
+  const filtered = projects.filter((p) => {
+    if (active === "All") return true;
+    if (active === "Full Stack") return p.type === "FULL STACK";
+    return p.type === "FRONTEND";
+  });
+
+  const a = (delay = 0) => ({
+    initial: { opacity: 0, y: 28 },
+    animate: inView ? { opacity: 1, y: 0 } : {},
+    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+  });
+
+  return (
+    <section id="projects" ref={ref} className="section-pad" style={{ backgroundColor: "var(--bg)", borderTop: "1px solid var(--border)" }}>
+      <div className="container">
+
+        <motion.div {...a(0)} className="section-label"><span>Selected Work</span></motion.div>
+
+        <motion.h2 {...a(0.1)} style={{
+          fontSize: "clamp(30px, 4vw, 52px)", fontWeight: 800,
+          lineHeight: 1.1, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 16,
+        }}>
+          Product work focused on<br />
+          <span style={{ color: "var(--accent)" }}>speed and craft.</span>
+        </motion.h2>
+
+        <motion.p {...a(0.2)} style={{ color: "var(--text)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.8, maxWidth: 560, marginBottom: 36, fontWeight: 500 }}>
+          A curated set of products spanning full-stack platforms and frontend builds, each designed for clean UX and performance.
+        </motion.p>
+
+        {/* Stats */}
+        <motion.div {...a(0.25)} style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 32 }}>
+          {[
+            { label: "TOTAL PROJECTS", value: projects.length },
+            { label: "FEATURED",       value: projects.filter((p) => p.featured).length },
+            { label: "LATEST YEAR",    value: "2026" },
+          ].map((s) => (
+            <div key={s.label} style={{
+              backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+              borderRadius: "var(--radius-md)", padding: "12px 20px",
+            }}>
+              <div style={{ fontFamily: mono, fontSize: 20, fontWeight: 700, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
+              <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 5, textTransform: "uppercase" }}>{s.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Filters */}
+        <motion.div {...a(0.3)} style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 40 }}>
+          {filters.map((f) => (
+            <button key={f} onClick={() => setActive(f)} style={{
+              fontFamily: mono, fontSize: 12, padding: "9px 20px", borderRadius: 9999,
+              border: active === f ? "1px solid var(--accent)" : "1px solid var(--border)",
+              backgroundColor: active === f ? "var(--accent)" : "transparent",
+              color: active === f ? "#000" : "var(--text)",
+              cursor: "pointer", transition: "all 0.2s", fontWeight: active === f ? 700 : 400,
+              letterSpacing: "0.04em",
+            }}
+              onMouseEnter={(e) => { if (active !== f) { e.currentTarget.style.borderColor = "var(--border-hover)"; e.currentTarget.style.color = "var(--text)"; } }}
+              onMouseLeave={(e) => { if (active !== f) { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text)"; } }}
+            >{f}</button>
+          ))}
+        </motion.div>
+
+        {/* Grid */}
+        <div className="grid-cards">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((project, i) => (
+              <motion.div key={project.id} layout
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.94 }}
+                transition={{ duration: 0.35, delay: i * 0.05 }}
+                style={{
+                  backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                  borderRadius: "var(--radius-lg)", overflow: "hidden",
+                  display: "flex", flexDirection: "column",
+                  transition: "border-color 0.25s, transform 0.25s, box-shadow 0.25s",
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--border-hover)"; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 20px 60px rgba(0,0,0,0.3)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
+              >
+                {/* Thumbnail */}
+                <div style={{
+                  position: "relative", height: 168,
+                  background: gradients[(project.id - 1) % gradients.length],
+                  borderBottom: "1px solid var(--border)",
+                  display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
+                }}>
+                  {/* Watermark initials */}
+                  <span style={{
+                    fontFamily: mono, fontSize: 80, fontWeight: 800,
+                    color: "rgba(255,255,255,0.04)", letterSpacing: "-0.04em",
+                    userSelect: "none", position: "absolute",
+                  }}>
+                    {project.title.split(" ").map(w => w[0]).join("").slice(0, 3)}
+                  </span>
+
+                  {/* Score */}
+                  <div style={{
+                    position: "absolute", bottom: 12, left: 12,
+                    display: "flex", alignItems: "center", gap: 6,
+                    backgroundColor: "rgba(0,0,0,0.65)", backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(232,255,71,0.2)", borderRadius: 8, padding: "5px 10px",
+                  }}>
+                    <div style={{ width: 5, height: 5, borderRadius: "50%", backgroundColor: "var(--accent)" }} />
+                    <span style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", fontWeight: 700 }}>{project.score}</span>
+                    <span style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)" }}>SCORE</span>
+                  </div>
+
+                  {project.featured && (
+                    <div style={{ position: "absolute", top: 12, left: 12, fontFamily: mono, fontSize: 9, fontWeight: 700, backgroundColor: "var(--accent)", color: "#000", padding: "4px 9px", borderRadius: 4, letterSpacing: "0.06em" }}>FEATURED</div>
+                  )}
+                  <div style={{ position: "absolute", top: 12, right: 12, fontFamily: mono, fontSize: 9, border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.6)", padding: "4px 9px", borderRadius: 4, backgroundColor: "rgba(0,0,0,0.5)" }}>{project.type}</div>
+
+                  {/* Links */}
+                  <div style={{ position: "absolute", bottom: 12, right: 12, display: "flex", gap: 6 }}>
+                    {[{ label: "Code", href: project.github }, { label: "Live ↗", href: project.live }].map((l) => (
+                      <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" style={{
+                        fontFamily: mono, fontSize: 10, border: "1px solid rgba(255,255,255,0.12)",
+                        color: "rgba(255,255,255,0.7)", padding: "4px 10px", borderRadius: 6,
+                        backgroundColor: "rgba(0,0,0,0.6)", textDecoration: "none",
+                        backdropFilter: "blur(8px)", transition: "all 0.2s",
+                      }}
+                        onMouseEnter={(e) => { e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)"; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.7)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)"; }}
+                      >{l.label}</a>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Body */}
+                <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", flex: 1 }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+                    <span style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>{project.year}</span>
+                    <span className="badge-accent">{project.badge}</span>
+                  </div>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "var(--text)", marginBottom: 8, lineHeight: 1.3 }}>{project.title}</h3>
+                  <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 16, flex: 1 }}>{project.desc}</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
+                    {project.tech.map((t) => (
+                      <span key={t} className="tag">{t}</span>
+                    ))}
+                  </div>
+                  <div style={{ borderTop: "1px solid var(--border)", paddingTop: 16 }}>
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" style={{
+                      fontFamily: mono, fontSize: 12, color: "var(--accent)", textDecoration: "none",
+                      display: "inline-flex", alignItems: "center", gap: 6, transition: "gap 0.2s",
+                      letterSpacing: "0.04em",
+                    }}
+                      onMouseEnter={(e) => (e.currentTarget.style.gap = "10px")}
+                      onMouseLeave={(e) => (e.currentTarget.style.gap = "6px")}
+                    >View Case Study <span>→</span></a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        <motion.div {...a(0.7)} style={{ textAlign: "center", marginTop: 52 }}>
+          <a href={personal.github} target="_blank" rel="noopener noreferrer" className="btn-outline">
+            VIEW ALL ON GITHUB ↗
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

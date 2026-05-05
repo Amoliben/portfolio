@@ -1,0 +1,151 @@
+"use client";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import { personal } from "@/data/portfolio";
+
+const mono = "'JetBrains Mono', monospace";
+
+export default function About() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.06 });
+  const a = (delay = 0) => ({
+    initial: { opacity: 0, y: 28 },
+    animate: inView ? { opacity: 1, y: 0 } : {},
+    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+  });
+
+  return (
+    <section id="about" ref={ref} className="section-pad" style={{ backgroundColor: "var(--bg)", borderTop: "1px solid var(--border)" }}>
+      <div className="container">
+
+        <motion.div {...a(0)} className="section-label">
+          <span style={{ fontWeight: 600 }}>About Me</span>
+        </motion.div>
+
+        <div className="about-grid">
+          {/* ── Left ── */}
+          <div>
+            <motion.h2 {...a(0.1)} style={{
+              fontSize: "clamp(30px, 4vw, 52px)", fontWeight: 800,
+              lineHeight: 1.1, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 24,
+            }}>
+              Building products where<br />
+              <span style={{ color: "var(--accent)" }}>design meets engineering.</span>
+            </motion.h2>
+
+            <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.85, marginBottom: 16, fontWeight: 500 }}>
+              {personal.about.description1}
+            </motion.p>
+            <motion.p {...a(0.25)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.85, marginBottom: 40, fontWeight: 500 }}>
+              {personal.about.description2}
+            </motion.p>
+
+            {/* Stats */}
+            <motion.div {...a(0.3)} className="grid-3" style={{ marginBottom: 28 }}>
+              {personal.about.stats.map((s) => (
+                <div key={s.label} style={{
+                  backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                  borderRadius: "var(--radius-md)", padding: "18px 16px",
+                  transition: "border-color 0.2s",
+                }}
+                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.3)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
+                >
+                  <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 8, textTransform: "uppercase" }}>{s.label}</div>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Principles */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {personal.about.principles.map((p, i) => (
+                <motion.div key={p.title} {...a(0.35 + i * 0.08)} style={{
+                  backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                  borderRadius: "var(--radius-md)", padding: "16px 20px",
+                  transition: "border-color 0.2s, transform 0.2s",
+                }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(232,255,71,0.25)"; e.currentTarget.style.transform = "translateX(4px)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateX(0)"; }}
+                >
+                  <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 6, fontWeight: 600 }}>{p.title}</div>
+                  <p style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.7, fontWeight: 500 }}>{p.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Right ── */}
+          <div>
+            {/* Profile image */}
+            <motion.div {...a(0.15)} style={{ position: "relative", marginBottom: 16 }}>
+              <div style={{
+                width: "100%", borderRadius: "var(--radius-xl)", overflow: "hidden",
+                border: "1px solid var(--border)", position: "relative", aspectRatio: "1 / 1",
+                transition: "border-color 0.3s",
+              }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.3)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
+              >
+                <Image
+                  src="/images/profile.png"
+                  alt={personal.name}
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  style={{ objectFit: "cover", objectPosition: "center top" }}
+                  priority
+                />
+                {/* Gradient overlay */}
+                <div style={{
+                  position: "absolute", bottom: 0, left: 0, right: 0, height: "50%",
+                  background: "linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.4) 60%, transparent 100%)",
+                }} />
+                {/* Name overlay */}
+                <div style={{ position: "absolute", bottom: 24, left: 24, right: 24, display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
+                  <div>
+                    <div style={{ fontWeight: 700, color: "#fff", fontSize: 20, lineHeight: 1.2, marginBottom: 4 }}>{personal.name}</div>
+                    <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)" }}>{personal.role}</div>
+                    <div style={{ fontFamily: mono, fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>📍 {personal.location}</div>
+                  </div>
+                  <div style={{
+                    backgroundColor: "var(--green)", color: "#000",
+                    fontFamily: mono, fontSize: 10, fontWeight: 700,
+                    padding: "6px 12px", borderRadius: 9999, letterSpacing: "0.06em",
+                    whiteSpace: "nowrap", boxShadow: "0 4px 12px rgba(74,222,128,0.3)",
+                  }}>● AVAILABLE</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Info card */}
+            <motion.div {...a(0.3)} style={{
+              backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+              borderRadius: "var(--radius-lg)", padding: 24, marginBottom: 14,
+            }}>
+              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>Current Focus</div>
+              <div style={{ fontSize: 15, color: "var(--text-secondary)", marginBottom: 24, fontWeight: 500 }}>Shipping quality fast</div>
+
+              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>Growth Timeline</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                {personal.about.timeline.map((item, i) => (
+                  <div key={item.year} style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <span style={{ fontFamily: mono, fontSize: 13, color: "var(--accent)", width: 50, flexShrink: 0, fontWeight: 700 }}>{item.year}</span>
+                    <div style={{ flex: 1, height: 1, background: `linear-gradient(to right, var(--border), transparent)` }} />
+                    <span style={{ fontSize: 13, color: "var(--text-secondary)", flex: 2, minWidth: 0, fontWeight: 500 }}>{item.event}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Tags */}
+            <motion.div {...a(0.4)} style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {personal.about.tags.map((tag) => (
+                <span key={tag} className="tag" style={{ fontSize: 10 }}>{tag}</span>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
