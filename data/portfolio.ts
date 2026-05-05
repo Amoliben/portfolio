@@ -1,13 +1,13 @@
 export const personal = {
   name: "Amenti Liben",
   brand: "AMENTI.",
-  role: "Full-Stack Engineer",
+  role: "Full-Stack Developer",
   tagline: "Building web applications\nfrom scratch",
-  subtitle: "< Full-Stack Engineer />",
+  subtitle: "< Full-Stack Developer />",
   description:
-    "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, Python, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frameworks like Next.js and React. Delivering scalable solutions from database to user interface.",
+    "I'm a Full-Stack Developer based in Ethiopia. I specialize in building complete web applications using Node.js, Python, PHP (Laravel), PostgreSQL, and React/Next.js. I enjoy turning ideas into working applications, from database design to user interface.",
   location: "Addis Ababa, Ethiopia",
-  availability: "Available for enterprise projects & contracts",
+  availability: "Open to opportunities",
   responseTime: "within 24 hours",
   email: "amentiliben454@gmail.com",
   phone: "+251917397648",
@@ -19,9 +19,9 @@ export const personal = {
   resume: "/resume.pdf",
   about: {
     description1:
-      "I'm a full-stack engineer based in Ethiopia specializing in web and mobile applications. I work across the entire stack — from database architecture and API design to responsive user interfaces. I build scalable solutions for enterprise management systems across education, healthcare, hospitality, logistics, and government sectors.",
+      "I'm a Full-Stack Developer based in Ethiopia. I build web applications that work — from the database to the user interface. I work with Node.js, Python, PHP (Laravel), PostgreSQL, and modern frontend frameworks like Next.js and React.",
     description2:
-      "My focus is on delivering solutions that work seamlessly across all layers. Clean code, security, performance, and user experience are my priorities in every project.",
+      "I love taking an idea and building it into a working application. Clean code, good performance, and user-friendly design matter to me. I'm always learning and improving my skills.",
     stats: [
       { label: "SYSTEMS SHIPPED", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
