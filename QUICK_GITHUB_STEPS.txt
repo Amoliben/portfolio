@@ -1,0 +1,148 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    PUSH TO GITHUB - QUICK STEPS                           ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+STEP 1: CREATE GITHUB REPOSITORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://github.com
+2. Sign in with your account
+3. Click + icon (top right) → New repository
+4. Repository name: portfolio
+5. Description: Professional portfolio
+6. Visibility: Public (recommended)
+7. Click "Create repository"
+8. Copy the URL shown (e.g., https://github.com/Amoliben/portfolio.git)
+
+STEP 2: OPEN TERMINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Windows: Press Win + R, type "cmd", press Enter
+Mac: Press Cmd + Space, type "terminal", press Enter
+Linux: Press Ctrl + Alt + T
+
+STEP 3: NAVIGATE TO YOUR PORTFOLIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Type this command:
+
+    cd /home/amenti/MyPortifolio
+
+Then press Enter.
+
+STEP 4: ADD GITHUB REMOTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Replace YOUR_USERNAME with your GitHub username:
+
+    git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
+
+Example:
+
+    git remote add origin https://github.com/Amoliben/portfolio.git
+
+Then press Enter.
+
+STEP 5: RENAME BRANCH (OPTIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Type this command:
+
+    git branch -m master main
+
+Then press Enter.
+
+STEP 6: PUSH TO GITHUB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Type this command:
+
+    git push -u origin main
+
+Then press Enter.
+
+STEP 7: ENTER CREDENTIALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You'll be asked for:
+
+Username: Your GitHub username
+Password: Your GitHub personal access token
+
+To get a personal access token:
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token"
+3. Select "repo" scope
+4. Click "Generate token"
+5. Copy the token
+6. Paste it when asked for password
+
+STEP 8: WAIT FOR UPLOAD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Wait for the upload to complete. You'll see:
+
+    Enumerating objects: 50, done.
+    ...
+    Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+STEP 9: VERIFY ON GITHUB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://github.com/YOUR_USERNAME/portfolio
+2. You should see all your files
+3. Success! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COMPLETE COMMAND LIST (Copy & Paste)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd /home/amenti/MyPortifolio
+git remote add origin https://github.com/Amoliben/portfolio.git
+git branch -m master main
+git push -u origin main
+
+(Replace "Amoliben" with your GitHub username)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Error: "fatal: remote origin already exists"
+Solution: git remote remove origin
+          Then run the add remote command again
+
+Error: "Permission denied"
+Solution: Make sure you're using a personal access token, not your password
+
+Error: "fatal: 'origin' does not appear to be a 'git' repository"
+Solution: Make sure you're in the correct folder:
+          cd /home/amenti/MyPortifolio
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEXT STEPS AFTER PUSHING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Deploy to Vercel:
+   - Go to: https://vercel.com
+   - Click "New Project"
+   - Select your GitHub repository
+   - Click "Deploy"
+   - Your portfolio will be live!
+
+2. Share your portfolio:
+   - GitHub: https://github.com/Amoliben/portfolio
+   - Live site: https://your-portfolio.vercel.app
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Time Required: 5-10 minutes
+Difficulty: Easy
+Status: Ready to Push
+
+Good luck! 🚀
