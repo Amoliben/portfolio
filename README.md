@@ -1,309 +1,209 @@
-# Amenti Liben - Professional Portfolio
+# Amenti Liben - Full-Stack Engineer
 
-A modern, responsive portfolio showcasing enterprise management systems and full-stack development expertise.
+🚀 Modern, responsive portfolio showcasing enterprise management systems and full-stack development expertise.
+
+Built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
+
+---
 
 ## 🌐 Live Demo
 
-**🚀 [DEPLOY NOW - See DEPLOY_NOW.md](./DEPLOY_NOW.md)**
+👉 **[Deploy to see live](./DEPLOY_NOW.md)** - 2-minute setup guide
 
-> **Important**: This portfolio is ready for deployment. Follow the 2-minute guide in `DEPLOY_NOW.md` to get your live URL.
+> **Note**: Follow `DEPLOY_NOW.md` to deploy this portfolio to Vercel and get your live URL.
 
-## ✨ Features
+---
 
-- **Modern Design** - Clean, professional interface with smooth animations
-- **Dark & Light Mode** - User preference-based theme switching
-- **Fully Responsive** - Perfect on mobile, tablet, and desktop
-- **Performance Optimized** - 90+ Lighthouse score
-- **Accessibility Compliant** - WCAG AA standards
-- **SEO Optimized** - All meta tags and structured data included
-- **Enterprise Focus** - Showcases 7 management systems
-- **Smooth Animations** - Framer Motion for engaging interactions
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Deployment**: Vercel-ready
+
+---
+
+## 📌 What I Built
+
+This portfolio showcases:
+
+### ✅ **7 Enterprise Management Systems**
+- School Management (500+ students)
+- Hospital Management (HIPAA-compliant)
+- Hotel Operations Platform
+- Delivery Tracking System
+- Wholesale Management
+- Pharmacy Management
+- Government Digitalization
+
+### ✅ **Full-Stack Expertise**
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Python, PHP (Laravel)
+- **Database**: PostgreSQL, Prisma ORM
+- **Mobile**: Flutter (iOS & Android)
+- **DevOps**: Docker, Git, Vercel
+
+### ✅ **Performance Optimized**
+- 90+ Lighthouse score
+- Fully responsive (mobile-first)
+- Dark mode only
+- Smooth animations
+- SEO optimized
+
+---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/Amoliben/portfolio.git
 cd portfolio
 
 # Install dependencies
 npm install
 
-# Start development server
+# Run development server
 npm run dev
 ```
 
-Visit `http://localhost:3000` to see the portfolio.
+Visit `http://localhost:3000`
 
-## 📦 Build & Deploy
+---
 
-### Production Build
+## 📦 Build for Production
+
 ```bash
+# Build
 npm run build
+
+# Start production server
 npm start
 ```
 
-### Deploy to Vercel (Recommended)
-```bash
-# Install Vercel CLI
-npm i -g vercel
+---
 
-# Deploy
-vercel
-```
+## 📸 Preview
 
-Or connect your GitHub repository to Vercel for automatic deployments.
+### Hero Section
+Modern landing with animated stats and tech stack marquee
 
-## 📁 Project Structure
+### Projects
+7 enterprise systems with detailed descriptions and tech stacks
+
+### Skills
+Interactive skill bars showing proficiency levels across 4 categories
+
+### Experience
+Full-stack engineering experience with metrics and achievements
+
+---
+
+## 📂 Project Structure
 
 ```
 portfolio/
-├── app/
-│   ├── page.tsx              # Main page
-│   ├── layout.tsx            # Root layout
-│   └── globals.css           # Global styles
-├── components/               # React components
-│   ├── Navbar.tsx
+├── app/                  # Next.js app directory
+│   ├── page.tsx         # Main page
+│   ├── layout.tsx       # Root layout
+│   └── globals.css      # Global styles
+├── components/          # React components
 │   ├── Hero.tsx
 │   ├── About.tsx
 │   ├── Skills.tsx
 │   ├── Services.tsx
-│   ├── Projects.tsx
-│   ├── CaseStudies.tsx
-│   ├── Stats.tsx
-│   ├── Process.tsx
-│   ├── Articles.tsx
-│   ├── Certificates.tsx
 │   ├── Experience.tsx
 │   ├── FAQ.tsx
-│   ├── Newsletter.tsx
 │   ├── Contact.tsx
-│   ├── Footer.tsx
-│   ├── ThemeToggle.tsx
-│   └── ScrollProgress.tsx
-├── contexts/                 # React contexts
-│   └── ThemeContext.tsx
+│   └── Footer.tsx
 ├── data/
-│   └── portfolio.ts          # All portfolio content
-├── hooks/
-│   └── useMediaQuery.ts
-├── public/                   # Static files
-│   └── images/
-├── package.json
-├── tsconfig.json
-├── tailwind.config.ts
-└── next.config.js
+│   └── portfolio.ts     # All content (easy to update)
+├── public/
+│   └── images/          # Static assets
+└── README.md
 ```
 
-## 🛠️ Tech Stack
+---
 
-- **Framework**: [Next.js 14](https://nextjs.org/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Package Manager**: npm
+## 🎯 Key Features
 
-## 📊 Portfolio Content
+- ✅ **Responsive Design** - Works perfectly on all devices
+- ✅ **Performance** - 90+ Lighthouse score
+- ✅ **SEO Optimized** - All meta tags included
+- ✅ **Type Safe** - Full TypeScript coverage
+- ✅ **Modern Stack** - Latest Next.js 14 features
+- ✅ **Easy to Update** - All content in `data/portfolio.ts`
 
-### Projects
-- 7 Enterprise Management Systems
-- 2 Additional featured projects
-- Real-world case studies
+---
 
-### Skills
-- Frontend Systems (React, Next.js, TypeScript, Tailwind)
-- Mobile Development (Flutter, Dart)
-- Backend & Data (Node.js, PostgreSQL, Prisma)
-- DevOps & Delivery (Docker, Git, Vercel)
-
-### Experience
-- Full-Stack Engineer & Digital Transformation Specialist
-- Full-Stack Developer
-
-### Services
-- Enterprise Management Systems
-- Full-Stack Product Development
-- Mobile App Development
-- Backend & API Development
-- Digital Transformation
-
-## 🎨 Design System
-
-### Colors
-- **Dark Mode** (Default)
-  - Background: `#0a0a0a`
-  - Surface: `#111111`
-  - Accent: `#e8ff47`
-  - Text: `#ffffff`
-
-- **Light Mode**
-  - Background: `#ffffff`
-  - Surface: `#f5f5f5`
-  - Accent: `#d4af37`
-  - Text: `#1a1a1a`
-
-### Typography
-- **Headings**: Inter (300-900 weights)
-- **Body**: Inter (400-600 weights)
-- **Code**: JetBrains Mono (400-700 weights)
-
-### Responsive Breakpoints
-- Mobile: < 480px
-- Tablet: 480px - 767px
-- Desktop: 768px - 1024px
-- Large: > 1024px
-
-## 📱 Responsive Design
-
-The portfolio is fully responsive and tested on:
-- ✅ iPhone (375px)
-- ✅ iPad (768px)
-- ✅ Desktop (1024px+)
-- ✅ Large screens (1600px+)
-
-## ♿ Accessibility
-
-- ✅ Semantic HTML
-- ✅ ARIA labels
-- ✅ Keyboard navigation
-- ✅ Focus management
-- ✅ Color contrast (WCAG AA)
-- ✅ Alt text for images
-
-## 🔍 SEO
-
-- ✅ Meta tags
-- ✅ Open Graph
-- ✅ Twitter Card
-- ✅ Canonical URL
-- ✅ Structured data
-- ✅ Sitemap ready
-
-## 📈 Performance
-
-- **Page Size**: 68.3 kB (optimized)
-- **First Load JS**: 155 kB
-- **Lighthouse Score**: 90+
-- **Mobile Score**: 90+
-- **Desktop Score**: 95+
-
-## 🔒 Security
-
-- No sensitive data in code
-- Environment variables ready
-- HTTPS ready (Vercel provides)
-- CSP headers ready
-- XSS protection
-- CSRF protection
-
-## 📝 Available Scripts
-
-```bash
-# Development
-npm run dev              # Start dev server
-
-# Production
-npm run build            # Build for production
-npm start                # Start production server
-
-# Code Quality
-npm run lint             # Run ESLint
-
-# Dependencies
-npm install              # Install dependencies
-npm update               # Update dependencies
-```
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Push to GitHub
-2. Connect repository to Vercel
-3. Auto-deploys on push
-
-### Netlify
-1. Connect GitHub repository
-2. Build command: `npm run build`
-3. Publish directory: `.next`
-
-### Self-Hosted
-```bash
-npm run build
-npm start
-```
-
-## 📞 Contact
+## 📫 Contact
 
 - **Email**: amentiliben454@gmail.com
 - **Phone**: +251917397648
 - **Location**: Addis Ababa, Ethiopia
 
-### Social Media
+### Connect with Me
+
 - [GitHub](https://github.com/Amoliben)
 - [LinkedIn](https://www.linkedin.com/in/amenti-liben-51233a378)
 - [Telegram](https://t.me/Amoliben)
 - [Facebook](https://www.facebook.com/amantii.liiban)
 - [Instagram](https://www.instagram.com/amoliben?igsh=MXJnbGo3amc3ZjVxZQ==)
 
-## 📚 Documentation
+---
 
-- [Deployment Guide](./DEPLOYMENT_GUIDE.md) - Step-by-step deployment instructions
-- [Test Results](./TEST_RESULTS.txt) - Comprehensive test report
-- [Final Summary](./FINAL_SUMMARY.md) - Project overview
-- [Quick Reference](./QUICK_REFERENCE.md) - Quick reference card
+## 🎓 Education
+
+**B.Sc. Software Engineering** (3rd Year)  
+Haramaya University | 2024 — 2028
+
+---
+
+## 💼 Experience
+
+**Full-Stack Engineer** | Freelance & Open Source | 2024 — Present
+
+- Built 7 enterprise management systems handling 500+ concurrent users
+- Developed RESTful APIs with Node.js, Python, and Laravel
+- Created responsive interfaces with Next.js and React
+- Improved system performance by 35% through optimization
+
+---
+
+## 📊 Stats
+
+- **Systems Built**: 7
+- **Concurrent Users**: 500+
+- **Years Building**: 2+
+- **Lighthouse Score**: 90+
+
+---
+
+## 🚀 Deploy Your Own
+
+1. Fork this repository
+2. Update `data/portfolio.ts` with your information
+3. Deploy to Vercel (see `DEPLOY_NOW.md`)
+4. Get your live URL in 2 minutes
+
+---
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+MIT License - Feel free to use this portfolio as a template for your own!
+
+---
 
 ## 🙏 Acknowledgments
 
-- [Next.js](https://nextjs.org/) - React framework
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
-- [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [Vercel](https://vercel.com/) - Deployment platform
-
-## 🎯 Future Enhancements
-
-- [ ] Blog section with MDX
-- [ ] Case study videos
-- [ ] Client testimonials
-- [ ] Analytics integration
-- [ ] Contact form backend
-- [ ] Newsletter integration
-- [ ] Dark mode persistence
-- [ ] Multi-language support
-
-## 🐛 Bug Reports
-
-Found a bug? Please create an issue on GitHub.
-
-## 💡 Contributing
-
-Contributions are welcome! Feel free to fork and submit pull requests.
+Built with:
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Vercel](https://vercel.com/)
 
 ---
 
-**Status**: ✅ Production Ready  
-**Last Updated**: May 5, 2026  
-**Version**: 1.0.0
+**Made with ❤️ by Amenti Liben**
 
-Made with ❤️ by Amenti Liben
-
----
-
-## 🚨 CRITICAL: Deploy Your Portfolio NOW
-
-**Your portfolio is NOT live yet!**
-
-Recruiters will NOT run your code locally. You need a live URL.
-
-**👉 Follow the 2-minute guide: [DEPLOY_NOW.md](./DEPLOY_NOW.md)**
-
-It takes 2 minutes to deploy to Vercel and get a professional live URL.
+⭐ Star this repo if you find it helpful!
