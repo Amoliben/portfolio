@@ -3,8 +3,8 @@ import "./globals.css";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
-  title: "Amenti Liben | Senior Full-Stack Engineer",
-  description: "Senior full-stack engineer specializing in Next.js, TypeScript, and scalable web systems. Available for product development, performance optimization, and technical consulting.",
+  title: "Amenti Liben | Full-Stack Engineer",
+  description: "Full-stack engineer specializing in Next.js, TypeScript, and scalable web systems. Available for product development, performance optimization, and technical consulting.",
   keywords: ["full-stack developer", "Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Product Engineer", "Ethiopia"],
   authors: [{ name: "Amenti Liben", url: "https://amentiliben.com" }],
   creator: "Amenti Liben",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Amenti Liben | Senior Full-Stack Engineer",
+    title: "Amenti Liben | Full-Stack Engineer",
     description: "Building modern web products with clean architecture, strong performance, and real impact.",
     type: "website",
     url: "https://amentiliben.com",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amenti Liben | Senior Full-Stack Engineer",
+    title: "Amenti Liben | Full-Stack Engineer",
     description: "Building modern web products with clean architecture and real performance.",
     creator: "@amentiliben",
   },

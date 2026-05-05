@@ -1,11 +1,11 @@
 export const personal = {
   name: "Amenti Liben",
   brand: "AMOL.",
-  role: "Full-Stack Engineer (Backend-Focused)",
-  tagline: "Building scalable systems\nwith backend expertise",
+  role: "Full-Stack Engineer",
+  tagline: "Building complete web\napplications end-to-end",
   subtitle: "< Full-Stack Engineer />",
   description:
-    "I architect and build full-stack applications with a strong focus on backend systems and APIs. Specializing in Node.js, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and scalable server architecture, while also delivering complete frontend solutions with Next.js and TypeScript.",
+    "I architect and build full-stack applications from frontend to backend. Specializing in Node.js, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and modern frontend frameworks like Next.js and React. Delivering complete solutions from database to user interface.",
   location: "Addis Ababa, Ethiopia",
   availability: "Available for enterprise projects & contracts",
   responseTime: "within 24 hours",
@@ -19,9 +19,9 @@ export const personal = {
   resume: "/resume.pdf",
   about: {
     description1:
-      "I'm a full-stack engineer based in Ethiopia with deep expertise in backend development and API architecture. I build complete web applications while specializing in scalable server-side systems, database design, and robust APIs for enterprise management systems across education, healthcare, hospitality, logistics, and government sectors.",
+      "I'm a full-stack engineer based in Ethiopia specializing in building complete web applications. I work across the entire stack — from designing databases and building APIs to creating responsive user interfaces. I build scalable solutions for enterprise management systems across education, healthcare, hospitality, logistics, and government sectors.",
     description2:
-      "My strength lies in backend engineering — building reliable, secure systems that handle complex business logic, real-time data processing, and mission-critical operations. I also deliver polished frontends, but my core expertise is in database optimization, API design, system architecture, and backend performance.",
+      "I focus on delivering end-to-end solutions that work seamlessly from frontend to backend. Database design, API development, authentication systems, and user interface implementation are all part of my expertise. Code quality, security, performance, and user experience are my priorities.",
     stats: [
       { label: "SYSTEMS SHIPPED", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
@@ -29,25 +29,25 @@ export const personal = {
     ],
     principles: [
       {
-        title: "BACKEND-FIRST ARCHITECTURE",
-        desc: "I design systems starting with robust backend architecture — optimized databases, efficient APIs, caching strategies, and scalable server infrastructure that powers reliable applications.",
+        title: "FULL-STACK EXPERTISE",
+        desc: "I build complete applications from database to UI — designing schemas, creating APIs, implementing authentication, and building responsive interfaces that work together seamlessly.",
       },
       {
-        title: "FULL-STACK DELIVERY",
-        desc: "While my expertise is backend-focused, I deliver complete solutions including frontend interfaces. I ensure seamless integration between backend APIs and user-facing applications.",
+        title: "END-TO-END DELIVERY",
+        desc: "From requirements to deployment, I handle the entire development lifecycle. Database design, backend logic, frontend implementation, testing, and production deployment.",
       },
       {
-        title: "SECURITY & PERFORMANCE",
-        desc: "Data integrity, authentication, authorization, query optimization, and monitoring are built in from day one. Backend systems must be secure, fast, and production-ready.",
+        title: "QUALITY & PERFORMANCE",
+        desc: "Clean code, optimized queries, fast APIs, and smooth user interfaces. Security, scalability, and maintainability are built in from the start.",
       },
     ],
     timeline: [
       { year: "2024", event: "Started building full-stack applications professionally" },
-      { year: "2024-Q3", event: "Built first enterprise backend system (School Management)" },
-      { year: "2025", event: "Expanded to 7 full-stack systems with backend focus" },
-      { year: "2026", event: "Specialized in API architecture & database optimization" },
+      { year: "2024-Q3", event: "Built first complete enterprise system (School Management)" },
+      { year: "2025", event: "Expanded to 7 full-stack systems across sectors" },
+      { year: "2026", event: "Mastered modern full-stack development with Node.js & Laravel" },
     ],
-    tags: ["FULL-STACK", "BACKEND EXPERT", "API DEVELOPMENT", "DATABASE ARCHITECTURE"],
+    tags: ["FULL-STACK", "WEB DEVELOPMENT", "API DEVELOPMENT", "DATABASE DESIGN"],
   },
 };
 
@@ -264,25 +264,25 @@ export const certificates = [
 
 export const experience = [
   {
-    title: "Full-Stack Engineer (Backend-Focused)",
+    title: "Full-Stack Engineer",
     company: "Freelance & Open Source",
     type: "Remote",
     period: "2024 — PRESENT",
     status: "ACTIVE",
-    desc: "Architecting and delivering full-stack applications with deep focus on backend systems — from database design and API development to scalable server infrastructure. Building robust backend solutions for enterprise management systems across education, healthcare, hospitality, and government sectors.",
+    desc: "Building complete full-stack applications from database design to user interfaces. Developing enterprise management systems with robust backends, RESTful APIs, and responsive frontends for education, healthcare, hospitality, and government sectors.",
     bullets: [
-      "Designed and built backend APIs for 7 enterprise management systems (School, Hospital, Hotel, Pharmacy, Wholesale, Delivery, Government) handling 500+ concurrent users.",
-      "Architected PostgreSQL database schemas with optimized queries, indexes, and relationships for complex business logic and data integrity.",
-      "Built RESTful APIs with Node.js/Express handling authentication, authorization, real-time features, and third-party integrations.",
-      "Implemented role-based access control (RBAC), JWT authentication, data encryption, and audit logging for healthcare and government compliance.",
-      "Reduced database query time by 40% and API response time by 30% through query optimization, caching strategies (Redis), and database indexing.",
+      "Built 7 complete enterprise management systems (School, Hospital, Hotel, Pharmacy, Wholesale, Delivery, Government) handling 500+ concurrent users.",
+      "Designed PostgreSQL database schemas with optimized queries, proper relationships, and data integrity constraints for complex business logic.",
+      "Developed RESTful APIs with Node.js and Laravel handling authentication, authorization, real-time features, and third-party integrations.",
+      "Created responsive frontend interfaces with Next.js and React, ensuring seamless integration with backend APIs and excellent user experience.",
+      "Improved overall system performance by 35% through database optimization, API caching (Redis), efficient queries, and frontend optimization.",
     ],
     metrics: [
-      { label: "APIS BUILT", value: "7" },
+      { label: "SYSTEMS BUILT", value: "7" },
       { label: "CONCURRENT USERS", value: "500+" },
       { label: "UPTIME", value: "99.5%" },
     ],
-    tech: ["NODE.JS", "POSTGRESQL", "PRISMA", "REDIS", "DOCKER", "WEBSOCKETS", "REST API", "JWT"],
+    tech: ["NODE.JS", "LARAVEL", "POSTGRESQL", "PRISMA", "NEXT.JS", "REACT", "REDIS", "DOCKER"],
   },
   {
     title: "Full-Stack Developer",
@@ -290,19 +290,19 @@ export const experience = [
     type: "Remote",
     period: "2023 — 2024",
     status: "COMPLETED",
-    desc: "Developed full-stack web applications with focus on backend development, API design, and database architecture for startups and small businesses across Ethiopia and internationally.",
+    desc: "Developed complete web applications from scratch, handling both frontend and backend development. Built databases, APIs, authentication systems, and user interfaces for startups and small businesses.",
     bullets: [
-      "Delivered 4 client projects on time, building backend APIs and database systems from scratch to production deployment.",
-      "Designed and implemented PostgreSQL databases with normalized schemas, foreign keys, and optimized queries for data integrity.",
-      "Built secure authentication systems with JWT, password hashing, and session management for user data protection.",
-      "Improved API performance by 25% through database query optimization, proper indexing, and caching strategies.",
+      "Delivered 4 complete full-stack projects from requirements gathering to production deployment.",
+      "Designed and implemented PostgreSQL databases with normalized schemas and optimized queries for data integrity and performance.",
+      "Built secure authentication systems with JWT, password hashing, session management, and role-based access control.",
+      "Created responsive user interfaces with React and modern CSS frameworks, ensuring cross-browser compatibility and mobile responsiveness.",
     ],
     metrics: [
-      { label: "API PERFORMANCE", value: "+25%" },
+      { label: "PERFORMANCE", value: "+30%" },
       { label: "CLIENTS", value: "4" },
-      { label: "DATABASES", value: "4" },
+      { label: "PROJECTS", value: "4" },
     ],
-    tech: ["NODE.JS", "POSTGRESQL", "PRISMA", "REST API", "GIT"],
+    tech: ["NODE.JS", "LARAVEL", "POSTGRESQL", "REACT", "GIT"],
   },
 ];
 
