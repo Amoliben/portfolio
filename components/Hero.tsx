@@ -124,6 +124,8 @@ export default function Hero() {
             { label: "GitHub", href: personal.github, icon: "🐙" },
             { label: "LinkedIn", href: personal.linkedin, icon: "💼" },
             { label: "Telegram", href: personal.telegram, icon: "✈️" },
+            { label: "Facebook", href: personal.facebook, icon: "👥" },
+            { label: "Instagram", href: personal.instagram, icon: "📸" },
           ].map((l) => (
             <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <span>{l.icon}</span>
