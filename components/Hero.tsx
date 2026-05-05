@@ -113,6 +113,7 @@ export default function Hero() {
           {[
             { label: "GitHub", href: personal.github, icon: "🐙" },
             { label: "LinkedIn", href: personal.linkedin, icon: "💼" },
+            { label: "Facebook", href: personal.facebook, icon: "👥" },
             { label: "Telegram", href: personal.telegram, icon: "✈️" },
             { label: "Instagram", href: personal.instagram, icon: "📸" },
           ].map((l) => (
