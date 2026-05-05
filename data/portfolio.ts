@@ -5,7 +5,7 @@ export const personal = {
   tagline: "Building scalable systems\nwith backend expertise",
   subtitle: "< Full-Stack Engineer />",
   description:
-    "I architect and build full-stack applications with a strong focus on backend systems and APIs. Specializing in Node.js, PostgreSQL, REST/GraphQL APIs, and scalable server architecture, while also delivering complete frontend solutions with Next.js and TypeScript.",
+    "I architect and build full-stack applications with a strong focus on backend systems and APIs. Specializing in Node.js, PHP (Laravel), PostgreSQL, REST/GraphQL APIs, and scalable server architecture, while also delivering complete frontend solutions with Next.js and TypeScript.",
   location: "Addis Ababa, Ethiopia",
   availability: "Available for enterprise projects & contracts",
   responseTime: "within 24 hours",
@@ -92,10 +92,10 @@ export const skills = {
       desc: "RESTful and GraphQL APIs, relational data modeling, auth systems, and production-grade server architecture.",
       items: [
         { name: "Node.js", level: 82 },
+        { name: "PHP (Laravel)", level: 85 },
         { name: "PostgreSQL", level: 80 },
         { name: "Prisma ORM", level: 80 },
         { name: "MongoDB", level: 72 },
-        { name: "Python", level: 70 },
       ],
     },
     {
@@ -112,9 +112,9 @@ export const skills = {
     },
   ],
   techStack: [
-    "NEXT.JS", "TYPESCRIPT", "REACT", "NODE.JS",
-    "POSTGRESQL", "PRISMA", "DOCKER", "TAILWIND",
-    "FLUTTER", "DART", "FIREBASE", "MOBILE",
+    "NODE.JS", "PHP", "LARAVEL", "POSTGRESQL",
+    "PRISMA", "DOCKER", "REST API", "TYPESCRIPT",
+    "NEXT.JS", "REACT", "TAILWIND", "FLUTTER",
   ],
 };
 
