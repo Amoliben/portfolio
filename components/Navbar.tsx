@@ -59,7 +59,7 @@ export default function Navbar() {
         }}
       >
         <div style={{
-          maxWidth: 1600, margin: "0 auto", padding: "0 64px", height: 68,
+          maxWidth: "100%", margin: "0 auto", padding: "0 64px", height: 68,
           display: "flex", alignItems: "center", justifyContent: "space-between",
         }}>
           {/* Brand */}

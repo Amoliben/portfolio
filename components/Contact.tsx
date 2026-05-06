@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { personal } from "@/data/portfolio";
+import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const mono = "'JetBrains Mono', monospace";
 
@@ -76,18 +77,24 @@ export default function Contact() {
 
             <motion.div {...a(0.3)} style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {[
-                { label: "GitHub", href: personal.github },
-                { label: "LinkedIn", href: personal.linkedin },
-                { label: "Telegram", href: personal.telegram },
-                { label: "Facebook", href: personal.facebook },
-                { label: "Instagram", href: personal.instagram },
-              ].map((l) => (
-                <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
-                  style={{ fontFamily: mono, fontSize: 12, border: "1px solid var(--border)", color: "var(--text-muted)", padding: "8px 16px", borderRadius: 9999, textDecoration: "none", transition: "all 0.2s" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
-                >{l.label} ↗</a>
-              ))}
+                { label: "GitHub", href: personal.github, icon: FaGithub },
+                { label: "LinkedIn", href: personal.linkedin, icon: FaLinkedin },
+                { label: "Telegram", href: personal.telegram, icon: FaTelegram },
+                { label: "Facebook", href: personal.facebook, icon: FaFacebook },
+                { label: "Instagram", href: personal.instagram, icon: FaInstagram },
+              ].map((l) => {
+                const Icon = l.icon;
+                return (
+                  <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
+                    style={{ fontFamily: mono, fontSize: 12, border: "1px solid var(--border)", color: "var(--text-muted)", padding: "8px 16px", borderRadius: 9999, textDecoration: "none", transition: "all 0.2s", display: "flex", alignItems: "center", gap: 6 }}
+                    onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-muted)"; }}
+                  >
+                    <Icon size={14} />
+                    {l.label}
+                  </a>
+                );
+              })}
             </motion.div>
 
             <motion.div {...a(0.35)} style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.1em", marginTop: 20, textTransform: "uppercase" }}>

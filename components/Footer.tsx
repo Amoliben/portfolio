@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { personal } from "@/data/portfolio";
+import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaInstagram, FaArrowUp, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 const mono = "'JetBrains Mono', monospace";
 const navLinks = [
@@ -43,16 +44,22 @@ export default function Footer() {
       </div>
 
       {/* Footer grid */}
-      <div style={{ maxWidth: 1600, margin: "0 auto", padding: "56px 64px 28px" }}>
+      <div style={{ maxWidth: "100%", margin: "0 auto", padding: "56px 64px 28px" }}>
         <div className="footer-grid">
           <div>
             <div style={{ fontFamily: mono, fontWeight: 900, fontSize: 20, color: "var(--accent)", marginBottom: 12, letterSpacing: "0.1em" }}>AMOL.</div>
             <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 12 }}>
               Full-stack engineer specializing in enterprise management systems and digital transformation. Building quality experiences from concept to launch.
             </p>
-            <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 4 }}>📍 {personal.location}</div>
+            <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 4, display: "flex", alignItems: "center", gap: 6 }}>
+              <FaMapMarkerAlt size={12} />
+              {personal.location}
+            </div>
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 8 }}>Typically replies {personal.responseTime}</div>
-            <a href={`mailto:${personal.email}`} style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", textDecoration: "none" }}>{personal.email}</a>
+            <a href={`mailto:${personal.email}`} style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", textDecoration: "none", display: "flex", alignItems: "center", gap: 6 }}>
+              <FaEnvelope size={12} />
+              {personal.email}
+            </a>
           </div>
 
           <div>
@@ -71,18 +78,24 @@ export default function Footer() {
             <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 14, fontWeight: 600 }}>Connect</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
-                { label: "GitHub", href: personal.github },
-                { label: "LinkedIn", href: personal.linkedin },
-                { label: "Telegram", href: personal.telegram },
-                { label: "Facebook", href: personal.facebook },
-                { label: "Instagram", href: personal.instagram },
-              ].map((l) => (
-                <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
-                  style={{ fontSize: 14, color: "var(--text-secondary)", textDecoration: "none", transition: "color 0.2s" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-                >{l.label} ↗</a>
-              ))}
+                { label: "GitHub", href: personal.github, icon: FaGithub },
+                { label: "LinkedIn", href: personal.linkedin, icon: FaLinkedin },
+                { label: "Telegram", href: personal.telegram, icon: FaTelegram },
+                { label: "Facebook", href: personal.facebook, icon: FaFacebook },
+                { label: "Instagram", href: personal.instagram, icon: FaInstagram },
+              ].map((l) => {
+                const Icon = l.icon;
+                return (
+                  <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
+                    style={{ fontSize: 14, color: "var(--text-secondary)", textDecoration: "none", transition: "color 0.2s", display: "flex", alignItems: "center", gap: 8 }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+                  >
+                    <Icon size={14} />
+                    {l.label}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -95,10 +108,12 @@ export default function Footer() {
             ))}
           </div>
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", background: "none", border: "none", cursor: "pointer", transition: "color 0.2s", letterSpacing: "0.05em" }}
+            style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", background: "none", border: "none", cursor: "pointer", transition: "color 0.2s", letterSpacing: "0.05em", display: "flex", alignItems: "center", gap: 6 }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
-          >BACK TO TOP ↑</button>
+          >
+            BACK TO TOP <FaArrowUp size={10} />
+          </button>
         </div>
       </div>
     </footer>
