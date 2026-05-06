@@ -25,7 +25,7 @@ export const personal = {
     description3:
       "I am currently open to internship and junior developer opportunities where I can contribute to meaningful projects and grow as a software engineer.",
     stats: [
-      { label: "PROJECTS BUILT", value: "6+" },
+      { label: "PROJECTS BUILT", value: "7+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],
@@ -183,16 +183,16 @@ export const projects = [
   },
   {
     id: 4,
-    year: "2024",
-    badge: "FULL STACK APP",
+    year: "2025",
+    badge: "LIVE PROJECT",
     type: "FULL STACK",
     featured: true,
-    title: "Task Management System",
-    desc: "A web-based system designed to manage and organize tasks efficiently. Features user-friendly interface for creating, updating, and tracking tasks with real-time updates. Includes user authentication, task categorization, and responsive design for all devices.",
-    tech: ["React", "Node.js", "PostgreSQL", "Express.js"],
+    title: "JiruuTask - Task Management Platform",
+    desc: "A professional task management and project collaboration platform with secure authentication system. Features user management, task organization, project tracking, and admin controls. Built for team productivity and workflow management with role-based access control.",
+    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
     github: "https://github.com/Amoliben",
-    live: "#",
-    score: 85,
+    live: "https://jiruutask.vercel.app",
+    score: 90,
   },
 ];
 
@@ -236,7 +236,7 @@ export const experience = [
       "Continuously learning new technologies including Docker, Redis, and advanced database optimization techniques.",
     ],
     metrics: [
-      { label: "PROJECTS BUILT", value: "6+" },
+      { label: "PROJECTS BUILT", value: "7+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],
