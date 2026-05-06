@@ -25,7 +25,7 @@ export const personal = {
     description3:
       "I am currently open to internship and junior developer opportunities where I can contribute to meaningful projects and grow as a software engineer.",
     stats: [
-      { label: "PROJECTS BUILT", value: "5+" },
+      { label: "PROJECTS BUILT", value: "6+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],
@@ -148,6 +148,19 @@ export const projects = [
     badge: "LIVE PROJECT",
     type: "FULL STACK",
     featured: true,
+    title: "JiruuTech - Software Solutions Company",
+    desc: "A professional software development company website showcasing services, products, and portfolio. Features modern UI/UX, responsive design, service offerings, product ecosystem, testimonials, and contact system. Built for a real business serving clients in Ethiopia and globally.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/Amoliben",
+    live: "https://jiruutech.vercel.app",
+    score: 95,
+  },
+  {
+    id: 2,
+    year: "2025",
+    badge: "LIVE PROJECT",
+    type: "FULL STACK",
+    featured: true,
     title: "Portfolio Website",
     desc: "A modern and responsive personal portfolio built to showcase my projects, skills, and development experience. Features clean UI/UX, optimized performance, and structured component-based architecture.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
@@ -156,7 +169,7 @@ export const projects = [
     score: 92,
   },
   {
-    id: 2,
+    id: 3,
     year: "2025",
     badge: "BACKEND SYSTEM",
     type: "BACKEND",
@@ -169,7 +182,7 @@ export const projects = [
     score: 88,
   },
   {
-    id: 3,
+    id: 4,
     year: "2024",
     badge: "FULL STACK APP",
     type: "FULL STACK",
@@ -223,7 +236,7 @@ export const experience = [
       "Continuously learning new technologies including Docker, Redis, and advanced database optimization techniques.",
     ],
     metrics: [
-      { label: "PROJECTS BUILT", value: "5+" },
+      { label: "PROJECTS BUILT", value: "6+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],
