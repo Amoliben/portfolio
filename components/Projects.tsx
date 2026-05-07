@@ -86,13 +86,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Grid */}
-        <div style={{ 
-          display: "grid", 
-          gridTemplateColumns: "repeat(4, 1fr)", 
-          gap: 20,
-        }}
-          className="projects-grid-responsive"
-        >
+        <div className="projects-grid-responsive">
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => (
               <motion.div key={project.id} layout
@@ -105,16 +99,18 @@ export default function Projects() {
                   borderRadius: "var(--radius-lg)", overflow: "hidden",
                   display: "flex", flexDirection: "column",
                   transition: "border-color 0.25s, transform 0.25s, box-shadow 0.25s",
+                  minHeight: "400px",
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--border-hover)"; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 20px 60px rgba(0,0,0,0.3)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
               >
                 {/* Thumbnail */}
                 <div style={{
-                  position: "relative", height: 168,
+                  position: "relative", height: "clamp(120px, 15vw, 168px)",
                   background: gradients[(project.id - 1) % gradients.length],
                   borderBottom: "1px solid var(--border)",
                   display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
+                  flexShrink: 0,
                 }}>
                   {/* Watermark initials */}
                   <span style={{
@@ -159,21 +155,21 @@ export default function Projects() {
                 </div>
 
                 {/* Body */}
-                <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", flex: 1 }}>
+                <div style={{ padding: "clamp(14px, 2vw, 22px)", display: "flex", flexDirection: "column", flex: 1 }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
-                    <span style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>{project.year}</span>
+                    <span style={{ fontFamily: mono, fontSize: "clamp(10px, 1.2vw, 11px)", color: "var(--text-secondary)" }}>{project.year}</span>
                     <span className="badge-accent">{project.badge}</span>
                   </div>
-                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "var(--text)", marginBottom: 8, lineHeight: 1.3 }}>{project.title}</h3>
-                  <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 16, flex: 1 }}>{project.desc}</p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
+                  <h3 style={{ fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 700, color: "var(--text)", marginBottom: 8, lineHeight: 1.3 }}>{project.title}</h3>
+                  <p style={{ fontSize: "clamp(12px, 1.3vw, 13px)", color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 16, flex: 1 }}>{project.desc}</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "clamp(4px, 0.8vw, 6px)", marginBottom: 16 }}>
                     {project.tech.map((t) => (
-                      <span key={t} className="tag">{t}</span>
+                      <span key={t} className="tag" style={{ fontSize: "clamp(9px, 1vw, 10px)", padding: "3px 8px" }}>{t}</span>
                     ))}
                   </div>
-                  <div style={{ borderTop: "1px solid var(--border)", paddingTop: 16 }}>
+                  <div style={{ borderTop: "1px solid var(--border)", paddingTop: "clamp(12px, 1.5vw, 16px)" }}>
                     <a href={project.live} target="_blank" rel="noopener noreferrer" style={{
-                      fontFamily: mono, fontSize: 12, color: "var(--accent)", textDecoration: "none",
+                      fontFamily: mono, fontSize: "clamp(11px, 1.2vw, 12px)", color: "var(--accent)", textDecoration: "none",
                       display: "inline-flex", alignItems: "center", gap: 6, transition: "gap 0.2s",
                       letterSpacing: "0.04em",
                     }}
