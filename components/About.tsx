@@ -26,25 +26,25 @@ export default function About() {
           {/* ── Left ── */}
           <div>
             <motion.h2 {...a(0.1)} style={{
-              fontSize: "clamp(30px, 4vw, 52px)", fontWeight: 800,
-              lineHeight: 1.1, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 24,
+              fontSize: "clamp(28px, 3.8vw, 44px)", fontWeight: 800,
+              lineHeight: 1.15, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 20,
             }}>
               Building scalable and<br />
               <span style={{ color: "var(--accent)" }}>maintainable applications.</span>
             </motion.h2>
 
-            <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.85, marginBottom: 16, fontWeight: 500 }}>
+            <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(14px, 1.25vw, 16px)", lineHeight: 1.75, marginBottom: 14, fontWeight: 500 }}>
               {personal.about.description1}
             </motion.p>
-            <motion.p {...a(0.25)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.3vw, 17px)", lineHeight: 1.85, marginBottom: 16, fontWeight: 500 }}>
+            <motion.p {...a(0.25)} style={{ color: "var(--text-secondary)", fontSize: "clamp(14px, 1.25vw, 16px)", lineHeight: 1.75, marginBottom: 14, fontWeight: 500 }}>
               {personal.about.description2}
             </motion.p>
-            <motion.p {...a(0.28)} style={{ color: "var(--text-muted)", fontSize: "clamp(14px, 1.2vw, 16px)", lineHeight: 1.85, marginBottom: 40, fontWeight: 500, fontStyle: "italic" }}>
+            <motion.p {...a(0.28)} style={{ color: "var(--text-muted)", fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.75, marginBottom: 32, fontWeight: 500, fontStyle: "italic" }}>
               {personal.about.description3}
             </motion.p>
 
             {/* Stats */}
-            <motion.div {...a(0.3)} className="grid-3" style={{ marginBottom: 28 }}>
+            <motion.div {...a(0.3)} className="grid-3" style={{ marginBottom: 24 }}>
               {personal.about.stats.map((s, i) => (
                 <motion.div 
                   key={s.label}
@@ -54,7 +54,7 @@ export default function About() {
                   whileHover={{ scale: 1.05, y: -4 }}
                   style={{
                     backgroundColor: "var(--surface)", border: "1px solid var(--border)",
-                    borderRadius: "var(--radius-md)", padding: "18px 16px",
+                    borderRadius: "var(--radius-md)", padding: "16px 14px",
                     transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                     cursor: "default",
                   }}
@@ -67,8 +67,8 @@ export default function About() {
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
-                  <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 8, textTransform: "uppercase" }}>{s.label}</div>
+                  <div style={{ fontFamily: mono, fontSize: 22, fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 7, textTransform: "uppercase" }}>{s.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -82,7 +82,7 @@ export default function About() {
                   whileHover={{ x: 6, scale: 1.02 }}
                   style={{
                     backgroundColor: "var(--surface)", border: "1px solid var(--border)",
-                    borderRadius: "var(--radius-md)", padding: "16px 20px",
+                    borderRadius: "var(--radius-md)", padding: "14px 18px",
                     transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                     cursor: "default",
                   }}
@@ -95,8 +95,8 @@ export default function About() {
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 6, fontWeight: 600 }}>{p.title}</div>
-                  <p style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.7, fontWeight: 500 }}>{p.desc}</p>
+                  <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 5, fontWeight: 600 }}>{p.title}</div>
+                  <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.65, fontWeight: 500 }}>{p.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -147,18 +147,18 @@ export default function About() {
             {/* Info card */}
             <motion.div {...a(0.3)} style={{
               backgroundColor: "var(--surface)", border: "1px solid var(--border)",
-              borderRadius: "var(--radius-lg)", padding: 24, marginBottom: 14,
+              borderRadius: "var(--radius-lg)", padding: 20, marginBottom: 14,
             }}>
-              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>Current Focus</div>
-              <div style={{ fontSize: 15, color: "var(--text-secondary)", marginBottom: 24, fontWeight: 500 }}>Seeking internship & junior developer opportunities</div>
+              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 7, fontWeight: 600 }}>Current Focus</div>
+              <div style={{ fontSize: 14, color: "var(--text-secondary)", marginBottom: 20, fontWeight: 500 }}>Seeking internship & junior developer opportunities</div>
 
-              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>Learning Journey</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+              <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 14, fontWeight: 600 }}>Learning Journey</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 {personal.about.timeline.map((item, i) => (
                   <div key={item.year} style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                    <span style={{ fontFamily: mono, fontSize: 13, color: "var(--accent)", width: 50, flexShrink: 0, fontWeight: 700 }}>{item.year}</span>
+                    <span style={{ fontFamily: mono, fontSize: 12, color: "var(--accent)", width: 50, flexShrink: 0, fontWeight: 700 }}>{item.year}</span>
                     <div style={{ flex: 1, height: 1, background: `linear-gradient(to right, var(--border), transparent)` }} />
-                    <span style={{ fontSize: 13, color: "var(--text-secondary)", flex: 2, minWidth: 0, fontWeight: 500 }}>{item.event}</span>
+                    <span style={{ fontSize: 12, color: "var(--text-secondary)", flex: 2, minWidth: 0, fontWeight: 500 }}>{item.event}</span>
                   </div>
                 ))}
               </div>

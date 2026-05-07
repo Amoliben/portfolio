@@ -39,21 +39,21 @@ export default function Skills() {
 
         <motion.div {...a(0)} className="section-label"><span>Technical Skills</span></motion.div>
 
-        <div style={{ maxWidth: "900px", marginBottom: 56 }}>
+        <div style={{ maxWidth: "900px", marginBottom: 40 }}>
           <motion.h2 {...a(0.1)} style={{
-            fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 900,
-            lineHeight: 1.1, letterSpacing: "-0.03em", color: "var(--text)", marginBottom: 20,
+            fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 900,
+            lineHeight: 1.15, letterSpacing: "-0.03em", color: "var(--text)", marginBottom: 16,
           }}>
             Technologies I work with to build <span style={{ color: "var(--accent)" }} className="text-glow">modern solutions</span>
           </motion.h2>
 
-          <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(16px, 1.4vw, 19px)", lineHeight: 1.7, maxWidth: 650, marginBottom: 0, fontWeight: 400 }}>
+          <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.35vw, 17px)", lineHeight: 1.65, maxWidth: 650, marginBottom: 0, fontWeight: 400 }}>
             From frontend interfaces to backend APIs and databases — I focus on mastering essential technologies for building scalable full-stack applications.
           </motion.p>
         </div>
 
         {/* Summary stats */}
-        <motion.div {...a(0.25)} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 48 }}>
+        <motion.div {...a(0.25)} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 36 }}>
           {[
             { label: "SKILL GROUPS", value: skills.summary.groups, icon: "📦" },
             { label: "AVG PROFICIENCY", value: skills.summary.avgProficiency, icon: "📊" },
@@ -68,7 +68,7 @@ export default function Skills() {
               whileHover={{ scale: 1.05, y: -6 }}
               style={{
                 backgroundColor: "var(--bg)", border: "1px solid var(--border)",
-                borderRadius: "var(--radius-lg)", padding: "24px 20px",
+                borderRadius: "var(--radius-lg)", padding: "20px 18px",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
                 position: "relative",
                 overflow: "hidden",
@@ -83,16 +83,16 @@ export default function Skills() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              <div style={{ fontSize: 28, marginBottom: 12 }}>{s.icon}</div>
-              <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 8 }}>{s.value}</div>
+              <div style={{ fontSize: 26, marginBottom: 10 }}>{s.icon}</div>
+              <div style={{ fontFamily: mono, fontSize: 22, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 7 }}>{s.value}</div>
               <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.12em", textTransform: "uppercase" }}>{s.label}</div>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Top Skills Tags */}
-        <motion.div {...a(0.3)} style={{ marginBottom: 56 }}>
-          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 20, display: "flex", alignItems: "center", gap: 10 }}>
+        <motion.div {...a(0.3)} style={{ marginBottom: 40 }}>
+          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16, display: "flex", alignItems: "center", gap: 10 }}>
             <div style={{ width: 4, height: 4, borderRadius: "50%", backgroundColor: "var(--accent)" }} />
             Top Skills
           </div>
@@ -153,8 +153,8 @@ export default function Skills() {
           {...a(0.8)}
           whileHover={{ scale: 1.01 }}
           style={{
-            marginTop: 56, border: "1px solid rgba(16,185,129,0.25)",
-            borderRadius: "var(--radius-xl)", padding: "40px 36px",
+            marginTop: 40, border: "1px solid rgba(16,185,129,0.25)",
+            borderRadius: "var(--radius-xl)", padding: "32px 28px",
             background: "linear-gradient(135deg, rgba(16,185,129,0.06) 0%, transparent 100%)",
             position: "relative",
             overflow: "hidden",
@@ -170,7 +170,7 @@ export default function Skills() {
           }}
         >
           <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 3, background: "linear-gradient(90deg, var(--accent), transparent)" }} />
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
             <motion.div 
               animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -178,7 +178,7 @@ export default function Skills() {
             />
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600 }}>My Learning Philosophy</div>
           </div>
-          <p style={{ color: "var(--text-secondary)", fontSize: 17, lineHeight: 1.7, maxWidth: 800 }}>
+          <p style={{ color: "var(--text-secondary)", fontSize: 15, lineHeight: 1.65, maxWidth: 800 }}>
             I focus on <span style={{ color: "var(--accent)", fontWeight: 600 }}>mastering core technologies deeply</span> rather than spreading thin across many tools. Each skill is developed through hands-on projects and real-world application, ensuring practical understanding alongside theoretical knowledge.
           </p>
         </motion.div>

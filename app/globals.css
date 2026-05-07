@@ -134,10 +134,10 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
 }
-@media (max-width: 767px) { .section-label { margin-bottom: 40px; gap: 10px; } }
-@media (max-width: 479px) { .section-label { margin-bottom: 32px; gap: 8px; } }
+@media (max-width: 767px) { .section-label { margin-bottom: 28px; gap: 10px; } }
+@media (max-width: 479px) { .section-label { margin-bottom: 24px; gap: 8px; } }
 .section-label span {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -376,10 +376,10 @@ body {
 }
 
 /* ─── Layout ────────────────────────────────────────────────── */
-.section-pad { padding: 112px 0; }
-@media (max-width: 1024px) { .section-pad { padding: 88px 0; } }
-@media (max-width: 767px)  { .section-pad { padding: 72px 0; } }
-@media (max-width: 479px)  { .section-pad { padding: 56px 0; } }
+.section-pad { padding: 80px 0; }
+@media (max-width: 1024px) { .section-pad { padding: 64px 0; } }
+@media (max-width: 767px)  { .section-pad { padding: 52px 0; } }
+@media (max-width: 479px)  { .section-pad { padding: 40px 0; } }
 
 .container {
   max-width: 100%;

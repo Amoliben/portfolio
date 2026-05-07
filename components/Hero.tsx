@@ -34,7 +34,7 @@ const fadeUp = (delay = 0) => ({
 export default function Hero() {
   return (
     <section style={{
-      position: "relative", minHeight: "100vh",
+      position: "relative", minHeight: "90vh",
       display: "flex", flexDirection: "column", justifyContent: "center",
       overflow: "hidden", paddingTop: 68, backgroundColor: "var(--bg)",
     }}>
@@ -66,7 +66,7 @@ export default function Hero() {
         <div style={{ maxWidth: "900px" }}>
 
           {/* Status badge */}
-          <motion.div {...fadeUp(0.1)} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
+          <motion.div {...fadeUp(0.1)} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
             <span className="animate-pulse-dot" style={{
               width: 8, height: 8, borderRadius: "50%", backgroundColor: "var(--green)",
               display: "inline-block", flexShrink: 0,
@@ -78,18 +78,18 @@ export default function Hero() {
 
           {/* Greeting */}
           <motion.p {...fadeUp(0.2)} style={{
-            fontSize: "clamp(16px, 2vw, 20px)",
+            fontSize: "clamp(15px, 1.8vw, 18px)",
             fontWeight: 500, color: "var(--text-muted)",
-            marginBottom: 20, letterSpacing: "-0.01em",
+            marginBottom: 16, letterSpacing: "-0.01em",
           }}>
             Hi, I'm <span style={{ color: "var(--accent)", fontWeight: 700 }}>Amenti Liben</span>
           </motion.p>
 
           {/* Heading */}
           <motion.h1 {...fadeUp(0.3)} style={{
-            fontSize: "clamp(42px, 7vw, 72px)",
-            fontWeight: 900, lineHeight: 1.1,
-            letterSpacing: "-0.03em", marginBottom: 28, color: "var(--text)",
+            fontSize: "clamp(36px, 6vw, 56px)",
+            fontWeight: 900, lineHeight: 1.15,
+            letterSpacing: "-0.03em", marginBottom: 20, color: "var(--text)",
           }}>
             Full-Stack Developer<br />
             building <span style={{ color: "var(--accent)" }} className="text-glow">scalable</span> and<br />
@@ -98,14 +98,14 @@ export default function Hero() {
 
           {/* Description */}
           <motion.p {...fadeUp(0.4)} style={{
-            color: "var(--text-secondary)", fontSize: "clamp(16px, 1.6vw, 19px)",
-            lineHeight: 1.7, maxWidth: 650, marginBottom: 32, fontWeight: 400,
+            color: "var(--text-secondary)", fontSize: "clamp(15px, 1.5vw, 17px)",
+            lineHeight: 1.65, maxWidth: 650, marginBottom: 28, fontWeight: 400,
           }}>
             I specialize in modern technologies like <span style={{ color: "var(--accent)", fontWeight: 600 }}>Next.js</span>, <span style={{ color: "var(--accent)", fontWeight: 600 }}>TypeScript</span>, and <span style={{ color: "var(--accent)", fontWeight: 600 }}>Node.js</span> to create efficient and user-focused solutions.
           </motion.p>
 
           {/* Focus badges */}
-          <motion.div {...fadeUp(0.45)} style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 48 }}>
+          <motion.div {...fadeUp(0.45)} style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 32 }}>
             {["Backend Systems", "REST APIs", "Clean Architecture"].map((item, i) => (
               <motion.span 
                 key={item}
@@ -144,18 +144,18 @@ export default function Hero() {
           </motion.div>
 
           {/* CTAs */}
-          <motion.div {...fadeUp(0.5)} style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14, marginBottom: 72 }}>
-            <a href="#projects" className="btn-primary" style={{ padding: "16px 32px", fontSize: 14 }}>
+          <motion.div {...fadeUp(0.5)} style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14, marginBottom: 48 }}>
+            <a href="#projects" className="btn-primary" style={{ padding: "14px 28px", fontSize: 13 }}>
               VIEW PROJECTS
-              <FaArrowRight size={14} />
+              <FaArrowRight size={13} />
             </a>
-            <a href="#contact" className="btn-outline" style={{ padding: "15px 32px", fontSize: 14 }}>
+            <a href="#contact" className="btn-outline" style={{ padding: "13px 28px", fontSize: 13 }}>
               CONTACT ME
             </a>
           </motion.div>
 
           {/* Social Links */}
-          <motion.div {...fadeUp(0.55)} style={{ marginBottom: 72 }}>
+          <motion.div {...fadeUp(0.55)} style={{ marginBottom: 48 }}>
             <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>
               Connect With Me
             </div>
@@ -209,17 +209,17 @@ export default function Hero() {
           </motion.div>
 
           {/* Stats */}
-          <motion.div {...fadeUp(0.6)} style={{ display: "flex", flexWrap: "wrap", gap: 48, paddingTop: 48, borderTop: "1px solid var(--border)" }}>
+          <motion.div {...fadeUp(0.6)} style={{ display: "flex", flexWrap: "wrap", gap: 40, paddingTop: 40, borderTop: "1px solid var(--border)" }}>
             {[
               { label: "PROJECTS BUILT", value: 5, suffix: "+" },
               { label: "TECHNOLOGIES", value: 12, suffix: "+" },
               { label: "YEARS LEARNING", value: 2, suffix: "+" },
             ].map((s) => (
               <div key={s.label}>
-                <div style={{ fontFamily: mono, fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
+                <div style={{ fontFamily: mono, fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
                   <Counter to={s.value} suffix={s.suffix} />
                 </div>
-                <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.18em", marginTop: 10, textTransform: "uppercase" }}>
+                <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.18em", marginTop: 8, textTransform: "uppercase" }}>
                   {s.label}
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function Hero() {
         </div>
 
         {/* Tech marquee */}
-        <motion.div {...fadeUp(0.7)} style={{ marginTop: 72 }}>
+        <motion.div {...fadeUp(0.7)} style={{ marginTop: 56 }}>
           <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 16 }}>
             Core Technologies
           </div>
