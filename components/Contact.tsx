@@ -9,7 +9,7 @@ const mono = "'JetBrains Mono', monospace";
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [form, setForm] = useState({ name: "", email: "", type: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", type: "", message: "" });
   const [sent, setSent] = useState(false);
 
   const a = (delay = 0) => ({
@@ -21,7 +21,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent(`[Portfolio] ${form.type || "Project Inquiry"} from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nType: ${form.type}\n\n${form.message}`);
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nType: ${form.type}\n\n${form.message}`);
     window.open(`mailto:${personal.email}?subject=${subject}&body=${body}`);
     setSent(true);
     setTimeout(() => setSent(false), 3000);
@@ -109,32 +109,41 @@ export default function Contact() {
                 <div>
                   <label style={label}>Name</label>
                   <input type="text" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Your name" style={inputStyle}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
+                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,185,129,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
                 </div>
                 <div>
                   <label style={label}>Email</label>
                   <input type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="your@email.com" style={inputStyle}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
+                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,185,129,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
                 </div>
               </div>
 
-              <div>
-                <label style={label}>Inquiry Type</label>
-                <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}
-                  onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}>
-                  <option value="">Select type...</option>
-                  <option value="Internship Opportunity">Internship Opportunity</option>
-                  <option value="Job Opportunity">Job Opportunity</option>
-                  <option value="Collaboration">Collaboration</option>
-                  <option value="Project Inquiry">Project Inquiry</option>
-                  <option value="Other">Other</option>
+              <div className="form-row">
+                <div>
+                  <label style={label}>Phone Number</label>
+                  <input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="+251 912 345 678" style={inputStyle}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,185,129,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
+                </div>
+                <div>
+                  <label style={label}>Inquiry Type</label>
+                  <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,185,129,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}>
+                    <option value="">Select type...</option>
+                    <option value="Internship Opportunity">Internship Opportunity</option>
+                    <option value="Job Opportunity">Job Opportunity</option>
+                    <option value="Collaboration">Collaboration</option>
+                    <option value="Project Inquiry">Project Inquiry</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
                 </select>
               </div>
 
               <div>
                 <label style={label}>Message</label>
                 <textarea required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tell me about the opportunity or project..." style={{ ...inputStyle, resize: "none" }}
-                  onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
+                  onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,185,129,0.5)")} onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")} />
               </div>
 
               <button type="submit" className="btn-primary" style={{
