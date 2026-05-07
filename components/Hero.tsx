@@ -94,7 +94,7 @@ export default function Hero() {
             fontWeight: 500, color: "var(--text-muted)",
             marginBottom: 20, letterSpacing: "-0.01em",
           }}>
-            Hi, I'm <span style={{ color: "var(--accent)", fontWeight: 700 }}>Amenti Liben</span>
+            Hi, I'm <span style={{ color: "#ffffff", fontWeight: 700 }}>Amenti Liben</span>
           </motion.p>
 
           {/* Heading */}
@@ -104,8 +104,8 @@ export default function Hero() {
             letterSpacing: "-0.03em", marginBottom: 24, color: "var(--text)",
           }}>
             Full-Stack Developer<br />
-            building <span style={{ color: "var(--accent)" }} className="text-glow">scalable</span> and<br />
-            <span style={{ color: "var(--accent)" }} className="text-glow">high-performance</span> web apps
+            building <span style={{ color: "#ffffff" }} className="text-glow">scalable</span> and<br />
+            <span style={{ color: "#ffffff" }} className="text-glow">high-performance</span> web apps
           </motion.h1>
 
           {/* Description */}
@@ -114,7 +114,7 @@ export default function Hero() {
             lineHeight: 1.7, maxWidth: 700, marginBottom: 32, fontWeight: 400,
             margin: "0 auto 32px",
           }}>
-            I specialize in modern technologies like <span style={{ color: "var(--accent)", fontWeight: 600 }}>Next.js</span>, <span style={{ color: "var(--accent)", fontWeight: 600 }}>TypeScript</span>, and <span style={{ color: "var(--accent)", fontWeight: 600 }}>Node.js</span> to create efficient and user-focused solutions.
+            I specialize in modern technologies like <span style={{ color: "#ffffff", fontWeight: 600 }}>Next.js</span>, <span style={{ color: "var(--accent)", fontWeight: 600 }}>TypeScript</span>, and <span style={{ color: "var(--accent)", fontWeight: 600 }}>Node.js</span> to create efficient and user-focused solutions.
           </motion.p>
 
           {/* Focus badges */}
@@ -175,7 +175,7 @@ export default function Hero() {
               { label: "YEARS LEARNING", value: 2, suffix: "+" },
             ].map((s) => (
               <div key={s.label}>
-                <div style={{ fontFamily: mono, fontSize: "clamp(32px, 3.8vw, 48px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
+                <div style={{ fontFamily: mono, fontSize: "clamp(32px, 3.8vw, 48px)", fontWeight: 800, color: "#ffffff", lineHeight: 1 }}>
                   <Counter to={s.value} suffix={s.suffix} />
                 </div>
                 <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.18em", marginTop: 8, textTransform: "uppercase" }}>
