@@ -86,7 +86,13 @@ export default function Projects() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid-cards">
+        <div style={{ 
+          display: "grid", 
+          gridTemplateColumns: "repeat(4, 1fr)", 
+          gap: 20,
+        }}
+          className="projects-grid-responsive"
+        >
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => (
               <motion.div key={project.id} layout

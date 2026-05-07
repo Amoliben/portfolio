@@ -425,6 +425,17 @@ body {
 @media (max-width: 767px) { .grid-cards { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; } }
 @media (max-width: 639px) { .grid-cards { grid-template-columns: 1fr; gap: 16px; } }
 
+/* Projects grid - 4 columns on large screens */
+.projects-grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1400px) { .projects-grid-responsive { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1024px) { .projects-grid-responsive { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
+@media (max-width: 767px) { .projects-grid-responsive { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+@media (max-width: 639px) { .projects-grid-responsive { grid-template-columns: 1fr; gap: 16px; } }
+
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
 @media (max-width: 1024px) { .about-grid { gap: 56px; } }
 @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } }
