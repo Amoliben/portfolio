@@ -26,9 +26,9 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 32 },
+  initial: { opacity: 0, y: 40 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
 });
 
 export default function Hero() {
@@ -46,15 +46,19 @@ export default function Hero() {
       }} />
       {/* Radial glow */}
       <motion.div
-        animate={{ opacity: [0.4, 0.7, 0.4] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        animate={{ 
+          opacity: [0.3, 0.6, 0.3],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         style={{
           position: "absolute", top: "30%", left: "50%",
           transform: "translate(-50%, -50%)",
-          width: "min(800px, 100vw)", height: "min(800px, 100vw)",
+          width: "min(900px, 100vw)", height: "min(900px, 100vw)",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(232,255,71,0.07) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%)",
           pointerEvents: "none",
+          filter: "blur(60px)",
         }}
       />
 
@@ -102,31 +106,40 @@ export default function Hero() {
 
           {/* Focus badges */}
           <motion.div {...fadeUp(0.45)} style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 48 }}>
-            {["Backend Systems", "REST APIs", "Clean Architecture"].map((item) => (
-              <span key={item} style={{
-                fontFamily: mono, fontSize: "clamp(11px, 1.2vw, 12px)", 
-                color: "var(--text-secondary)",
-                border: "1px solid rgba(232,255,71,0.3)", 
-                padding: "8px 16px",
-                borderRadius: 9999, 
-                display: "inline-block", 
-                backgroundColor: "rgba(232,255,71,0.05)",
-                letterSpacing: "0.02em",
-                transition: "all 0.3s",
-              }}
+            {["Backend Systems", "REST APIs", "Clean Architecture"].map((item, i) => (
+              <motion.span 
+                key={item}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ scale: 1.05, y: -2 }}
+                style={{
+                  fontFamily: mono, fontSize: "clamp(11px, 1.2vw, 12px)", 
+                  color: "var(--text-secondary)",
+                  border: "1px solid rgba(16,185,129,0.3)", 
+                  padding: "8px 16px",
+                  borderRadius: 9999, 
+                  display: "inline-block", 
+                  backgroundColor: "rgba(16,185,129,0.05)",
+                  letterSpacing: "0.02em",
+                  transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+                  cursor: "default",
+                }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(232,255,71,0.12)";
+                  e.currentTarget.style.backgroundColor = "rgba(16,185,129,0.12)";
                   e.currentTarget.style.borderColor = "var(--accent)";
                   e.currentTarget.style.color = "var(--accent)";
+                  e.currentTarget.style.boxShadow = "0 4px 16px rgba(16,185,129,0.2)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(232,255,71,0.05)";
-                  e.currentTarget.style.borderColor = "rgba(232,255,71,0.3)";
+                  e.currentTarget.style.backgroundColor = "rgba(16,185,129,0.05)";
+                  e.currentTarget.style.borderColor = "rgba(16,185,129,0.3)";
                   e.currentTarget.style.color = "var(--text-secondary)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
                 {item}
-              </span>
+              </motion.span>
             ))}
           </motion.div>
 
@@ -153,10 +166,18 @@ export default function Hero() {
                 { label: "Telegram", href: personal.telegram, icon: FaTelegram },
                 { label: "Facebook", href: personal.facebook, icon: FaFacebook },
                 { label: "Instagram", href: personal.instagram, icon: FaInstagram },
-              ].map((l) => {
+              ].map((l, i) => {
                 const Icon = l.icon;
                 return (
-                  <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" 
+                  <motion.a 
+                    key={l.label} 
+                    href={l.href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 + i * 0.08 }}
+                    whileHover={{ scale: 1.05, y: -4 }}
                     style={{ 
                       display: "flex", alignItems: "center", gap: 8,
                       fontFamily: mono, fontSize: 12, 
@@ -166,22 +187,22 @@ export default function Hero() {
                       borderRadius: 9999, 
                       textDecoration: "none",
                       backgroundColor: "var(--surface)",
-                      transition: "all 0.3s",
+                      transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = "var(--accent)";
                       e.currentTarget.style.color = "var(--accent)";
-                      e.currentTarget.style.transform = "translateY(-2px)";
+                      e.currentTarget.style.boxShadow = "0 8px 24px rgba(16,185,129,0.2)";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.borderColor = "var(--border)";
                       e.currentTarget.style.color = "var(--text-muted)";
-                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "none";
                     }}
                   >
                     <Icon size={16} />
                     {l.label}
-                  </a>
+                  </motion.a>
                 );
               })}
             </div>

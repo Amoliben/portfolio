@@ -28,9 +28,9 @@ function SkillBar({ name, level, delay }: { name: string; level: number; delay: 
 export default function Skills() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
   const a = (delay = 0) => ({
-    initial: { opacity: 0, y: 28 },
+    initial: { opacity: 0, y: 40 },
     animate: inView ? { opacity: 1, y: 0 } : {},
-    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
   });
 
   return (
@@ -59,29 +59,34 @@ export default function Skills() {
             { label: "AVG PROFICIENCY", value: skills.summary.avgProficiency, icon: "📊" },
             { label: "TOP STACK", value: skills.summary.topStack, icon: "⚡" },
             { label: "CORE SKILLS", value: `${skills.summary.strengths.length}`, icon: "🎯" },
-          ].map((s) => (
-            <div key={s.label} style={{
-              backgroundColor: "var(--bg)", border: "1px solid var(--border)",
-              borderRadius: "var(--radius-lg)", padding: "24px 20px",
-              transition: "all 0.3s",
-              position: "relative",
-              overflow: "hidden",
-            }}
+          ].map((s, i) => (
+            <motion.div 
+              key={s.label}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
+              whileHover={{ scale: 1.05, y: -6 }}
+              style={{
+                backgroundColor: "var(--bg)", border: "1px solid var(--border)",
+                borderRadius: "var(--radius-lg)", padding: "24px 20px",
+                transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                position: "relative",
+                overflow: "hidden",
+                cursor: "default",
+              }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "rgba(232,255,71,0.4)";
-                e.currentTarget.style.transform = "translateY(-4px)";
-                e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.3)";
+                e.currentTarget.style.borderColor = "rgba(16,185,129,0.4)";
+                e.currentTarget.style.boxShadow = "0 12px 32px rgba(16,185,129,0.2)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = "var(--border)";
-                e.currentTarget.style.transform = "translateY(0)";
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
               <div style={{ fontSize: 28, marginBottom: 12 }}>{s.icon}</div>
               <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 8 }}>{s.value}</div>
               <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.12em", textTransform: "uppercase" }}>{s.label}</div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -97,24 +102,25 @@ export default function Skills() {
                 key={s}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
+                transition={{ duration: 0.5, delay: 0.35 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ scale: 1.08, y: -3 }}
                 style={{
                   fontFamily: mono, fontSize: 12, fontWeight: 600,
-                  border: "1px solid rgba(232,255,71,0.3)", color: "var(--accent)",
+                  border: "1px solid rgba(16,185,129,0.3)", color: "var(--accent)",
                   padding: "10px 20px", borderRadius: 9999,
-                  backgroundColor: "rgba(232,255,71,0.08)", letterSpacing: "0.05em",
-                  transition: "all 0.3s",
+                  backgroundColor: "rgba(16,185,129,0.08)", letterSpacing: "0.05em",
+                  transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                   cursor: "default",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(232,255,71,0.15)";
+                  e.currentTarget.style.backgroundColor = "rgba(16,185,129,0.15)";
                   e.currentTarget.style.borderColor = "var(--accent)";
-                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = "0 6px 20px rgba(16,185,129,0.25)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(232,255,71,0.08)";
-                  e.currentTarget.style.borderColor = "rgba(232,255,71,0.3)";
-                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.backgroundColor = "rgba(16,185,129,0.08)";
+                  e.currentTarget.style.borderColor = "rgba(16,185,129,0.3)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >{s}</motion.span>
             ))}
@@ -143,16 +149,33 @@ export default function Skills() {
         </div>
 
         {/* Learning Approach */}
-        <motion.div {...a(0.8)} style={{
-          marginTop: 56, border: "1px solid rgba(232,255,71,0.25)",
-          borderRadius: "var(--radius-xl)", padding: "40px 36px",
-          background: "linear-gradient(135deg, rgba(232,255,71,0.06) 0%, transparent 100%)",
-          position: "relative",
-          overflow: "hidden",
-        }}>
+        <motion.div 
+          {...a(0.8)}
+          whileHover={{ scale: 1.01 }}
+          style={{
+            marginTop: 56, border: "1px solid rgba(16,185,129,0.25)",
+            borderRadius: "var(--radius-xl)", padding: "40px 36px",
+            background: "linear-gradient(135deg, rgba(16,185,129,0.06) 0%, transparent 100%)",
+            position: "relative",
+            overflow: "hidden",
+            transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = "rgba(16,185,129,0.4)";
+            e.currentTarget.style.boxShadow = "0 12px 40px rgba(16,185,129,0.15)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = "rgba(16,185,129,0.25)";
+            e.currentTarget.style.boxShadow = "none";
+          }}
+        >
           <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 3, background: "linear-gradient(90deg, var(--accent), transparent)" }} />
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <div style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "var(--accent)", boxShadow: "0 0 12px var(--accent)" }} />
+            <motion.div 
+              animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "var(--accent)", boxShadow: "0 0 12px var(--accent)" }} 
+            />
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600 }}>My Learning Philosophy</div>
           </div>
           <p style={{ color: "var(--text-secondary)", fontSize: 17, lineHeight: 1.7, maxWidth: 800 }}>

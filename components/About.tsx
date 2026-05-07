@@ -9,9 +9,9 @@ const mono = "'JetBrains Mono', monospace";
 export default function About() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.06 });
   const a = (delay = 0) => ({
-    initial: { opacity: 0, y: 28 },
+    initial: { opacity: 0, y: 40 },
     animate: inView ? { opacity: 1, y: 0 } : {},
-    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
   });
 
   return (
@@ -45,31 +45,55 @@ export default function About() {
 
             {/* Stats */}
             <motion.div {...a(0.3)} className="grid-3" style={{ marginBottom: 28 }}>
-              {personal.about.stats.map((s) => (
-                <div key={s.label} style={{
-                  backgroundColor: "var(--surface)", border: "1px solid var(--border)",
-                  borderRadius: "var(--radius-md)", padding: "18px 16px",
-                  transition: "border-color 0.2s",
-                }}
-                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(232,255,71,0.3)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
+              {personal.about.stats.map((s, i) => (
+                <motion.div 
+                  key={s.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.5, delay: 0.35 + i * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  style={{
+                    backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                    borderRadius: "var(--radius-md)", padding: "18px 16px",
+                    transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+                    cursor: "default",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(16,185,129,0.4)";
+                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(16,185,129,0.15)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "var(--border)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
                 >
                   <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
                   <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 8, textTransform: "uppercase" }}>{s.label}</div>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
 
             {/* Principles */}
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {personal.about.principles.map((p, i) => (
-                <motion.div key={p.title} {...a(0.35 + i * 0.08)} style={{
-                  backgroundColor: "var(--surface)", border: "1px solid var(--border)",
-                  borderRadius: "var(--radius-md)", padding: "16px 20px",
-                  transition: "border-color 0.2s, transform 0.2s",
-                }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(232,255,71,0.25)"; e.currentTarget.style.transform = "translateX(4px)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateX(0)"; }}
+                <motion.div 
+                  key={p.title} 
+                  {...a(0.35 + i * 0.08)}
+                  whileHover={{ x: 6, scale: 1.02 }}
+                  style={{
+                    backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                    borderRadius: "var(--radius-md)", padding: "16px 20px",
+                    transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+                    cursor: "default",
+                  }}
+                  onMouseEnter={(e) => { 
+                    e.currentTarget.style.borderColor = "rgba(16,185,129,0.3)"; 
+                    e.currentTarget.style.boxShadow = "0 4px 16px rgba(16,185,129,0.1)";
+                  }}
+                  onMouseLeave={(e) => { 
+                    e.currentTarget.style.borderColor = "var(--border)"; 
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
                 >
                   <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 6, fontWeight: 600 }}>{p.title}</div>
                   <p style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.7, fontWeight: 500 }}>{p.desc}</p>
