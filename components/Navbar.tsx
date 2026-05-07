@@ -64,7 +64,7 @@ export default function Navbar() {
         }}>
           {/* Brand */}
           <a href="#" style={{
-            fontFamily: mono, fontWeight: 900, fontSize: 18,
+            fontFamily: mono, fontWeight: 900, fontSize: 20,
             color: "var(--accent)", letterSpacing: "0.12em", textDecoration: "none", flexShrink: 0,
           }}>
             AMENTI.
@@ -76,7 +76,7 @@ export default function Navbar() {
               const isActive = activeSection === link.href.slice(1);
               return (
                 <a key={link.href} href={link.href} style={{
-                  fontFamily: mono, fontSize: 12, letterSpacing: "0.06em",
+                  fontFamily: mono, fontSize: 14, letterSpacing: "0.06em",
                   color: isActive ? "var(--accent)" : "var(--text-muted)",
                   textDecoration: "none", transition: "color 0.2s",
                   position: "relative", paddingBottom: 2,
@@ -99,11 +99,11 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="nav-cta">
             <a href={personal.github} target="_blank" rel="noopener noreferrer"
-              style={{ fontFamily: mono, fontSize: 12, color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s" }}
+              style={{ fontFamily: mono, fontSize: 14, color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             >GitHub</a>
-            <a href={`mailto:${personal.email}`} className="btn-primary" style={{ padding: "8px 20px", fontSize: 12 }}>
+            <a href={`mailto:${personal.email}`} className="btn-primary" style={{ padding: "10px 24px", fontSize: 14 }}>
               Hire Me
             </a>
           </div>
@@ -149,8 +149,8 @@ export default function Navbar() {
               }}
             >
               <div style={{ padding: "24px", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <span style={{ fontFamily: mono, fontWeight: 900, fontSize: 16, color: "var(--accent)", letterSpacing: "0.1em" }}>AMENTI.</span>
-                <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: 20, lineHeight: 1 }} aria-label="Close menu">✕</button>
+                <span style={{ fontFamily: mono, fontWeight: 900, fontSize: 18, color: "var(--accent)", letterSpacing: "0.1em" }}>AMENTI.</span>
+                <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: 24, lineHeight: 1 }} aria-label="Close menu">✕</button>
               </div>
               <div style={{ flex: 1, padding: "16px 24px", display: "flex", flexDirection: "column", gap: 4, overflowY: "auto" }}>
                 {navLinks.map((link, i) => {
@@ -163,7 +163,7 @@ export default function Navbar() {
                       transition={{ delay: i * 0.05 }}
                       onClick={() => setMenuOpen(false)}
                       style={{
-                        fontFamily: mono, fontSize: 15, letterSpacing: "0.05em",
+                        fontFamily: mono, fontSize: 16, letterSpacing: "0.05em",
                         color: isActive ? "var(--accent)" : "var(--text-muted)",
                         textDecoration: "none", padding: "14px 12px",
                         borderRadius: "var(--radius-md)",
@@ -177,7 +177,7 @@ export default function Navbar() {
                 })}
               </div>
               <div style={{ padding: "20px 24px", borderTop: "1px solid var(--border)", display: "flex", flexDirection: "column", gap: 12 }}>
-                <a href={`mailto:${personal.email}`} className="btn-primary" style={{ textAlign: "center", justifyContent: "center" }}>
+                <a href={`mailto:${personal.email}`} className="btn-primary" style={{ textAlign: "center", justifyContent: "center", fontSize: 15 }}>
                   Hire Me
                 </a>
               </div>
