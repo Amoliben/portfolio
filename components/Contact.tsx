@@ -137,8 +137,6 @@ export default function Contact() {
                   </select>
                 </div>
               </div>
-                </select>
-              </div>
 
               <div>
                 <label style={label}>Message</label>
