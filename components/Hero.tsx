@@ -26,9 +26,21 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 40 },
+  initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] },
+  transition: { duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] },
+});
+
+const fadeIn = (delay = 0) => ({
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.8, delay, ease: "easeOut" },
+});
+
+const scaleIn = (delay = 0) => ({
+  initial: { opacity: 0, scale: 0.9 },
+  animate: { opacity: 1, scale: 1 },
+  transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] },
 });
 
 export default function Hero() {
