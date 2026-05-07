@@ -102,6 +102,37 @@ body {
   50%       { opacity: 1; }
 }
 
+/* Card Color Variants */
+.card-green { border-color: rgba(16,185,129,0.3); }
+.card-green:hover { border-color: var(--accent); box-shadow: 0 20px 60px rgba(16,185,129,0.2); }
+.card-green::before { background: linear-gradient(90deg, var(--accent), transparent); }
+
+.card-blue { border-color: rgba(59,130,246,0.3); }
+.card-blue:hover { border-color: #3b82f6; box-shadow: 0 20px 60px rgba(59,130,246,0.2); }
+.card-blue::before { background: linear-gradient(90deg, #3b82f6, transparent); }
+
+.card-purple { border-color: rgba(168,85,247,0.3); }
+.card-purple:hover { border-color: #a855f7; box-shadow: 0 20px 60px rgba(168,85,247,0.2); }
+.card-purple::before { background: linear-gradient(90deg, #a855f7, transparent); }
+
+.card-orange { border-color: rgba(249,115,22,0.3); }
+.card-orange:hover { border-color: #f97316; box-shadow: 0 20px 60px rgba(249,115,22,0.2); }
+.card-orange::before { background: linear-gradient(90deg, #f97316, transparent); }
+
+.card-pink { border-color: rgba(236,72,153,0.3); }
+.card-pink:hover { border-color: #ec4899; box-shadow: 0 20px 60px rgba(236,72,153,0.2); }
+.card-pink::before { background: linear-gradient(90deg, #ec4899, transparent); }
+
+.card-yellow { border-color: rgba(234,179,8,0.3); }
+.card-yellow:hover { border-color: #eab308; box-shadow: 0 20px 60px rgba(234,179,8,0.2); }
+.card-yellow::before { background: linear-gradient(90deg, #eab308, transparent); }
+
+/* Gradient backgrounds for cards */
+.gradient-bg-1 { background: linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(59,130,246,0.05) 100%); }
+.gradient-bg-2 { background: linear-gradient(135deg, rgba(168,85,247,0.1) 0%, rgba(236,72,153,0.05) 100%); }
+.gradient-bg-3 { background: linear-gradient(135deg, rgba(249,115,22,0.1) 0%, rgba(234,179,8,0.05) 100%); }
+.gradient-bg-4 { background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(16,185,129,0.05) 100%); }
+
 @keyframes scroll-indicator {
   0%   { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(8px); opacity: 0; }

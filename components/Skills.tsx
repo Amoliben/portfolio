@@ -129,8 +129,10 @@ export default function Skills() {
 
         {/* Skill cards */}
         <div className="skills-grid">
-          {skills.categories.map((cat, ci) => (
-            <motion.div key={cat.label} {...a(0.4 + ci * 0.08)} className="card">
+          {skills.categories.map((cat, ci) => {
+            const colorClasses = ["card-green", "card-blue", "card-purple", "card-orange", "card-pink", "card-yellow"];
+            return (
+            <motion.div key={cat.label} {...a(0.4 + ci * 0.08)} className={`card ${colorClasses[ci % colorClasses.length]} gradient-bg-${(ci % 4) + 1}`}>
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 16 }}>
                 <div>
                   <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>{cat.label}</div>
@@ -145,7 +147,8 @@ export default function Skills() {
                 ))}
               </div>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
 
         {/* Learning Approach */}

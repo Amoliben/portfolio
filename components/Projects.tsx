@@ -8,12 +8,10 @@ const mono = "'JetBrains Mono', monospace";
 const filters = ["All", "Full Stack", "Backend", "Frontend"];
 
 const gradients = [
-  "linear-gradient(135deg, rgba(232,255,71,0.14) 0%, rgba(0,200,150,0.08) 100%)",
-  "linear-gradient(135deg, rgba(100,160,255,0.14) 0%, rgba(180,100,255,0.08) 100%)",
-  "linear-gradient(135deg, rgba(255,140,80,0.14) 0%, rgba(232,255,71,0.06) 100%)",
-  "linear-gradient(135deg, rgba(80,220,200,0.14) 0%, rgba(100,160,255,0.08) 100%)",
-  "linear-gradient(135deg, rgba(255,100,150,0.12) 0%, rgba(255,180,80,0.08) 100%)",
-  "linear-gradient(135deg, rgba(180,100,255,0.14) 0%, rgba(80,220,200,0.08) 100%)",
+  { bg: "linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(16,185,129,0.03) 100%)", border: "rgba(16,185,129,0.3)", hover: "rgba(16,185,129,0.25)" },
+  { bg: "linear-gradient(135deg, rgba(59,130,246,0.12) 0%, rgba(59,130,246,0.03) 100%)", border: "rgba(59,130,246,0.3)", hover: "rgba(59,130,246,0.25)" },
+  { bg: "linear-gradient(135deg, rgba(168,85,247,0.12) 0%, rgba(168,85,247,0.03) 100%)", border: "rgba(168,85,247,0.3)", hover: "rgba(168,85,247,0.25)" },
+  { bg: "linear-gradient(135deg, rgba(249,115,22,0.12) 0%, rgba(249,115,22,0.03) 100%)", border: "rgba(249,115,22,0.3)", hover: "rgba(249,115,22,0.25)" },
 ];
 
 export default function Projects() {
@@ -95,27 +93,37 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.94 }}
                 transition={{ duration: 0.35, delay: i * 0.05 }}
                 style={{
-                  backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                  backgroundColor: "var(--surface)", 
+                  border: `1px solid ${gradients[(project.id - 1) % gradients.length].border}`,
                   borderRadius: "var(--radius-lg)", overflow: "hidden",
                   display: "flex", flexDirection: "column",
                   transition: "border-color 0.25s, transform 0.25s, box-shadow 0.25s",
                   minHeight: "400px",
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--border-hover)"; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 20px 60px rgba(0,0,0,0.3)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
+                onMouseEnter={(e) => { 
+                  const color = gradients[(project.id - 1) % gradients.length].hover;
+                  e.currentTarget.style.borderColor = color.replace("0.25", "0.5"); 
+                  e.currentTarget.style.transform = "translateY(-4px)"; 
+                  e.currentTarget.style.boxShadow = `0 20px 60px ${color.replace("0.25", "0.15")}`; 
+                }}
+                onMouseLeave={(e) => { 
+                  e.currentTarget.style.borderColor = gradients[(project.id - 1) % gradients.length].border; 
+                  e.currentTarget.style.transform = "translateY(0)"; 
+                  e.currentTarget.style.boxShadow = "none"; 
+                }}
               >
                 {/* Thumbnail */}
                 <div style={{
                   position: "relative", height: "clamp(120px, 15vw, 168px)",
-                  background: gradients[(project.id - 1) % gradients.length],
-                  borderBottom: "1px solid var(--border)",
+                  background: gradients[(project.id - 1) % gradients.length].bg,
+                  borderBottom: `1px solid ${gradients[(project.id - 1) % gradients.length].border}`,
                   display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
                   flexShrink: 0,
                 }}>
                   {/* Watermark initials */}
                   <span style={{
-                    fontFamily: mono, fontSize: 80, fontWeight: 800,
-                    color: "rgba(255,255,255,0.04)", letterSpacing: "-0.04em",
+                    fontFamily: mono, fontSize: "clamp(40px, 8vw, 80px)", fontWeight: 800,
+                    color: "rgba(255,255,255,0.06)", letterSpacing: "-0.04em",
                     userSelect: "none", position: "absolute",
                   }}>
                     {project.title.split(" ").map(w => w[0]).join("").slice(0, 3)}
