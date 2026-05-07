@@ -6,28 +6,28 @@
 
 /* ─── CSS Variables ─────────────────────────────────────────── */
 :root {
-  --bg: #0a0a0a;
-  --surface: #111111;
-  --surface-2: #161616;
-  --border: #1f1f1f;
-  --border-hover: #333333;
-  --accent: #e8ff47;
-  --accent-dim: rgba(232,255,71,0.12);
-  --accent-glow: rgba(232,255,71,0.06);
-  --text: #ffffff;
-  --text-secondary: #d4d4d8;
-  --text-muted: #a1a1a6;
-  --text-subtle: #71717a;
-  --green: #4ade80;
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --surface-2: #222222;
+  --border: #2a2a2a;
+  --border-hover: #3a3a3a;
+  --accent: #10b981;
+  --accent-dim: rgba(16,185,129,0.12);
+  --accent-glow: rgba(16,185,129,0.06);
+  --text: #f5f5f5;
+  --text-secondary: #d1d1d1;
+  --text-muted: #a8a8a8;
+  --text-subtle: #808080;
+  --green: #10b981;
   --blue: #3b82f6;
   --purple: #a855f7;
   --red: #ef4444;
-  --bg-rgb: 10, 10, 10;
-  --surface-rgb: 17, 17, 17;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --bg-rgb: 15, 15, 15;
+  --surface-rgb: 26, 26, 26;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
 }
 
 
@@ -55,7 +55,7 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: var(--text-subtle); }
 
 /* ─── Selection ─────────────────────────────────────────────── */
-::selection { background: var(--accent); color: #000; font-weight: 600; }
+::selection { background: var(--accent); color: #fff; font-weight: 600; }
 
 /* ─── Focus ─────────────────────────────────────────────────── */
 :focus-visible {
@@ -111,8 +111,8 @@ body {
 .scroll-progress {
   position: fixed;
   top: 0; left: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent), rgba(232,255,71,0.4));
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), rgba(16,185,129,0.4));
   z-index: 100;
   transform-origin: left;
   transition: none;
@@ -185,10 +185,10 @@ body {
 }
 
 .card:hover {
-  border-color: rgba(232,255,71,0.4);
+  border-color: rgba(16,185,129,0.4);
   transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(232,255,71,0.1);
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(232,255,71,0.02) 100%);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(16,185,129,0.1);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(16,185,129,0.02) 100%);
   will-change: transform, box-shadow, border-color;
 }
 
@@ -207,8 +207,8 @@ body {
 }
 
 .card-accent:hover {
-  border-color: rgba(232,255,71,0.5);
-  box-shadow: 0 20px 60px rgba(232,255,71,0.15), 0 0 40px rgba(232,255,71,0.08);
+  border-color: rgba(16,185,129,0.5);
+  box-shadow: 0 20px 60px rgba(16,185,129,0.15), 0 0 40px rgba(16,185,129,0.08);
 }
 
 /* ─── Buttons ───────────────────────────────────────────────── */
@@ -221,7 +221,7 @@ body {
   font-size: 13px;
   letter-spacing: 0.06em;
   background-color: var(--accent);
-  color: #000 !important;
+  color: #fff !important;
   padding: 14px 28px;
   border-radius: 9999px;
   text-decoration: none;
@@ -256,14 +256,14 @@ body {
 .btn-primary:hover {
   filter: brightness(1.15);
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(232,255,71,0.4), 0 0 20px rgba(232,255,71,0.2);
+  box-shadow: 0 12px 32px rgba(16,185,129,0.4), 0 0 20px rgba(16,185,129,0.2);
   will-change: filter, transform, box-shadow;
 }
 .btn-primary:active { transform: translateY(0) scale(0.98); }
 
 .btn-primary svg {
-  color: #000 !important;
-  stroke: #000 !important;
+  color: #fff !important;
+  stroke: #fff !important;
   transition: transform 0.3s;
 }
 
@@ -311,7 +311,7 @@ body {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(232,255,71,0.15);
+  box-shadow: 0 8px 24px rgba(16,185,129,0.15);
   will-change: border-color, color, transform;
 }
 
@@ -334,7 +334,7 @@ body {
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #000;
+  color: #fff;
   border: 1px solid var(--accent);
   padding: 3px 8px;
   border-radius: 4px;
@@ -361,7 +361,7 @@ body {
 
 /* ─── Gradient Text ─────────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent) 0%, #bef264 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #34d399 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -369,10 +369,10 @@ body {
 
 /* ─── Glow Effects ──────────────────────────────────────────── */
 .glow-accent {
-  box-shadow: 0 0 20px rgba(232,255,71,0.25), 0 0 60px rgba(232,255,71,0.1);
+  box-shadow: 0 0 20px rgba(16,185,129,0.25), 0 0 60px rgba(16,185,129,0.1);
 }
 .text-glow { 
-  text-shadow: 0 0 40px rgba(232,255,71,0.5), 0 0 80px rgba(232,255,71,0.2); 
+  text-shadow: 0 0 40px rgba(16,185,129,0.5), 0 0 80px rgba(16,185,129,0.2); 
 }
 
 /* ─── Layout ────────────────────────────────────────────────── */
