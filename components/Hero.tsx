@@ -63,7 +63,7 @@ export default function Hero() {
       />
 
       <div className="container" style={{ position: "relative" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
+        <div style={{ textAlign: "center" }}>
 
           {/* Status badge */}
           <motion.div {...fadeUp(0.1)} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24, justifyContent: "center" }}>
@@ -230,7 +230,7 @@ export default function Hero() {
         </div>
 
         {/* Tech marquee */}
-        <motion.div {...fadeUp(0.75)} style={{ marginTop: 40, maxWidth: "1100px", margin: "40px auto 0" }}>
+        <motion.div {...fadeUp(0.75)} style={{ marginTop: 40 }}>
           <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 20, textAlign: "center" }}>
             Core Technologies
           </div>

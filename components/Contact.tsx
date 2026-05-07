@@ -41,7 +41,6 @@ export default function Contact() {
   return (
     <section id="contact" ref={ref} className="section-pad" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg)" }}>
       <div className="container">
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
 
         <motion.div {...a(0)} style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 48 }}>
           <span style={{ fontFamily: mono, fontSize: 11, letterSpacing: "0.2em", color: "var(--text-secondary)", textTransform: "uppercase" }}>Contact</span>
@@ -146,7 +145,6 @@ export default function Contact() {
               </button>
             </form>
           </motion.div>
-        </div>
         </div>
       </div>
     </section>

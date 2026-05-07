@@ -36,7 +36,6 @@ export default function Projects() {
   return (
     <section id="projects" ref={ref} className="section-pad" style={{ backgroundColor: "var(--bg)", borderTop: "1px solid var(--border)" }}>
       <div className="container">
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
 
         <motion.div {...a(0)} className="section-label"><span>Selected Work</span></motion.div>
 
@@ -187,7 +186,6 @@ export default function Projects() {
             VIEW ALL ON GITHUB ↗
           </a>
         </motion.div>
-        </div>
       </div>
     </section>
   );
