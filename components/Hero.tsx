@@ -34,7 +34,7 @@ const fadeUp = (delay = 0) => ({
 export default function Hero() {
   return (
     <section style={{
-      position: "relative", minHeight: "90vh",
+      position: "relative", minHeight: "95vh",
       display: "flex", flexDirection: "column", justifyContent: "center",
       overflow: "hidden", paddingTop: 68, backgroundColor: "var(--bg)",
     }}>
@@ -63,10 +63,10 @@ export default function Hero() {
       />
 
       <div className="container" style={{ position: "relative" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
 
           {/* Status badge */}
-          <motion.div {...fadeUp(0.1)} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
+          <motion.div {...fadeUp(0.1)} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24, justifyContent: "center" }}>
             <span className="animate-pulse-dot" style={{
               width: 8, height: 8, borderRadius: "50%", backgroundColor: "var(--green)",
               display: "inline-block", flexShrink: 0,
@@ -80,16 +80,16 @@ export default function Hero() {
           <motion.p {...fadeUp(0.2)} style={{
             fontSize: "clamp(18px, 2.2vw, 22px)",
             fontWeight: 500, color: "var(--text-muted)",
-            marginBottom: 16, letterSpacing: "-0.01em",
+            marginBottom: 20, letterSpacing: "-0.01em",
           }}>
             Hi, I'm <span style={{ color: "var(--accent)", fontWeight: 700 }}>Amenti Liben</span>
           </motion.p>
 
           {/* Heading */}
           <motion.h1 {...fadeUp(0.3)} style={{
-            fontSize: "clamp(44px, 7vw, 68px)",
+            fontSize: "clamp(44px, 7vw, 72px)",
             fontWeight: 900, lineHeight: 1.15,
-            letterSpacing: "-0.03em", marginBottom: 20, color: "var(--text)",
+            letterSpacing: "-0.03em", marginBottom: 24, color: "var(--text)",
           }}>
             Full-Stack Developer<br />
             building <span style={{ color: "var(--accent)" }} className="text-glow">scalable</span> and<br />
@@ -99,13 +99,14 @@ export default function Hero() {
           {/* Description */}
           <motion.p {...fadeUp(0.4)} style={{
             color: "var(--text-secondary)", fontSize: "clamp(17px, 1.8vw, 20px)",
-            lineHeight: 1.65, maxWidth: 650, marginBottom: 28, fontWeight: 400,
+            lineHeight: 1.7, maxWidth: 700, marginBottom: 32, fontWeight: 400,
+            margin: "0 auto 32px",
           }}>
             I specialize in modern technologies like <span style={{ color: "var(--accent)", fontWeight: 600 }}>Next.js</span>, <span style={{ color: "var(--accent)", fontWeight: 600 }}>TypeScript</span>, and <span style={{ color: "var(--accent)", fontWeight: 600 }}>Node.js</span> to create efficient and user-focused solutions.
           </motion.p>
 
           {/* Focus badges */}
-          <motion.div {...fadeUp(0.45)} style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 32 }}>
+          <motion.div {...fadeUp(0.45)} style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 40, justifyContent: "center" }}>
             {["Backend Systems", "REST APIs", "Clean Architecture"].map((item, i) => (
               <motion.span 
                 key={item}
@@ -144,7 +145,7 @@ export default function Hero() {
           </motion.div>
 
           {/* CTAs */}
-          <motion.div {...fadeUp(0.5)} style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14, marginBottom: 48 }}>
+          <motion.div {...fadeUp(0.5)} style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14, marginBottom: 56, justifyContent: "center" }}>
             <a href="#projects" className="btn-primary" style={{ padding: "16px 32px", fontSize: 15 }}>
               VIEW PROJECTS
               <FaArrowRight size={15} />
@@ -154,12 +155,30 @@ export default function Hero() {
             </a>
           </motion.div>
 
+          {/* Stats */}
+          <motion.div {...fadeUp(0.6)} style={{ display: "flex", flexWrap: "wrap", gap: 48, paddingTop: 48, borderTop: "1px solid var(--border)", marginBottom: 48, justifyContent: "center" }}>
+            {[
+              { label: "PROJECTS BUILT", value: 5, suffix: "+" },
+              { label: "TECHNOLOGIES", value: 12, suffix: "+" },
+              { label: "YEARS LEARNING", value: 2, suffix: "+" },
+            ].map((s) => (
+              <div key={s.label}>
+                <div style={{ fontFamily: mono, fontSize: "clamp(32px, 3.8vw, 48px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
+                  <Counter to={s.value} suffix={s.suffix} />
+                </div>
+                <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.18em", marginTop: 8, textTransform: "uppercase" }}>
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+
           {/* Social Links */}
-          <motion.div {...fadeUp(0.55)} style={{ marginBottom: 48 }}>
-            <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16 }}>
+          <motion.div {...fadeUp(0.65)} style={{ marginBottom: 48 }}>
+            <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 20 }}>
               Connect With Me
             </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
               {[
                 { label: "GitHub", href: personal.github, icon: FaGithub },
                 { label: "LinkedIn", href: personal.linkedin, icon: FaLinkedin },
@@ -176,7 +195,7 @@ export default function Hero() {
                     rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 + i * 0.08 }}
+                    transition={{ duration: 0.5, delay: 0.7 + i * 0.08 }}
                     whileHover={{ scale: 1.05, y: -4 }}
                     style={{ 
                       display: "flex", alignItems: "center", gap: 8,
@@ -208,29 +227,11 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div {...fadeUp(0.6)} style={{ display: "flex", flexWrap: "wrap", gap: 40, paddingTop: 40, borderTop: "1px solid var(--border)" }}>
-            {[
-              { label: "PROJECTS BUILT", value: 5, suffix: "+" },
-              { label: "TECHNOLOGIES", value: 12, suffix: "+" },
-              { label: "YEARS LEARNING", value: 2, suffix: "+" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div style={{ fontFamily: mono, fontSize: "clamp(32px, 3.8vw, 44px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
-                  <Counter to={s.value} suffix={s.suffix} />
-                </div>
-                <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.18em", marginTop: 8, textTransform: "uppercase" }}>
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </motion.div>
-
         </div>
 
         {/* Tech marquee */}
-        <motion.div {...fadeUp(0.7)} style={{ marginTop: 56, maxWidth: "900px", margin: "56px auto 0" }}>
-          <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 16 }}>
+        <motion.div {...fadeUp(0.75)} style={{ marginTop: 40, maxWidth: "1100px", margin: "40px auto 0" }}>
+          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: 20, textAlign: "center" }}>
             Core Technologies
           </div>
           <div style={{ overflow: "hidden", position: "relative" }}>
