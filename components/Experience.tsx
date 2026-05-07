@@ -50,20 +50,22 @@ export default function Experience() {
 
         {/* Experience cards */}
         <div style={{ display: "flex", flexDirection: "column", gap: 18, marginBottom: 20 }}>
-          {experience.map((exp, i) => (
-            <motion.div key={exp.title} {...a(0.3 + i * 0.12)} style={card}>
+          {experience.map((exp, i) => {
+            const colors = ["rgba(16,185,129,0.3)", "rgba(59,130,246,0.3)", "rgba(168,85,247,0.3)"];
+            return (
+            <motion.div key={exp.title} {...a(0.3 + i * 0.12)} style={{...card, border: `1px solid ${colors[i % 3]}`}}>
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", justifyContent: "space-between", gap: 10, marginBottom: 14 }}>
                 <div>
-                  <h3 style={{ fontSize: 17, fontWeight: 600, color: "var(--text)" }}>{exp.title}</h3>
+                  <h3 style={{ fontSize: 17, fontWeight: 600, color: ["var(--accent)", "#3b82f6", "#a855f7"][i % 3] }}>{exp.title}</h3>
                   <div style={{ fontSize: 13, color: "var(--text-muted)", marginTop: 4 }}>{exp.company} · {exp.type}</div>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>{exp.period}</span>
                   <span style={{
                     fontFamily: mono, fontSize: 9, padding: "3px 8px", borderRadius: 4,
-                    border: exp.status === "ACTIVE" ? "1px solid rgba(74,222,128,0.3)" : "1px solid var(--border)",
-                    color: exp.status === "ACTIVE" ? "var(--green)" : "var(--text-subtle)",
-                    backgroundColor: exp.status === "ACTIVE" ? "rgba(74,222,128,0.06)" : "transparent",
+                    border: exp.status === "ACTIVE" ? `1px solid ${colors[i % 3]}` : "1px solid var(--border)",
+                    color: exp.status === "ACTIVE" ? colors[i % 3].replace("0.3", "0.5").replace("rgba(", "").replace(")", "") : "var(--text-subtle)",
+                    backgroundColor: exp.status === "ACTIVE" ? colors[i % 3].replace("0.3", "0.06") : "transparent",
                   }}>{exp.status}</span>
                 </div>
               </div>
@@ -73,15 +75,15 @@ export default function Experience() {
               <ul style={{ listStyle: "none", marginBottom: 18, display: "flex", flexDirection: "column", gap: 6 }}>
                 {exp.bullets.map((b) => (
                   <li key={b} style={{ fontSize: 13, color: "var(--text-muted)", display: "flex", gap: 8, alignItems: "flex-start" }}>
-                    <span style={{ color: "var(--accent)", flexShrink: 0, marginTop: 2 }}>•</span>{b}
+                    <span style={{ color: colors[i % 3], flexShrink: 0, marginTop: 2 }}>•</span>{b}
                   </li>
                 ))}
               </ul>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 14 }}>
-                {exp.metrics.map((m) => (
-                  <div key={m.label} style={{ backgroundColor: "var(--bg)", border: "1px solid var(--border)", borderRadius: 10, padding: "10px 14px" }}>
-                    <div style={{ fontFamily: mono, fontSize: 14, fontWeight: 700, color: "var(--accent)", lineHeight: 1 }}>{m.value}</div>
+                {exp.metrics.map((m, mi) => (
+                  <div key={m.label} style={{ backgroundColor: "var(--bg)", border: `1px solid ${colors[i % 3]}`, borderRadius: 10, padding: "10px 14px" }}>
+                    <div style={{ fontFamily: mono, fontSize: 14, fontWeight: 700, color: colors[i % 3], lineHeight: 1 }}>{m.value}</div>
                     <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.1em", marginTop: 4, textTransform: "uppercase" }}>{m.label}</div>
                   </div>
                 ))}
@@ -89,11 +91,12 @@ export default function Experience() {
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 {exp.tech.map((t) => (
-                  <span key={t} style={{ fontFamily: mono, fontSize: 10, border: "1px solid var(--border)", color: "var(--text-muted)", padding: "3px 8px", borderRadius: 4 }}>{t}</span>
+                  <span key={t} style={{ fontFamily: mono, fontSize: 10, border: `1px solid ${colors[i % 3]}`, color: "var(--text-muted)", padding: "3px 8px", borderRadius: 4 }}>{t}</span>
                 ))}
               </div>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
 
         {/* Education */}
@@ -113,10 +116,10 @@ export default function Experience() {
           <div style={{ borderTop: "1px solid var(--border)", paddingTop: 14 }}>
             <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 10 }}>Languages</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-              {education.languages.map((lang) => (
+              {education.languages.map((lang, i) => (
                 <div key={lang.name} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ fontSize: 14, color: "var(--text)" }}>{lang.name}</span>
-                  <span style={{ fontFamily: mono, fontSize: 9, border: "1px solid var(--border)", color: "var(--text-muted)", padding: "3px 8px", borderRadius: 4, letterSpacing: "0.05em" }}>{lang.level}</span>
+                  <span style={{ fontSize: 14, color: ["var(--accent)", "#3b82f6", "#a855f7"][i % 3] }}>{lang.name}</span>
+                  <span style={{ fontFamily: mono, fontSize: 9, border: `1px solid ${["rgba(16,185,129,0.3)", "rgba(59,130,246,0.3)", "rgba(168,85,247,0.3)"][i % 3]}`, color: ["var(--accent)", "#3b82f6", "#a855f7"][i % 3], padding: "3px 8px", borderRadius: 4, letterSpacing: "0.05em" }}>{lang.level}</span>
                 </div>
               ))}
             </div>

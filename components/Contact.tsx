@@ -60,14 +60,14 @@ export default function Contact() {
 
             <motion.div {...a(0.25)} style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 24 }}>
               {[
-                { k: "Email", v: personal.email, isLink: true },
-                { k: "Location", v: personal.location, isLink: false },
-                { k: "Availability", v: personal.availability, isLink: false },
-              ].map((item) => (
-                <div key={item.k} style={{ backgroundColor: "var(--surface)", border: "1px solid var(--border)", borderRadius: 14, padding: "16px 20px" }}>
+                { k: "Email", v: personal.email, isLink: true, color: "rgba(16,185,129,0.3)" },
+                { k: "Location", v: personal.location, isLink: false, color: "rgba(59,130,246,0.3)" },
+                { k: "Availability", v: personal.availability, isLink: false, color: "rgba(168,85,247,0.3)" },
+              ].map((item, i) => (
+                <div key={item.k} style={{ backgroundColor: "var(--surface)", border: `1px solid ${item.color}`, borderRadius: 14, padding: "16px 20px" }}>
                   <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 4 }}>{item.k}</div>
                   {item.isLink ? (
-                    <a href={`mailto:${item.v}`} style={{ fontFamily: mono, fontSize: 13, color: "var(--accent)", textDecoration: "none" }}>{item.v}</a>
+                    <a href={`mailto:${item.v}`} style={{ fontFamily: mono, fontSize: 13, color: ["var(--accent)", "#3b82f6", "#a855f7"][i], textDecoration: "none" }}>{item.v}</a>
                   ) : (
                     <div style={{ fontSize: 14, color: "var(--text)" }}>{item.v}</div>
                   )}

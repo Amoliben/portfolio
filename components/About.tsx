@@ -52,22 +52,25 @@ export default function About() {
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.35 + i * 0.1 }}
                   whileHover={{ scale: 1.05, y: -4 }}
+                  className={`card gradient-bg-${(i % 4) + 1}`}
                   style={{
-                    backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                    backgroundColor: "var(--surface)", 
+                    border: `1px solid ${["rgba(16,185,129,0.3)", "rgba(59,130,246,0.3)", "rgba(168,85,247,0.3)"][i % 3]}`,
                     borderRadius: "var(--radius-md)", padding: "16px 14px",
                     transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                     cursor: "default",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = "rgba(16,185,129,0.4)";
-                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(16,185,129,0.15)";
+                    const colors = ["rgba(16,185,129,0.4)", "rgba(59,130,246,0.4)", "rgba(168,85,247,0.4)"];
+                    e.currentTarget.style.borderColor = colors[i % 3];
+                    e.currentTarget.style.boxShadow = `0 8px 24px ${colors[i % 3].replace("0.4", "0.15")}`;
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = "var(--border)";
+                    e.currentTarget.style.borderColor = ["rgba(16,185,129,0.3)", "rgba(59,130,246,0.3)", "rgba(168,85,247,0.3)"][i % 3];
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: ["var(--accent)", "#3b82f6", "#a855f7"][i % 3], lineHeight: 1 }}>{s.value}</div>
                   <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 7, textTransform: "uppercase" }}>{s.label}</div>
                 </motion.div>
               ))}
@@ -75,30 +78,35 @@ export default function About() {
 
             {/* Principles */}
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {personal.about.principles.map((p, i) => (
+              {personal.about.principles.map((p, i) => {
+                const colors = ["rgba(16,185,129,0.3)", "rgba(59,130,246,0.3)", "rgba(249,115,22,0.3)"];
+                return (
                 <motion.div 
                   key={p.title} 
                   {...a(0.35 + i * 0.08)}
                   whileHover={{ x: 6, scale: 1.02 }}
+                  className={`card ${["card-green", "card-blue", "card-orange"][i % 3]}`}
                   style={{
-                    backgroundColor: "var(--surface)", border: "1px solid var(--border)",
+                    backgroundColor: "var(--surface)", 
+                    border: `1px solid ${colors[i % 3]}`,
                     borderRadius: "var(--radius-md)", padding: "14px 18px",
                     transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                     cursor: "default",
                   }}
                   onMouseEnter={(e) => { 
-                    e.currentTarget.style.borderColor = "rgba(16,185,129,0.3)"; 
-                    e.currentTarget.style.boxShadow = "0 4px 16px rgba(16,185,129,0.1)";
+                    e.currentTarget.style.borderColor = colors[i % 3].replace("0.3", "0.5"); 
+                    e.currentTarget.style.boxShadow = `0 4px 16px ${colors[i % 3].replace("0.3", "0.1")}`;
                   }}
                   onMouseLeave={(e) => { 
-                    e.currentTarget.style.borderColor = "var(--border)"; 
+                    e.currentTarget.style.borderColor = colors[i % 3]; 
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 5, fontWeight: 600 }}>{p.title}</div>
+                  <div style={{ fontFamily: mono, fontSize: 10, color: ["var(--accent)", "#3b82f6", "#f97316"][i % 3], letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 5, fontWeight: 600 }}>{p.title}</div>
                   <p style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.65, fontWeight: 500 }}>{p.desc}</p>
                 </motion.div>
-              ))}
+              );
+              })}
             </div>
           </div>
 
