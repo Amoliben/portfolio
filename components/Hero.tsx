@@ -78,7 +78,7 @@ export default function Hero() {
 
           {/* Greeting */}
           <motion.p {...fadeUp(0.2)} style={{
-            fontSize: "clamp(15px, 1.8vw, 18px)",
+            fontSize: "clamp(17px, 2vw, 20px)",
             fontWeight: 500, color: "var(--text-muted)",
             marginBottom: 16, letterSpacing: "-0.01em",
           }}>
@@ -87,7 +87,7 @@ export default function Hero() {
 
           {/* Heading */}
           <motion.h1 {...fadeUp(0.3)} style={{
-            fontSize: "clamp(36px, 6vw, 56px)",
+            fontSize: "clamp(40px, 6.5vw, 64px)",
             fontWeight: 900, lineHeight: 1.15,
             letterSpacing: "-0.03em", marginBottom: 20, color: "var(--text)",
           }}>
@@ -98,7 +98,7 @@ export default function Hero() {
 
           {/* Description */}
           <motion.p {...fadeUp(0.4)} style={{
-            color: "var(--text-secondary)", fontSize: "clamp(15px, 1.5vw, 17px)",
+            color: "var(--text-secondary)", fontSize: "clamp(16px, 1.6vw, 18px)",
             lineHeight: 1.65, maxWidth: 650, marginBottom: 28, fontWeight: 400,
           }}>
             I specialize in modern technologies like <span style={{ color: "var(--accent)", fontWeight: 600 }}>Next.js</span>, <span style={{ color: "var(--accent)", fontWeight: 600 }}>TypeScript</span>, and <span style={{ color: "var(--accent)", fontWeight: 600 }}>Node.js</span> to create efficient and user-focused solutions.
@@ -114,7 +114,7 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 0.5 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 style={{
-                  fontFamily: mono, fontSize: "clamp(11px, 1.2vw, 12px)", 
+                  fontFamily: mono, fontSize: "clamp(11px, 1.2vw, 13px)", 
                   color: "var(--text-secondary)",
                   border: "1px solid rgba(16,185,129,0.3)", 
                   padding: "8px 16px",
@@ -145,11 +145,11 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div {...fadeUp(0.5)} style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14, marginBottom: 48 }}>
-            <a href="#projects" className="btn-primary" style={{ padding: "14px 28px", fontSize: 13 }}>
+            <a href="#projects" className="btn-primary" style={{ padding: "15px 30px", fontSize: 14 }}>
               VIEW PROJECTS
-              <FaArrowRight size={13} />
+              <FaArrowRight size={14} />
             </a>
-            <a href="#contact" className="btn-outline" style={{ padding: "13px 28px", fontSize: 13 }}>
+            <a href="#contact" className="btn-outline" style={{ padding: "14px 30px", fontSize: 14 }}>
               CONTACT ME
             </a>
           </motion.div>
@@ -180,7 +180,7 @@ export default function Hero() {
                     whileHover={{ scale: 1.05, y: -4 }}
                     style={{ 
                       display: "flex", alignItems: "center", gap: 8,
-                      fontFamily: mono, fontSize: 12, 
+                      fontFamily: mono, fontSize: 13, 
                       color: "var(--text-muted)",
                       border: "1px solid var(--border)", 
                       padding: "10px 18px",
@@ -216,7 +216,7 @@ export default function Hero() {
               { label: "YEARS LEARNING", value: 2, suffix: "+" },
             ].map((s) => (
               <div key={s.label}>
-                <div style={{ fontFamily: mono, fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
+                <div style={{ fontFamily: mono, fontSize: "clamp(32px, 3.8vw, 44px)", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
                   <Counter to={s.value} suffix={s.suffix} />
                 </div>
                 <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.18em", marginTop: 8, textTransform: "uppercase" }}>

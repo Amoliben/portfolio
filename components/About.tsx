@@ -26,20 +26,20 @@ export default function About() {
           {/* ── Left ── */}
           <div>
             <motion.h2 {...a(0.1)} style={{
-              fontSize: "clamp(28px, 3.8vw, 44px)", fontWeight: 800,
+              fontSize: "clamp(32px, 4.2vw, 50px)", fontWeight: 800,
               lineHeight: 1.15, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 20,
             }}>
               Building scalable and<br />
               <span style={{ color: "var(--accent)" }}>maintainable applications.</span>
             </motion.h2>
 
-            <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(14px, 1.25vw, 16px)", lineHeight: 1.75, marginBottom: 14, fontWeight: 500 }}>
+            <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.35vw, 17px)", lineHeight: 1.75, marginBottom: 14, fontWeight: 500 }}>
               {personal.about.description1}
             </motion.p>
-            <motion.p {...a(0.25)} style={{ color: "var(--text-secondary)", fontSize: "clamp(14px, 1.25vw, 16px)", lineHeight: 1.75, marginBottom: 14, fontWeight: 500 }}>
+            <motion.p {...a(0.25)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.35vw, 17px)", lineHeight: 1.75, marginBottom: 14, fontWeight: 500 }}>
               {personal.about.description2}
             </motion.p>
-            <motion.p {...a(0.28)} style={{ color: "var(--text-muted)", fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.75, marginBottom: 32, fontWeight: 500, fontStyle: "italic" }}>
+            <motion.p {...a(0.28)} style={{ color: "var(--text-muted)", fontSize: "clamp(14px, 1.25vw, 16px)", lineHeight: 1.75, marginBottom: 32, fontWeight: 500, fontStyle: "italic" }}>
               {personal.about.description3}
             </motion.p>
 
@@ -67,7 +67,7 @@ export default function About() {
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  <div style={{ fontFamily: mono, fontSize: 22, fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
+                  <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>{s.value}</div>
                   <div style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)", letterSpacing: "0.15em", marginTop: 7, textTransform: "uppercase" }}>{s.label}</div>
                 </motion.div>
               ))}
@@ -96,7 +96,7 @@ export default function About() {
                   }}
                 >
                   <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 5, fontWeight: 600 }}>{p.title}</div>
-                  <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.65, fontWeight: 500 }}>{p.desc}</p>
+                  <p style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.65, fontWeight: 500 }}>{p.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -150,15 +150,15 @@ export default function About() {
               borderRadius: "var(--radius-lg)", padding: 20, marginBottom: 14,
             }}>
               <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 7, fontWeight: 600 }}>Current Focus</div>
-              <div style={{ fontSize: 14, color: "var(--text-secondary)", marginBottom: 20, fontWeight: 500 }}>Seeking internship & junior developer opportunities</div>
+              <div style={{ fontSize: 15, color: "var(--text-secondary)", marginBottom: 20, fontWeight: 500 }}>Seeking internship & junior developer opportunities</div>
 
               <div style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 14, fontWeight: 600 }}>Learning Journey</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 {personal.about.timeline.map((item, i) => (
                   <div key={item.year} style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                    <span style={{ fontFamily: mono, fontSize: 12, color: "var(--accent)", width: 50, flexShrink: 0, fontWeight: 700 }}>{item.year}</span>
+                    <span style={{ fontFamily: mono, fontSize: 13, color: "var(--accent)", width: 50, flexShrink: 0, fontWeight: 700 }}>{item.year}</span>
                     <div style={{ flex: 1, height: 1, background: `linear-gradient(to right, var(--border), transparent)` }} />
-                    <span style={{ fontSize: 12, color: "var(--text-secondary)", flex: 2, minWidth: 0, fontWeight: 500 }}>{item.event}</span>
+                    <span style={{ fontSize: 13, color: "var(--text-secondary)", flex: 2, minWidth: 0, fontWeight: 500 }}>{item.event}</span>
                   </div>
                 ))}
               </div>

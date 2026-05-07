@@ -41,13 +41,13 @@ export default function Skills() {
 
         <div style={{ maxWidth: "900px", marginBottom: 40 }}>
           <motion.h2 {...a(0.1)} style={{
-            fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 900,
+            fontSize: "clamp(36px, 5vw, 58px)", fontWeight: 900,
             lineHeight: 1.15, letterSpacing: "-0.03em", color: "var(--text)", marginBottom: 16,
           }}>
             Technologies I work with to build <span style={{ color: "var(--accent)" }} className="text-glow">modern solutions</span>
           </motion.h2>
 
-          <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(15px, 1.35vw, 17px)", lineHeight: 1.65, maxWidth: 650, marginBottom: 0, fontWeight: 400 }}>
+          <motion.p {...a(0.2)} style={{ color: "var(--text-secondary)", fontSize: "clamp(16px, 1.45vw, 18px)", lineHeight: 1.65, maxWidth: 650, marginBottom: 0, fontWeight: 400 }}>
             From frontend interfaces to backend APIs and databases — I focus on mastering essential technologies for building scalable full-stack applications.
           </motion.p>
         </div>
@@ -83,8 +83,8 @@ export default function Skills() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              <div style={{ fontSize: 26, marginBottom: 10 }}>{s.icon}</div>
-              <div style={{ fontFamily: mono, fontSize: 22, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 7 }}>{s.value}</div>
+              <div style={{ fontSize: 28, marginBottom: 10 }}>{s.icon}</div>
+              <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 7 }}>{s.value}</div>
               <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.12em", textTransform: "uppercase" }}>{s.label}</div>
             </motion.div>
           ))}
@@ -105,7 +105,7 @@ export default function Skills() {
                 transition={{ duration: 0.5, delay: 0.35 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
                 whileHover={{ scale: 1.08, y: -3 }}
                 style={{
-                  fontFamily: mono, fontSize: 12, fontWeight: 600,
+                  fontFamily: mono, fontSize: 13, fontWeight: 600,
                   border: "1px solid rgba(16,185,129,0.3)", color: "var(--accent)",
                   padding: "10px 20px", borderRadius: 9999,
                   backgroundColor: "rgba(16,185,129,0.08)", letterSpacing: "0.05em",
@@ -178,7 +178,7 @@ export default function Skills() {
             />
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600 }}>My Learning Philosophy</div>
           </div>
-          <p style={{ color: "var(--text-secondary)", fontSize: 15, lineHeight: 1.65, maxWidth: 800 }}>
+          <p style={{ color: "var(--text-secondary)", fontSize: 16, lineHeight: 1.65, maxWidth: 800 }}>
             I focus on <span style={{ color: "var(--accent)", fontWeight: 600 }}>mastering core technologies deeply</span> rather than spreading thin across many tools. Each skill is developed through hands-on projects and real-world application, ensuring practical understanding alongside theoretical knowledge.
           </p>
         </motion.div>
