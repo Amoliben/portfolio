@@ -22,7 +22,7 @@ export default function About() {
           <span style={{ fontWeight: 600 }}>About Me</span>
         </motion.div>
 
-        <div className="about-grid">
+        <div className="about-grid" style={{ maxWidth: "1200px", margin: "0 auto" }}>
           {/* ── Left ── */}
           <div>
             <motion.h2 {...a(0.1)} style={{

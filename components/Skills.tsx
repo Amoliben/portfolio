@@ -39,7 +39,7 @@ export default function Skills() {
 
         <motion.div {...a(0)} className="section-label"><span>Technical Skills</span></motion.div>
 
-        <div style={{ maxWidth: "900px", marginBottom: 40 }}>
+        <div style={{ maxWidth: "1000px", marginBottom: 40, margin: "0 auto 40px" }}>
           <motion.h2 {...a(0.1)} style={{
             fontSize: "clamp(36px, 5vw, 58px)", fontWeight: 900,
             lineHeight: 1.15, letterSpacing: "-0.03em", color: "var(--text)", marginBottom: 16,
@@ -53,7 +53,7 @@ export default function Skills() {
         </div>
 
         {/* Summary stats */}
-        <motion.div {...a(0.25)} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 36 }}>
+        <motion.div {...a(0.25)} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 36, maxWidth: "1000px", margin: "0 auto 36px" }}>
           {[
             { label: "SKILL GROUPS", value: skills.summary.groups, icon: "📦" },
             { label: "AVG PROFICIENCY", value: skills.summary.avgProficiency, icon: "📊" },
@@ -91,7 +91,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Top Skills Tags */}
-        <motion.div {...a(0.3)} style={{ marginBottom: 40 }}>
+        <motion.div {...a(0.3)} style={{ marginBottom: 40, maxWidth: "1000px", margin: "0 auto 40px" }}>
           <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 16, display: "flex", alignItems: "center", gap: 10 }}>
             <div style={{ width: 4, height: 4, borderRadius: "50%", backgroundColor: "var(--accent)" }} />
             Top Skills
@@ -128,7 +128,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Skill cards */}
-        <div className="skills-grid">
+        <div className="skills-grid" style={{ maxWidth: "1200px", margin: "0 auto" }}>
           {skills.categories.map((cat, ci) => (
             <motion.div key={cat.label} {...a(0.4 + ci * 0.08)} className="card">
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 16 }}>
@@ -159,6 +159,8 @@ export default function Skills() {
             position: "relative",
             overflow: "hidden",
             transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+            maxWidth: "1000px",
+            margin: "40px auto 0",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.borderColor = "rgba(16,185,129,0.4)";

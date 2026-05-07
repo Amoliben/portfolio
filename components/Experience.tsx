@@ -20,6 +20,7 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="section-pad" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg)" }}>
       <div className="container">
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
 
         <motion.div {...a(0)} style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 48 }}>
           <span style={{ fontFamily: mono, fontSize: 11, letterSpacing: "0.2em", color: "var(--text-secondary)", textTransform: "uppercase" }}>Experience</span>
@@ -122,6 +123,7 @@ export default function Experience() {
             </div>
           </div>
         </motion.div>
+        </div>
       </div>
     </section>
   );
