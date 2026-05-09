@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { personal } from "@/data/portfolio";
-import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaInstagram, FaArrowUp, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaInstagram, FaArrowUp, FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const mono = "'JetBrains Mono', monospace";
 const navLinks = [
@@ -54,6 +54,10 @@ export default function Footer() {
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 4, display: "flex", alignItems: "center", gap: 6 }}>
               <FaMapMarkerAlt size={12} />
               {personal.location}
+            </div>
+            <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 4, display: "flex", alignItems: "center", gap: 6 }}>
+              <FaPhone size={12} />
+              {personal.phone}
             </div>
             <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", marginBottom: 8 }}>Typically replies {personal.responseTime}</div>
             <a href={`mailto:${personal.email}`} style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", textDecoration: "none", display: "flex", alignItems: "center", gap: 6 }}>
