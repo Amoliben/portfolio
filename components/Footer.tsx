@@ -101,12 +101,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>© 2026 Amenti Liben. Crafted with intent.</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
-            {["NEXT.JS 14", "TYPESCRIPT", "TAILWIND", "FRAMER MOTION"].map((t) => (
-              <span key={t} style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.05em" }}>{t}</span>
-            ))}
-          </div>
+          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>© 2026 Amenti Liben.</div>
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", background: "none", border: "none", cursor: "pointer", transition: "color 0.2s", letterSpacing: "0.05em", display: "flex", alignItems: "center", gap: 6 }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
