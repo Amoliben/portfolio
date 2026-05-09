@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>© 2026 Amenti Liben.</div>
+          <div style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)" }}>© 2026 Amenti Liben. All rights reserved.</div>
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             style={{ fontFamily: mono, fontSize: 11, color: "var(--text-secondary)", background: "none", border: "none", cursor: "pointer", transition: "color 0.2s", letterSpacing: "0.05em", display: "flex", alignItems: "center", gap: 6 }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
