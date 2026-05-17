@@ -120,14 +120,28 @@ export default function Projects() {
                   display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
                   flexShrink: 0,
                 }}>
-                  {/* Watermark initials */}
-                  <span style={{
-                    fontFamily: mono, fontSize: "clamp(40px, 8vw, 80px)", fontWeight: 800,
-                    color: "rgba(255,255,255,0.06)", letterSpacing: "-0.04em",
-                    userSelect: "none", position: "absolute",
-                  }}>
-                    {project.title.split(" ").map(w => w[0]).join("").slice(0, 3)}
-                  </span>
+                  {/* Project Image */}
+                  {(project as any).image ? (
+                    <img 
+                      src={(project as any).image} 
+                      alt={project.title}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        objectPosition: "top center",
+                      }}
+                    />
+                  ) : (
+                    /* Watermark initials fallback */
+                    <span style={{
+                      fontFamily: mono, fontSize: "clamp(40px, 8vw, 80px)", fontWeight: 800,
+                      color: "rgba(255,255,255,0.06)", letterSpacing: "-0.04em",
+                      userSelect: "none", position: "absolute",
+                    }}>
+                      {project.title.split(" ").map(w => w[0]).join("").slice(0, 3)}
+                    </span>
+                  )}
 
                   {/* Score */}
                   <div style={{

@@ -153,6 +153,7 @@ export const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/Amoliben",
     live: "https://koket-delivery.vercel.app",
+    image: "/images/projects/koket-delivery.png",
     score: 93,
   },
   {
@@ -166,6 +167,7 @@ export const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/Amoliben",
     live: "https://jiruutech.vercel.app",
+    image: "/images/projects/jiruutech.png",
     score: 95,
   },
   {
@@ -179,6 +181,7 @@ export const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/Amoliben/portfolio",
     live: "https://amentiliben.vercel.app",
+    image: "/images/projects/portfolio.png",
     score: 92,
   },
   {
@@ -192,6 +195,7 @@ export const projects = [
     tech: ["Node.js", "Express.js", "PostgreSQL"],
     github: "https://github.com/Amoliben",
     live: "#",
+    image: "/images/projects/rest-api.png",
     score: 88,
   },
   {
@@ -205,6 +209,7 @@ export const projects = [
     tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
     github: "https://github.com/Amoliben",
     live: "https://jiruutask.vercel.app",
+    image: "/images/projects/jiruutask.png",
     score: 90,
   },
 ];
