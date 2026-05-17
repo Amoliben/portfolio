@@ -98,7 +98,7 @@ export default function Projects() {
                   borderRadius: "var(--radius-lg)", overflow: "hidden",
                   display: "flex", flexDirection: "column",
                   transition: "border-color 0.25s, transform 0.25s, box-shadow 0.25s",
-                  minHeight: "400px",
+                  minHeight: "480px",
                 }}
                 onMouseEnter={(e) => { 
                   const color = gradients[(project.id - 1) % gradients.length].hover;
@@ -114,7 +114,7 @@ export default function Projects() {
               >
                 {/* Thumbnail */}
                 <div style={{
-                  position: "relative", height: "clamp(120px, 15vw, 168px)",
+                  position: "relative", height: "clamp(180px, 20vw, 220px)",
                   background: gradients[(project.id - 1) % gradients.length].bg,
                   borderBottom: `1px solid ${gradients[(project.id - 1) % gradients.length].border}`,
                   display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
@@ -130,6 +130,7 @@ export default function Projects() {
                         height: "100%",
                         objectFit: "cover",
                         objectPosition: "top center",
+                        display: "block",
                       }}
                     />
                   ) : (
