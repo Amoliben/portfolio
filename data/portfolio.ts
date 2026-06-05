@@ -25,7 +25,7 @@ export const personal = {
     description3:
       "I am currently open to internship and junior developer opportunities where I can contribute to meaningful projects and grow as a software engineer.",
     stats: [
-      { label: "PROJECTS BUILT", value: "8+" },
+      { label: "PROJECTS BUILT", value: "9+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],
@@ -148,6 +148,20 @@ export const projects = [
     badge: "LIVE PROJECT",
     type: "FULL STACK",
     featured: true,
+    title: "Bole Cafe & Restaurant",
+    desc: "A full-featured restaurant and accommodation website for Bole Cafe in Nekemte, Oromia. Features online menu with pricing, room booking system, customer testimonials, photo gallery, service showcase, and location information. Built for a real business serving customers in Ethiopia with modern design and Ethiopian hospitality.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/Amoliben",
+    live: "https://bolecafe.vercel.app",
+    image: "/images/projects/bole-cafe.png",
+    score: 94,
+  },
+  {
+    id: 2,
+    year: "2025",
+    badge: "LIVE PROJECT",
+    type: "FULL STACK",
+    featured: true,
     title: "Koket Delivery - E-Commerce Platform",
     desc: "A bilingual (English/Amharic) e-commerce platform for premium female bags with real-time product catalog, free delivery service, and Telegram integration. Features responsive design, product showcase with pricing, contact system, and service area coverage. Built for a real business serving customers in Assosa, Ethiopia.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
@@ -157,7 +171,7 @@ export const projects = [
     score: 93,
   },
   {
-    id: 2,
+    id: 3,
     year: "2025",
     badge: "LIVE PROJECT",
     type: "FULL STACK",
@@ -171,7 +185,7 @@ export const projects = [
     score: 95,
   },
   {
-    id: 3,
+    id: 4,
     year: "2025",
     badge: "LIVE PROJECT",
     type: "FULL STACK",
@@ -185,7 +199,7 @@ export const projects = [
     score: 92,
   },
   {
-    id: 4,
+    id: 5,
     year: "2025",
     badge: "BACKEND SYSTEM",
     type: "BACKEND",
@@ -199,7 +213,7 @@ export const projects = [
     score: 88,
   },
   {
-    id: 5,
+    id: 6,
     year: "2025",
     badge: "LIVE PROJECT",
     type: "FULL STACK",
@@ -254,7 +268,7 @@ export const experience = [
       "Continuously learning new technologies including Docker, Redis, and advanced database optimization techniques.",
     ],
     metrics: [
-      { label: "PROJECTS BUILT", value: "8+" },
+      { label: "PROJECTS BUILT", value: "9+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],

@@ -170,7 +170,7 @@ export default function Hero() {
           {/* Stats */}
           <motion.div {...fadeUp(0.6)} style={{ display: "flex", flexWrap: "wrap", gap: 48, paddingTop: 48, borderTop: "1px solid var(--border)", marginBottom: 48, justifyContent: "center" }}>
             {[
-              { label: "PROJECTS BUILT", value: 8, suffix: "+" },
+              { label: "PROJECTS BUILT", value: 9, suffix: "+" },
               { label: "TECHNOLOGIES", value: 12, suffix: "+" },
               { label: "YEARS LEARNING", value: 2, suffix: "+" },
             ].map((s) => (
