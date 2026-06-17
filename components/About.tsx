@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { personal } from "@/data/portfolio";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const mono = "'JetBrains Mono', monospace";
 
@@ -140,7 +141,7 @@ export default function About() {
                   <div>
                     <div style={{ fontWeight: 700, color: "#fff", fontSize: 20, lineHeight: 1.2, marginBottom: 4 }}>{personal.name}</div>
                     <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)" }}>{personal.role}</div>
-                    <div style={{ fontFamily: mono, fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>📍 {personal.location}</div>
+                    <div style={{ fontFamily: mono, fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 4, display: "flex", alignItems: "center", gap: 4 }}><FaMapMarkerAlt size={10} /> {personal.location}</div>
                   </div>
                   <div style={{
                     backgroundColor: "var(--green)", color: "#000",

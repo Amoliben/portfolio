@@ -141,17 +141,18 @@ export default function Projects() {
                     </span>
                   )}
 
-                  {/* Score */}
-                  <div style={{
-                    position: "absolute", bottom: 12, left: 12,
-                    display: "flex", alignItems: "center", gap: 6,
-                    backgroundColor: "rgba(0,0,0,0.65)", backdropFilter: "blur(8px)",
-                    border: "1px solid rgba(232,255,71,0.2)", borderRadius: 8, padding: "5px 10px",
-                  }}>
-                    <div style={{ width: 5, height: 5, borderRadius: "50%", backgroundColor: "var(--accent)" }} />
-                    <span style={{ fontFamily: mono, fontSize: 11, color: "var(--accent)", fontWeight: 700 }}>{project.score}</span>
-                    <span style={{ fontFamily: mono, fontSize: 9, color: "var(--text-secondary)" }}>SCORE</span>
-                  </div>
+                  {/* Live indicator */}
+                  {project.live && project.live !== "#" && (
+                    <div style={{
+                      position: "absolute", bottom: 12, left: 12,
+                      display: "flex", alignItems: "center", gap: 6,
+                      backgroundColor: "rgba(0,0,0,0.65)", backdropFilter: "blur(8px)",
+                      border: "1px solid rgba(16,185,129,0.4)", borderRadius: 8, padding: "5px 10px",
+                    }}>
+                      <div style={{ width: 5, height: 5, borderRadius: "50%", backgroundColor: "var(--accent)", boxShadow: "0 0 6px var(--accent)" }} />
+                      <span style={{ fontFamily: mono, fontSize: 10, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.08em" }}>LIVE</span>
+                    </div>
+                  )}
 
                   {project.featured && (
                     <div style={{ position: "absolute", top: 12, left: 12, fontFamily: mono, fontSize: 9, fontWeight: 700, backgroundColor: "var(--accent)", color: "#000", padding: "4px 9px", borderRadius: 4, letterSpacing: "0.06em" }}>FEATURED</div>

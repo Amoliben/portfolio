@@ -47,7 +47,7 @@ export default function Footer() {
       <div style={{ maxWidth: "100%", margin: "0 auto", padding: "56px 64px 28px" }}>
         <div className="footer-grid">
           <div>
-            <div style={{ fontFamily: mono, fontWeight: 700, fontSize: 16, color: "var(--text)", marginBottom: 12, letterSpacing: "0.06em" }}>AMOL.</div>
+            <div style={{ fontFamily: mono, fontWeight: 700, fontSize: 16, color: "var(--text)", marginBottom: 12, letterSpacing: "0.06em" }}>AMENTI.</div>
             <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 12 }}>
               Full-stack engineer specializing in enterprise management systems and digital transformation. Building quality experiences from concept to launch.
             </p>

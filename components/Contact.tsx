@@ -6,11 +6,12 @@ import { personal } from "@/data/portfolio";
 import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const mono = "'JetBrains Mono', monospace";
+const FORMSPREE_ID = "xdkobqnw"; // ← replace with your Formspree form ID
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [form, setForm] = useState({ name: "", email: "", phone: "", type: "", message: "" });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const a = (delay = 0) => ({
     initial: { opacity: 0, y: 24 },
@@ -18,13 +19,33 @@ export default function Contact() {
     transition: { duration: 0.6, delay, ease: "easeOut" },
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`[Portfolio] ${form.type || "Project Inquiry"} from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nType: ${form.type}\n\n${form.message}`);
-    window.open(`mailto:${personal.email}?subject=${subject}&body=${body}`);
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    setStatus("sending");
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          type: form.type,
+          message: form.message,
+        }),
+      });
+      if (res.ok) {
+        setStatus("sent");
+        setForm({ name: "", email: "", phone: "", type: "", message: "" });
+        setTimeout(() => setStatus("idle"), 4000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 4000);
+      }
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 4000);
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -146,9 +167,15 @@ export default function Contact() {
 
               <button type="submit" className="btn-primary" style={{
                 width: "100%", justifyContent: "center", padding: 16, borderRadius: 12,
-                opacity: sent ? 0.7 : 1,
-              }}>
-                {sent ? "MESSAGE SENT ✓" : "SEND MESSAGE"}
+                opacity: status === "sending" ? 0.7 : 1,
+                cursor: status === "sending" ? "not-allowed" : "pointer",
+              }}
+                disabled={status === "sending"}
+              >
+                {status === "sending" && "SENDING..."}
+                {status === "sent" && "MESSAGE SENT ✓"}
+                {status === "error" && "FAILED — TRY AGAIN"}
+                {status === "idle" && "SEND MESSAGE"}
               </button>
             </form>
           </motion.div>
