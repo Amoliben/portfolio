@@ -236,7 +236,7 @@ export const projects = [
     desc: "A professional task management and project collaboration platform with secure authentication system. Features user management, task organization, project tracking, and admin controls. Built for team productivity and workflow management with role-based access control.",
     tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
     github: "https://github.com/Amoliben",
-    live: "https://jiruutask.vercel.app",
+    live: "https://task.jiruutech.com/",
     image: "/images/projects/jiruutask.png",
     score: 90,
   },
