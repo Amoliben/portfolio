@@ -88,35 +88,32 @@ export default function Projects() {
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => (
               <motion.div key={project.id} layout
-                initial={{ opacity: 0, scale: 0.96 }}
+                initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.94 }}
-                transition={{ duration: 0.35, delay: i * 0.05 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.3, delay: i * 0.04 }}
                 style={{
-                  backgroundColor: "var(--surface)", 
-                  border: `1px solid ${gradients[(project.id - 1) % gradients.length].border}`,
+                  backgroundColor: "var(--surface)",
+                  border: `1px solid var(--border)`,
                   borderRadius: "var(--radius-lg)", overflow: "hidden",
                   display: "flex", flexDirection: "column",
-                  transition: "border-color 0.25s, transform 0.25s, box-shadow 0.25s",
+                  transition: "border-color 0.2s, transform 0.2s",
                   minHeight: "480px",
                 }}
-                onMouseEnter={(e) => { 
-                  const color = gradients[(project.id - 1) % gradients.length].hover;
-                  e.currentTarget.style.borderColor = color.replace("0.25", "0.5"); 
-                  e.currentTarget.style.transform = "translateY(-4px)"; 
-                  e.currentTarget.style.boxShadow = `0 20px 60px ${color.replace("0.25", "0.15")}`; 
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = "var(--border-hover)";
+                  e.currentTarget.style.transform = "translateY(-3px)";
                 }}
-                onMouseLeave={(e) => { 
-                  e.currentTarget.style.borderColor = gradients[(project.id - 1) % gradients.length].border; 
-                  e.currentTarget.style.transform = "translateY(0)"; 
-                  e.currentTarget.style.boxShadow = "none"; 
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = "var(--border)";
+                  e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
                 {/* Thumbnail */}
                 <div style={{
                   position: "relative", height: "clamp(180px, 20vw, 220px)",
                   background: gradients[(project.id - 1) % gradients.length].bg,
-                  borderBottom: `1px solid ${gradients[(project.id - 1) % gradients.length].border}`,
+                  borderBottom: `1px solid var(--border)`,
                   display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
                   flexShrink: 0,
                 }}>

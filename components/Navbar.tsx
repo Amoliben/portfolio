@@ -48,24 +48,24 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         style={{
           position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-          transition: "background-color 0.3s, border-color 0.3s, backdrop-filter 0.3s",
-          backgroundColor: scrolled ? "rgba(var(--bg-rgb), 0.88)" : "transparent",
-          backdropFilter: scrolled ? "blur(16px) saturate(180%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(16px) saturate(180%)" : "none",
+          transition: "background-color 0.3s, border-color 0.3s",
+          backgroundColor: scrolled ? "rgba(5,5,5,0.92)" : "transparent",
+          backdropFilter: scrolled ? "blur(20px) saturate(150%)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(20px) saturate(150%)" : "none",
           borderBottom: `1px solid ${scrolled ? "var(--border)" : "transparent"}`,
         }}
       >
         <div style={{
-          maxWidth: "100%", margin: "0 auto", padding: "0 64px", height: 68,
+          maxWidth: "100%", margin: "0 auto", padding: "0 72px", height: 64,
           display: "flex", alignItems: "center", justifyContent: "space-between",
         }}>
           {/* Brand */}
           <a href="#" style={{
-            fontFamily: mono, fontWeight: 900, fontSize: 20,
-            color: "var(--accent)", letterSpacing: "0.12em", textDecoration: "none", flexShrink: 0,
+            fontFamily: mono, fontWeight: 700, fontSize: 16,
+            color: "var(--text)", letterSpacing: "0.06em", textDecoration: "none", flexShrink: 0,
           }}>
             AMENTI.
           </a>
@@ -76,12 +76,12 @@ export default function Navbar() {
               const isActive = activeSection === link.href.slice(1);
               return (
                 <a key={link.href} href={link.href} style={{
-                  fontFamily: mono, fontSize: 14, letterSpacing: "0.06em",
-                  color: isActive ? "var(--accent)" : "var(--text-muted)",
+                  fontFamily: mono, fontSize: 12, letterSpacing: "0.06em",
+                  color: isActive ? "var(--text)" : "var(--text-muted)",
                   textDecoration: "none", transition: "color 0.2s",
                   position: "relative", paddingBottom: 2,
                 }}
-                  onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = "var(--text)"; }}
+                  onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = "var(--text-secondary)"; }}
                   onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = "var(--text-muted)"; }}
                 >
                   {link.label}
@@ -99,11 +99,11 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="nav-cta">
             <a href={personal.github} target="_blank" rel="noopener noreferrer"
-              style={{ fontFamily: mono, fontSize: 14, color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
+              style={{ fontFamily: mono, fontSize: 12, color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s", letterSpacing: "0.04em" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
             >GitHub</a>
-            <a href={`mailto:${personal.email}`} className="btn-primary" style={{ padding: "10px 24px", fontSize: 14 }}>
+            <a href={`mailto:${personal.email}`} className="btn-primary" style={{ padding: "9px 20px", fontSize: 11 }}>
               Hire Me
             </a>
           </div>
@@ -149,7 +149,7 @@ export default function Navbar() {
               }}
             >
               <div style={{ padding: "24px", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <span style={{ fontFamily: mono, fontWeight: 900, fontSize: 18, color: "var(--accent)", letterSpacing: "0.1em" }}>AMENTI.</span>
+                <span style={{ fontFamily: mono, fontWeight: 700, fontSize: 16, color: "var(--text)", letterSpacing: "0.06em" }}>AMENTI.</span>
                 <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: 24, lineHeight: 1 }} aria-label="Close menu">✕</button>
               </div>
               <div style={{ flex: 1, padding: "16px 24px", display: "flex", flexDirection: "column", gap: 4, overflowY: "auto" }}>
