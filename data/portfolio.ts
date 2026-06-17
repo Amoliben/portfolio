@@ -180,7 +180,7 @@ export const projects = [
     desc: "A professional software development company website showcasing services, products, and portfolio. Features modern UI/UX, responsive design, service offerings, product ecosystem, testimonials, and contact system. Built for a real business serving clients in Ethiopia and globally.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/Amoliben",
-    live: "https://jiruutech.vercel.app",
+    live: "https://www.jiruutech.com/",
     image: "/images/projects/jiruutech.png",
     score: 95,
   },
