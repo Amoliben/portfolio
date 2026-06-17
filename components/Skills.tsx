@@ -2,6 +2,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { skills } from "@/data/portfolio";
+import { HiOutlineCube } from "react-icons/hi";
+import { HiOutlineChartBar } from "react-icons/hi";
+import { BsLightningChargeFill } from "react-icons/bs";
+import { TbTargetArrow } from "react-icons/tb";
 
 const mono = "'JetBrains Mono', monospace";
 
@@ -55,10 +59,10 @@ export default function Skills() {
         {/* Summary stats */}
         <motion.div {...a(0.25)} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 36 }}>
           {[
-            { label: "SKILL GROUPS", value: skills.summary.groups, icon: "📦" },
-            { label: "AVG PROFICIENCY", value: skills.summary.avgProficiency, icon: "📊" },
-            { label: "TOP STACK", value: skills.summary.topStack, icon: "⚡" },
-            { label: "CORE SKILLS", value: `${skills.summary.strengths.length}`, icon: "🎯" },
+            { label: "SKILL GROUPS", value: skills.summary.groups, icon: <HiOutlineCube size={28} color="var(--accent)" /> },
+            { label: "AVG PROFICIENCY", value: skills.summary.avgProficiency, icon: <HiOutlineChartBar size={28} color="var(--accent)" /> },
+            { label: "TOP STACK", value: skills.summary.topStack, icon: <BsLightningChargeFill size={24} color="var(--accent)" /> },
+            { label: "CORE SKILLS", value: `${skills.summary.strengths.length}`, icon: <TbTargetArrow size={28} color="var(--accent)" /> },
           ].map((s, i) => (
             <motion.div 
               key={s.label}
@@ -83,7 +87,7 @@ export default function Skills() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              <div style={{ fontSize: 28, marginBottom: 10 }}>{s.icon}</div>
+              <div style={{ fontSize: 28, marginBottom: 10, display: "flex", alignItems: "center" }}>{s.icon}</div>
               <div style={{ fontFamily: mono, fontSize: 24, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 7 }}>{s.value}</div>
               <div style={{ fontFamily: mono, fontSize: 10, color: "var(--text-secondary)", letterSpacing: "0.12em", textTransform: "uppercase" }}>{s.label}</div>
             </motion.div>
