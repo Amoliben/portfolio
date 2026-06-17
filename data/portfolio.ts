@@ -25,7 +25,7 @@ export const personal = {
     description3:
       "I am currently open to internship and junior developer opportunities where I can contribute to meaningful projects and grow as a software engineer.",
     stats: [
-      { label: "PROJECTS BUILT", value: "9+" },
+      { label: "PROJECTS BUILT", value: "10+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],
@@ -218,6 +218,20 @@ export const projects = [
     badge: "LIVE PROJECT",
     type: "FULL STACK",
     featured: true,
+    title: "MiinaMul Fashion - Online Store",
+    desc: "A bilingual fashion e-commerce platform for MiinaMul Fashion in Nekemte, Ethiopia. Features a modern product catalog covering traditional and contemporary clothing, free delivery throughout Nekemte City, secure online ordering, customer testimonials, newsletter subscription, and a 7-day return policy. Trusted by thousands of customers in the Ethiopian Oromo community.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/Amoliben",
+    live: "https://miinamulfashion.vercel.app",
+    image: "/images/projects/miinamul-fashion.png",
+    score: 92,
+  },
+  {
+    id: 7,
+    year: "2025",
+    badge: "LIVE PROJECT",
+    type: "FULL STACK",
+    featured: true,
     title: "JiruuTask - Task Management Platform",
     desc: "A professional task management and project collaboration platform with secure authentication system. Features user management, task organization, project tracking, and admin controls. Built for team productivity and workflow management with role-based access control.",
     tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
@@ -268,7 +282,7 @@ export const experience = [
       "Continuously learning new technologies including Docker, Redis, and advanced database optimization techniques.",
     ],
     metrics: [
-      { label: "PROJECTS BUILT", value: "9+" },
+      { label: "PROJECTS BUILT", value: "10+" },
       { label: "TECHNOLOGIES", value: "12+" },
       { label: "YEARS LEARNING", value: "2+" },
     ],
