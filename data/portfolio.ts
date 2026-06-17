@@ -223,7 +223,7 @@ export const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/Amoliben",
     live: "https://miinamulfashion.vercel.app",
-    image: "/images/projects/miinamul-fashion.png",
+    image: "/images/projects/miinamul.png",
     score: 92,
   },
   {
