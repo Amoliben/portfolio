@@ -6,7 +6,7 @@ import { personal } from "@/data/portfolio";
 import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const mono = "'JetBrains Mono', monospace";
-const FORMSPREE_ID = "xdkobqnw"; // ← replace with your Formspree form ID
+const FORMSPREE_ID = "xlgkkdge";
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
