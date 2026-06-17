@@ -4,7 +4,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
   title: "Amenti Liben | Full-Stack Developer & Software Engineering Student",
-  description: "3rd-year Software Engineering student and Full-Stack Developer building web applications with Next.js, TypeScript, Node.js, Python, and PostgreSQL. Open to internships and junior developer opportunities.",
+  description: "4th-year Software Engineering student and Full-Stack Developer building web applications with Next.js, TypeScript, Node.js, Python, and PostgreSQL. Open to internships and junior developer opportunities.",
   keywords: ["full-stack developer", "software engineering student", "Next.js", "React", "TypeScript", "Node.js", "Python", "Laravel", "PostgreSQL", "Flutter", "Ethiopia", "internship"],
   authors: [{ name: "Amenti Liben", url: "https://amentiliben.com" }],
   creator: "Amenti Liben",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Amenti Liben | Full-Stack Developer & Software Engineering Student",
-    description: "3rd-year Software Engineering student building web applications with Next.js, TypeScript, and modern technologies. Open to opportunities.",
+    description: "4th-year Software Engineering student building web applications with Next.js, TypeScript, and modern technologies. Open to opportunities.",
     type: "website",
     url: "https://amentiliben.com",
     siteName: "Amenti Liben",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Amenti Liben | Full-Stack Developer & Software Engineering Student",
-    description: "3rd-year Software Engineering student building web applications. Open to internships and opportunities.",
+    description: "4th-year Software Engineering student building web applications. Open to internships and opportunities.",
     creator: "@amentiliben",
   },
   robots: {

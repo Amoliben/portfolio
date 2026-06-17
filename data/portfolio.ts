@@ -5,7 +5,7 @@ export const personal = {
   tagline: "Building web applications\nfrom scratch",
   subtitle: "< Full-Stack Developer />",
   description:
-    "I'm a 3rd-year Software Engineering student and Full-Stack Developer based in Ethiopia. I build web applications using Node.js, Python, PHP (Laravel), PostgreSQL, and React/Next.js. I'm passionate about learning and creating functional applications from database to user interface.",
+    "I'm a 4th-year Software Engineering student and Full-Stack Developer based in Ethiopia. I build web applications using Node.js, Python, PHP (Laravel), PostgreSQL, and React/Next.js. I'm passionate about learning and creating functional applications from database to user interface.",
   location: "Addis Ababa, Ethiopia",
   availability: "Open to opportunities",
   responseTime: "within 24 hours",
@@ -280,7 +280,7 @@ export const education = {
   degree: "B.Sc. Software Engineering",
   university: "Haramaya University",
   period: "2024 — 2028",
-  standing: "3rd Year",
+  standing: "4th Year",
   languages: [
     { name: "English", level: "PROFESSIONAL" },
     { name: "Afaan Oromoo", level: "NATIVE" },
