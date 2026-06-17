@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     canonical: "https://amentiliben.vercel.app",
   },
   verification: {
-    google: "",
+    google: "56OOROOxnAbPeWFeJOpdgxJKt6D9SIFCzlgpQ9qWDuU",
   },
   category: "technology",
 };
